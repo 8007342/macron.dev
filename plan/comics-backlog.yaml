@@ -1,0 +1,8 @@
+# Backlog for comics.macron.dev. Nothing here starts before the Visual Story
+# theme and the art guidelines exist (openspec/specs/comics/spec.md).
+episodes:
+  - title: "setting a Cloudflare deploy token as a GitHub secret for Actions deploys"
+    status: not-started
+    level: advanced
+    shape: [multi-frame, punchline, animations]
+    blocked_on: art guidelines
