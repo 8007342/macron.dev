@@ -13,3 +13,26 @@ anywhere else.
 
 Status: under construction. See `openspec/specs/` for what each sub-project
 will be, and `plan/` for its backlog.
+
+## The workshop
+
+The landing page introduces Tlatoāni, apprentice Covi, and Mācron the āi:
+learning together, experimenting, and documenting their adventures. Planned
+sub-projects are labeled as planned until they are published.
+
+Preview locally with `python -m http.server 8000 --directory public`.
+
+## Character references
+
+The supplied originals live in `assets/`. Read
+[the character canon](assets/Tlatoāni%20+%20Mācron%20cannon%20guidelines.md)
+before creating character artwork or writing. Its explicit constraints are
+authoritative; committing a reference does not automatically promote every
+detail in it to canon. The supplied images remain reference material with no
+new individual canonical status assigned by this landing-page update.
+
+The page uses optimized WebP display copies of `Chess Tlatoāni vs Mācron.png`
+and `Baby mācrons.png`, preserving the original compositions. To regenerate
+them, install Pillow and run `python scripts/prepare-images.py`.
+Only `public/` is served; the full reference collection stays in the repository
+for future builders.
