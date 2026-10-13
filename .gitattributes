@@ -1,0 +1,3 @@
+# Concurrent additions to the notes index merge by keeping both sides' lines.
+# Each line is one self-contained JSON object, so a union is always valid.
+public/notes/manifest.jsonl merge=union
