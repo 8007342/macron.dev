@@ -36,10 +36,11 @@ A note SHALL describe what actually happened, failures included. The site is
 public, so a note SHALL NOT contain logs, tokens, credentials, host paths,
 internal addresses or any other secret.
 
-### Requirement: No comics or characters yet
+### Requirement: Characters follow the canon
 
-Notes SHALL NOT introduce comics, character stories or character artwork until
-macron.dev publishes its art guidelines.
+Notes stay plain field reports. Character stories and comics belong in
+lessons and in the comics backlog, and SHALL follow the character canon,
+`assets/Tlatoāni + Mācron cannon guidelines.md`.
 
 ### Requirement: Rendered as text
 

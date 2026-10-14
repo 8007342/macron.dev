@@ -1,0 +1,1624 @@
+{
+  "version": 1,
+  "generated": "2026-10-14",
+  "canon": "https://github.com/8007342/macron.dev/blob/main/assets/Tlato%C4%81ni%20%2B%20M%C4%81cron%20cannon%20guidelines.md",
+  "status_policy": "Every item is reference material; no generated image is canon until a human promotes it.",
+  "items": [
+    {
+      "id": "agreement-compounds",
+      "source": "assets/Agreement Compounds.png",
+      "title": "Agreement Compounds",
+      "alt": "On a sunny San Diego terrace, dozens of small cream robots assemble interlocking wooden blocks into a long viaduct while a round-headed figure in a hoodie puzzles over one block and Tlatoāni lounges in an armchair eating cookies.",
+      "description": "Many Mācrons each add the same small interlocking piece, and the pieces compound into a bridge that reaches a café across the bay. The hooded figure is still trying to understand one block; Tlatoāni has already relaxed, trusting the agreement between pieces. Small agreed-upon units, repeated, build something no single agent could.",
+      "characters": [
+        "tlatoani",
+        "macron",
+        "other:hoodie-roundhead"
+      ],
+      "concepts": [
+        "convergence",
+        "emergence",
+        "composability",
+        "multi-agent-coordination",
+        "incremental-progress"
+      ],
+      "tags": [
+        "agreement",
+        "compounding",
+        "swarm",
+        "robots",
+        "building-blocks",
+        "san-diego",
+        "axolotl",
+        "multi-agent"
+      ],
+      "slogan": "Agreement compounds.",
+      "text_in_image": "SAN DIEGO",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Mācron count far exceeds the 3–5 guideline (swarm arguably justified by the concept)",
+        "the hooded figure has a cream Mācron-like ball head with a hook antenna, blurring who is a robot",
+        "Tlatoāni wears a large feathered ceremonial headdress in a casual scene",
+        "busy background (city skyline, café, laptop stickers) competes with the main idea"
+      ],
+      "homage": "",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/agreement-compounds.webp",
+      "image_small": "/images/gallery/agreement-compounds-small.webp"
+    },
+    {
+      "id": "baby-macrons",
+      "source": "assets/Baby mācrons.png",
+      "title": "Baby Mācrons",
+      "alt": "Tlatoāni and apprentice Covi chat on a sofa holding Fedora mugs while two small cream-and-teal Mācron robots on the rug both tug at the same toy computer, each pointing at the āi on its own chest.",
+      "description": "Two Mācrons want the same toy computer and each insists it is theirs, mirroring the pointing-at-each-other meme. Above them Tlatoāni and Covi keep talking calmly. Two agents contending for one shared resource is a coordination problem, not a character flaw.",
+      "characters": [
+        "tlatoani",
+        "covi",
+        "macron"
+      ],
+      "concepts": [
+        "resource-contention",
+        "locking",
+        "multi-agent-coordination",
+        "ownership"
+      ],
+      "tags": [
+        "macron",
+        "covi",
+        "tlatoani",
+        "fedora",
+        "contention",
+        "pointing-meme",
+        "workshop",
+        "robots"
+      ],
+      "slogan": "Two owners means no owner.",
+      "text_in_image": "fedora · āi",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "Mācron eyes are angled into an angry glare, close to a threatening face (§41)",
+        "Mācron heads carry ear-like side discs",
+        "Tlatoāni robe is olive/brown rather than cream",
+        "toddler play-rug framing leans toward 'baby' reading that §16/§41 warn against"
+      ],
+      "homage": "Spider-Man pointing meme",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/baby-macrons.webp",
+      "image_small": "/images/gallery/baby-macrons-small.webp",
+      "notes": "Used on the landing page as /images/learning-together.webp."
+    },
+    {
+      "id": "bluepill-redpill",
+      "source": "assets/BluePill-RedPill.png",
+      "title": "Blue Pill, Red Pill",
+      "alt": "Close-up of Tlatoāni wearing round dark glasses whose lenses reflect a young man offered a red pill and a blue pill.",
+      "description": "Tlatoāni takes the Morpheus role: the choice is shown only in the reflection, and Tlatoāni simply smiles. The image is about choosing to see how the system really works versus staying comfortable.",
+      "characters": [
+        "tlatoani",
+        "other:young-man-in-reflection"
+      ],
+      "concepts": [
+        "choice",
+        "systems-thinking",
+        "abstraction"
+      ],
+      "tags": [
+        "matrix",
+        "red-pill",
+        "blue-pill",
+        "sunglasses",
+        "axolotl",
+        "homage",
+        "choice"
+      ],
+      "slogan": "Look closer. Then choose.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "heavy gold regalia, sun-face medallions and ear spools read as Aztec costume cliché (§7)",
+        "visible nostrils add facial clutter",
+        "dark, dramatic palette away from the warm workshop style"
+      ],
+      "homage": "The Matrix",
+      "width": 1403,
+      "height": 1121,
+      "display_width": 1200,
+      "display_height": 959,
+      "image": "/images/gallery/bluepill-redpill.webp",
+      "image_small": "/images/gallery/bluepill-redpill-small.webp"
+    },
+    {
+      "id": "build-a-cathedral",
+      "source": "assets/Build A Cathedral.png",
+      "title": "Build a Cathedral",
+      "alt": "A small axolotl in a paper hat lays a stone block in the foreground while a dashed-line outline of a Gothic cathedral rises behind medieval builders and a treadwheel crane.",
+      "description": "The cathedral exists only as a dashed blueprint; what is real is one stone being set. Tlatoāni works on the foundation, cheerful, knowing it will take generations. Big systems are built one verified piece at a time toward a shared plan.",
+      "characters": [
+        "tlatoani",
+        "other:medieval-builders"
+      ],
+      "concepts": [
+        "planning",
+        "incremental-progress",
+        "spec-driven-development",
+        "long-term-thinking"
+      ],
+      "tags": [
+        "cathedral",
+        "blueprint",
+        "construction",
+        "masonry",
+        "medieval",
+        "axolotl",
+        "patience"
+      ],
+      "slogan": "Lay the stone. The plan holds the rest.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "Tlatoāni's skin is mottled tan/beige rather than pink",
+        "teeth visible in a wide grin; face reads less canon-round",
+        "plain dirty smock, no cream/teal clothing language"
+      ],
+      "homage": "Parable of the cathedral builders",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/build-a-cathedral.webp",
+      "image_small": "/images/gallery/build-a-cathedral-small.webp"
+    },
+    {
+      "id": "burning-tokens",
+      "source": "assets/Burning Tokens.png",
+      "title": "Burning Tokens",
+      "alt": "A purple axolotl in a starry purple robe happily eats chocolate coins from a jar while a round-headed figure in a hoodie grins in front of monitors showing burning coin icons.",
+      "description": "Every monitor shows coins on fire while Tlatoāni casually unwraps another chocolate coin, foil wrappers piling up on the table. Tokens are the currency of agent work, and they are easy to spend without noticing.",
+      "characters": [
+        "tlatoani",
+        "other:hoodie-roundhead"
+      ],
+      "concepts": [
+        "token-cost",
+        "observability",
+        "resource-budget"
+      ],
+      "tags": [
+        "tokens",
+        "cost",
+        "chocolate-coins",
+        "dashboard",
+        "llm",
+        "budget",
+        "fedora",
+        "axolotl"
+      ],
+      "slogan": "Every wrapper was a token.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "purple star-pattern robe is off-palette (no cream/teal)",
+        "monitor wall with fake dashboard UI text in the background (§31)",
+        "the hooded figure's ball head reads as a mascot rather than an established character"
+      ],
+      "homage": "",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/burning-tokens.webp",
+      "image_small": "/images/gallery/burning-tokens-small.webp"
+    },
+    {
+      "id": "chess-tlatoani-vs-macron",
+      "source": "assets/Chess Tlatoāni vs Mācron.png",
+      "title": "Chess: Tlatoāni vs Mācron",
+      "alt": "In a sunny garden full of hanging Tillandsias, a puzzled pink Tlatoāni studies a chessboard while a small cream robot with a dark screen face smiles beside a jar of teal tokens.",
+      "description": "Tlatoāni concentrates hard on the position; Mācron is already relaxed and pleased, holding a captured token. The scene captures the core contrast: one reasons about consequences, the other has found a move nobody expected.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "strategy",
+        "emotional-contrast",
+        "search",
+        "game-theory"
+      ],
+      "tags": [
+        "chess",
+        "garden",
+        "tillandsia",
+        "san-diego",
+        "axolotl",
+        "robot",
+        "strategy",
+        "workshop"
+      ],
+      "slogan": "Direction before force.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "Mācron's head is a boxy CRT-like rectangle rather than a rounded shell",
+        "Mācron's antenna is a leaf sprout instead of a small orb",
+        "front gill lobes are large and ear-like"
+      ],
+      "homage": "",
+      "width": 1448,
+      "height": 1086,
+      "display_width": 1200,
+      "display_height": 900,
+      "image": "/images/gallery/chess-tlatoani-vs-macron.webp",
+      "image_small": "/images/gallery/chess-tlatoani-vs-macron-small.webp",
+      "notes": "Used on the landing page as /images/garden-chess.webp. Strongest Tlatoāni anatomy reference in the set: pink body, gills, one tail, cream/teal robe."
+    },
+    {
+      "id": "developers-developers-developers",
+      "source": "assets/Developers Developers Developers.png",
+      "title": "Developers! Developers! Developers!",
+      "alt": "A bald man in a blue shirt shouts on stage in front of a screen reading DEVELOPERS! three times while Tlatoāni claps happily in a cheering conference audience.",
+      "description": "A recreation of the famous keynote chant, with Tlatoāni enjoying the energy from the seats. It is about developer ecosystems and the people they are built for.",
+      "characters": [
+        "tlatoani",
+        "other:steve-ballmer",
+        "other:conference-audience"
+      ],
+      "concepts": [
+        "developer-experience",
+        "community",
+        "platforms"
+      ],
+      "tags": [
+        "developers",
+        "keynote",
+        "build-conference",
+        "microsoft",
+        "meme",
+        "audience",
+        "axolotl"
+      ],
+      "slogan": "Build for the people in the seats.",
+      "text_in_image": "DEVELOPERS! DEVELOPERS! DEVELOPERS! · Microsoft · // BUILD 2011 ATTENDEE",
+      "status": "reference",
+      "suggested_status": "historical",
+      "canon_qa": [
+        "depicts a recognizable real person and a corporate trademark; unsafe for promotion",
+        "large feathered headdress in a casual audience scene",
+        "many unnecessary background characters (§47)"
+      ],
+      "homage": "Steve Ballmer's 'Developers' chant",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/developers-developers-developers.webp",
+      "image_small": "/images/gallery/developers-developers-developers-small.webp"
+    },
+    {
+      "id": "fedora-up",
+      "source": "assets/Fedora Up.png",
+      "title": "Fedora Up",
+      "alt": "A photorealistic close-up of Tlatoāni's smiling lower face and pink gills beneath a blue felt fedora with an embroidered Fedora logo.",
+      "description": "A cinematic close-up: the hat hides the eyes, leaving only the smile and gills. It is a brand nod to Fedora as the home operating system of the workshop.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "linux",
+        "tooling",
+        "identity"
+      ],
+      "tags": [
+        "fedora",
+        "linux",
+        "hat",
+        "close-up",
+        "axolotl",
+        "branding"
+      ],
+      "slogan": "Hat on. Work begins.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "photorealistic rendering, outside the cartoon style (§42 'overly realistic')",
+        "visible nostril and skin texture add facial realism",
+        "eyes hidden, so the character is not readable at thumbnail size"
+      ],
+      "homage": "Fedora Linux logo",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/fedora-up.webp",
+      "image_small": "/images/gallery/fedora-up-small.webp"
+    },
+    {
+      "id": "ford-production-line",
+      "source": "assets/Ford Production Line.png",
+      "title": "Ford Production Line",
+      "alt": "A sepia photograph-style scene in which an elderly man in a suit points out a Model T on an assembly line staffed by many small round robots, while a robed axolotl in a fedora watches from behind.",
+      "description": "An early-1900s assembly line where every station is a Mācron doing one well-defined step. Tlatoāni watches the man who designed the line explain it. Splitting work into small, repeatable stages is how many agents produce one coherent result.",
+      "characters": [
+        "tlatoani",
+        "macron",
+        "other:henry-ford"
+      ],
+      "concepts": [
+        "pipelines",
+        "division-of-labor",
+        "parallelism",
+        "automation"
+      ],
+      "tags": [
+        "assembly-line",
+        "model-t",
+        "history",
+        "sepia",
+        "robots",
+        "pipeline",
+        "industry"
+      ],
+      "slogan": "One step per station. One car at the end.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "Mācron count far exceeds 3–5 (swarm is the concept)",
+        "sepia treatment removes pink, cream and teal, so neither character's palette reads",
+        "Tlatoāni seen only from behind; silhouette depends on the hat"
+      ],
+      "homage": "Ford Model T assembly line",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/ford-production-line.webp",
+      "image_small": "/images/gallery/ford-production-line-small.webp"
+    },
+    {
+      "id": "i-m-trying-to-tell-you-you-won-t-have-to",
+      "source": "assets/I'm trying to tell you you won't have to.png",
+      "title": "I'm Trying to Tell You You Won't Have To",
+      "alt": "Tlatoāni, eyes closed and smiling, raises one palm and stops a hail of bullets frozen in mid-air.",
+      "description": "The bullet-stop scene from The Matrix with Tlatoāni serene at its center. When you understand the system well enough, you stop dodging problems one at a time.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "mastery",
+        "automation",
+        "systems-thinking"
+      ],
+      "tags": [
+        "matrix",
+        "bullet-time",
+        "calm",
+        "mastery",
+        "axolotl",
+        "homage"
+      ],
+      "slogan": "When you're ready, you won't have to.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "semi-realistic skin texture and nostrils (§42 'overly realistic')",
+        "olive/khaki robe instead of cream",
+        "bullets introduce weapon imagery",
+        "heavy feathered headdress"
+      ],
+      "homage": "The Matrix",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/i-m-trying-to-tell-you-you-won-t-have-to.webp",
+      "image_small": "/images/gallery/i-m-trying-to-tell-you-you-won-t-have-to-small.webp"
+    },
+    {
+      "id": "king-tlatoani-and-goku",
+      "source": "assets/King Tlatoāni and Goku.png",
+      "title": "King Tlatoāni and Goku",
+      "alt": "In anime style, Goku in his orange gi walks beside a round lavender Tlatoāni wearing a black robe with an axolotl emblem, past golden domes and tall trees.",
+      "description": "Tlatoāni appears as a jolly king-sage figure walking with Goku in the Dragon Ball world. A playful crossover about mentors and students.",
+      "characters": [
+        "tlatoani",
+        "other:goku"
+      ],
+      "concepts": [
+        "mentorship"
+      ],
+      "tags": [
+        "dragon-ball",
+        "goku",
+        "anime",
+        "crossover",
+        "axolotl",
+        "mentor"
+      ],
+      "slogan": "Strength is easy. Direction is training.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "Tlatoāni is lavender rather than pink",
+        "black/yellow/red robe off-palette",
+        "anime style departs from the shared visual style",
+        "copyrighted character (Goku) dominates the frame"
+      ],
+      "homage": "Dragon Ball",
+      "width": 1448,
+      "height": 1086,
+      "display_width": 1200,
+      "display_height": 900,
+      "image": "/images/gallery/king-tlatoani-and-goku.webp",
+      "image_small": "/images/gallery/king-tlatoani-and-goku-small.webp"
+    },
+    {
+      "id": "less-syntax-more-intent",
+      "source": "assets/Less Syntax More Intent.png",
+      "title": "Less Syntax, More Intent",
+      "alt": "A frustrated white round-headed developer rubs his head in front of colorful code while Tlatoāni, crowned and calm, rests a hand on his shoulder and raises the other palm.",
+      "description": "The developer is drowning in syntax; Tlatoāni calmly signals 'pause'. The lesson is to state what you want clearly and let the tools handle the spelling.",
+      "characters": [
+        "tlatoani",
+        "other:white-roundhead-everyman"
+      ],
+      "concepts": [
+        "intent",
+        "spec-driven-development",
+        "prompting",
+        "abstraction"
+      ],
+      "tags": [
+        "syntax",
+        "intent",
+        "developer",
+        "code",
+        "frustration",
+        "mentor",
+        "axolotl",
+        "prompting"
+      ],
+      "slogan": "Less syntax. More intent.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "gold crown in a desk scene (allowed, but not needed)"
+      ],
+      "homage": "",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/less-syntax-more-intent.webp",
+      "image_small": "/images/gallery/less-syntax-more-intent-small.webp"
+    },
+    {
+      "id": "mario-tlatoani",
+      "source": "assets/Mario Tlatoāni.png",
+      "title": "Mario Tlatoāni",
+      "alt": "An NES-style platformer screen in which a pixel-art Tlatoāni jumps between brick ledges toward a pipe with a piranha plant, under a HUD reading TLATOĀNI, WORLD 8-2.",
+      "description": "Tlatoāni stars in a classic side-scroller late in the game. A lighthearted homage to learning by playing levels over and over.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "iteration",
+        "games",
+        "practice"
+      ],
+      "tags": [
+        "mario",
+        "nes",
+        "pixel-art",
+        "platformer",
+        "retro",
+        "axolotl",
+        "homage"
+      ],
+      "slogan": "World 8-2. Still learning the jumps.",
+      "text_in_image": "TLATOĀNI 290350 · x81 · WORLD 8-2 · TIME 206",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "pseudo-Mesoamerican glyph watermarks scattered across the sky (§7, §31)",
+        "an odd pink stub figure with a green head near the pipe",
+        "Nintendo IP dominates"
+      ],
+      "homage": "Super Mario Bros.",
+      "width": 1340,
+      "height": 1174,
+      "display_width": 1200,
+      "display_height": 1051,
+      "image": "/images/gallery/mario-tlatoani.webp",
+      "image_small": "/images/gallery/mario-tlatoani-small.webp"
+    },
+    {
+      "id": "measurements",
+      "source": "assets/Measurements.png",
+      "title": "Measurements",
+      "alt": "An angry young purple axolotl in a black hoodie shouts at a computer with a red X speech bubble while an older purple axolotl in a robe rests a hand on his shoulder, thinking of a ruler.",
+      "description": "One axolotl reacts to failure with rage; the other answers with a ruler. Before you fix anything, measure it: anger is not a signal you can act on, but a measurement is.",
+      "characters": [
+        "tlatoani",
+        "other:young-axolotl-in-hoodie"
+      ],
+      "concepts": [
+        "observability",
+        "measurement",
+        "debugging",
+        "feedback-loops"
+      ],
+      "tags": [
+        "measure",
+        "debugging",
+        "observability",
+        "frustration",
+        "ruler",
+        "axolotl",
+        "mentor"
+      ],
+      "slogan": "Measure first.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "dark purple wizard robe instead of cream/teal",
+        "a second axolotl appears, which can be confused with Tlatoāni",
+        "chart sketches on the back wall"
+      ],
+      "homage": "",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/measurements.webp",
+      "image_small": "/images/gallery/measurements-small.webp"
+    },
+    {
+      "id": "narratives-merge",
+      "source": "assets/Narratives Merge.png",
+      "title": "Narratives Merge",
+      "alt": "A pixel-art gothic scene: a red-cloaked, white-haired vampire lord stands beside a tall purple-grey axolotl in a tattered cloak, above dialogue reading 'History abhors a paradox' and 'Narratives merge.'",
+      "description": "Kain warns that history abhors a paradox; Tlatoāni answers that narratives merge. Two histories that diverged can be reconciled instead of one erasing the other.",
+      "characters": [
+        "tlatoani",
+        "other:kain"
+      ],
+      "concepts": [
+        "version-control",
+        "merge",
+        "causality",
+        "history"
+      ],
+      "tags": [
+        "legacy-of-kain",
+        "soul-reaver",
+        "pixel-art",
+        "merge",
+        "history",
+        "paradox",
+        "git"
+      ],
+      "slogan": "Narratives merge.",
+      "text_in_image": "KAIN: History abhors a paradox. TLATOĀNI: Narratives merge.",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "lanky, muscular humanoid legs and torso (§6)",
+        "purple-grey skin, not pink",
+        "dark gothic styling with no cream/teal clothing"
+      ],
+      "homage": "Legacy of Kain: Soul Reaver",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/narratives-merge.webp",
+      "image_small": "/images/gallery/narratives-merge-small.webp"
+    },
+    {
+      "id": "panic-fix-is-in-head",
+      "source": "assets/Panic fix is in HEAD.png",
+      "title": "Panic Fix Is in HEAD",
+      "alt": "A cream robot with an ā on its chest clutches its face in panic beside a terminal showing a context-overflow panic, while Tlatoāni laughs, points, and thinks of the git logo.",
+      "description": "Mācron's run ends in 'panic: context overflow' and it freezes in horror. Tlatoāni is not worried at all: the fix is already committed, so the way back is one git command. Small commits turn panics into jokes.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "version-control",
+        "error-handling",
+        "context-window",
+        "recovery"
+      ],
+      "tags": [
+        "git",
+        "panic",
+        "terminal",
+        "context-overflow",
+        "rust",
+        "commit",
+        "robot",
+        "axolotl"
+      ],
+      "slogan": "The fix is already in HEAD.",
+      "text_in_image": "agent@macron:~/task$ run > analyzing... > processing... > applying changes... > building... ! panic: context overflow ! thread 'main' panicked at 'cannot handle this right now' stack backtrace: ... (lots of noise) ... agent@macron:~/task$ · TOKEN · OBSERVE UNDERSTAND MOVE · The Pragmatic Programmer · Designing Data-Intensive Applications",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "Mācron's eyes are large white circles, not cyan/teal",
+        "Mācron's head is boxy rather than rounded",
+        "Tlatoāni laughing and pointing at Mācron's panic edges toward mockery (§1, §11)",
+        "large feathered headdress in a desk scene"
+      ],
+      "homage": "git; Rust panic messages",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/panic-fix-is-in-head.webp",
+      "image_small": "/images/gallery/panic-fix-is-in-head-small.webp"
+    },
+    {
+      "id": "pass-on-what-you-ve-learned",
+      "source": "assets/Pass on what you've learned.png",
+      "title": "Pass On What You've Learned",
+      "alt": "A green monochrome Metal Gear Solid codec screen with a soldier on the left, Tlatoāni on the right, frequency 140.85, and a message about passing on what you've learned.",
+      "description": "Tlatoāni calls in on the codec with advice: building the future and keeping the past alive are the same thing. Knowledge only survives if someone writes it down for the next one.",
+      "characters": [
+        "tlatoani",
+        "other:solid-snake"
+      ],
+      "concepts": [
+        "documentation",
+        "knowledge-transfer",
+        "memory",
+        "handoff"
+      ],
+      "tags": [
+        "metal-gear-solid",
+        "codec",
+        "documentation",
+        "memory",
+        "handoff",
+        "retro",
+        "axolotl"
+      ],
+      "slogan": "Pass on what you've learned.",
+      "text_in_image": "PTT · 140.85 · MEMORY · Building the future and keeping the past alive are one and the same thing. Pass on what you've learned.",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "monochrome green palette removes pink/cream/teal identity",
+        "copyrighted character (Solid Snake) shares the frame"
+      ],
+      "homage": "Metal Gear Solid",
+      "width": 1382,
+      "height": 1138,
+      "display_width": 1200,
+      "display_height": 988,
+      "image": "/images/gallery/pass-on-what-you-ve-learned.webp",
+      "image_small": "/images/gallery/pass-on-what-you-ve-learned-small.webp"
+    },
+    {
+      "id": "play-the-meta",
+      "source": "assets/Play The Meta.png",
+      "title": "Play the Meta",
+      "alt": "A white round-headed gamer yells at a MOBA game on his monitor, thinking of cheese, while crowned Tlatoāni holds a retro joystick and thinks of a brain made of cheese.",
+      "description": "The gamer is angry about 'cheese' strategies; Tlatoāni, joystick in hand, has turned the cheese into understanding. The rules include the strategies people actually use.",
+      "characters": [
+        "tlatoani",
+        "other:white-roundhead-everyman"
+      ],
+      "concepts": [
+        "meta-strategy",
+        "reward-hacking",
+        "systems-thinking"
+      ],
+      "tags": [
+        "gaming",
+        "moba",
+        "cheese",
+        "meta",
+        "joystick",
+        "axolotl",
+        "comic"
+      ],
+      "slogan": "Play the meta.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni's half-lidded expression reads as smug (§4)",
+        "red/orange zigzag clothing pattern drifts from cream/teal"
+      ],
+      "homage": "League of Legends",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/play-the-meta.webp",
+      "image_small": "/images/gallery/play-the-meta-small.webp"
+    },
+    {
+      "id": "play-the-meta-mario",
+      "source": "assets/Play The Meta - Mario.png",
+      "title": "Play the Meta (Mario)",
+      "alt": "A Super Mario Bros. 3-style World 9 Warp Zone map with numbered pipes 2 through 8 and a pixel purple axolotl standing by pipe 8.",
+      "description": "Tlatoāni found the warp zone and stands by the pipe to world 8. Knowing the shortcuts in a system is part of playing it well.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "shortcuts",
+        "meta-strategy",
+        "games"
+      ],
+      "tags": [
+        "mario",
+        "warp-zone",
+        "pixel-art",
+        "shortcut",
+        "meta",
+        "retro",
+        "axolotl"
+      ],
+      "slogan": "Play the meta.",
+      "text_in_image": "WORLD 9 WARP ZONE! · 2 3 4 5 6 7 8 · WORLD 9 x 6 x26 0031290 · L R",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "purple robe off-palette",
+        "Nintendo IP dominates"
+      ],
+      "homage": "Super Mario Bros. 3",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/play-the-meta-mario.webp",
+      "image_small": "/images/gallery/play-the-meta-mario-small.webp"
+    },
+    {
+      "id": "preserve-accord",
+      "source": "assets/Preserve Accord.png",
+      "title": "Preserve Accord",
+      "alt": "On a dirt road, one small robot drags a spiked roller that breaks the paved path back into rubble while another relaxes on a bench with tea, a confused figure kneels with notes, and crowned Tlatoāni gestures calmly.",
+      "description": "Phase 1 breaks rocks down, phase 2 refines and compacts them, but the phase 1 robot keeps rolling over finished road and undoing it. Tlatoāni's thought bubble shows the intended sequence from rock to road. Agents need to preserve each other's work instead of redoing it.",
+      "characters": [
+        "tlatoani",
+        "macron",
+        "other:white-roundhead-everyman"
+      ],
+      "concepts": [
+        "multi-agent-coordination",
+        "convergence",
+        "idempotence",
+        "pipelines",
+        "append-only"
+      ],
+      "tags": [
+        "agents",
+        "coordination",
+        "road",
+        "phases",
+        "pipeline",
+        "accord",
+        "robots",
+        "axolotl"
+      ],
+      "slogan": "Agents keep undoing each other. Preserve accord.",
+      "text_in_image": "PHASE 1 BREAK DOWN · PHASE 2 REFINE & COMPACT · Agents keep undoing each other. Preserve accord. — Tlatoāni",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "the robots are grey metal and boxy, not cream-shelled with dark screen faces and cyan eyes",
+        "the angry-faced robot drifts from Mācron's friendly face vocabulary"
+      ],
+      "homage": "",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/preserve-accord.webp",
+      "image_small": "/images/gallery/preserve-accord-small.webp",
+      "notes": "Quotes the canon example in §27 directly."
+    },
+    {
+      "id": "pressing-red-button",
+      "source": "assets/Pressing Red Button.png",
+      "title": "Pressing the Red Button",
+      "alt": "A purple axolotl in a cream coat lounges in a retro-futuristic cockpit, eating a chocolate coin and casually pressing a big red button with chocolate wrappers scattered on the floor.",
+      "description": "Tlatoāni presses the big red button with one finger while snacking, completely relaxed. The joke works both ways: it can be confidence earned by preparation, or the moment before an irreversible mistake.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "irreversible-actions",
+        "automation",
+        "token-cost",
+        "approval-gates"
+      ],
+      "tags": [
+        "red-button",
+        "retro-futurism",
+        "cockpit",
+        "chocolate-coins",
+        "deploy",
+        "axolotl"
+      ],
+      "slogan": "Know what the button does.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink"
+      ],
+      "homage": "Retro-futurist space-age cartoons (The Jetsons)",
+      "width": 1597,
+      "height": 985,
+      "display_width": 1200,
+      "display_height": 740,
+      "image": "/images/gallery/pressing-red-button.webp",
+      "image_small": "/images/gallery/pressing-red-button-small.webp"
+    },
+    {
+      "id": "read-the-formation",
+      "source": "assets/Read The Formation.png",
+      "title": "Read the Formation",
+      "alt": "At a packed night football game, a sweating round-headed figure in a hoodie clutches his head while a purple axolotl in a starry robe happily eats a corn dog and nachos.",
+      "description": "The hooded fan stresses over each play; Tlatoāni has read the formation and already knows how it unfolds, so there is time for nachos. Recognizing the structure early beats reacting to every snap.",
+      "characters": [
+        "tlatoani",
+        "other:hoodie-roundhead"
+      ],
+      "concepts": [
+        "pattern-recognition",
+        "systems-thinking",
+        "anticipation"
+      ],
+      "tags": [
+        "football",
+        "stadium",
+        "formation",
+        "patterns",
+        "nachos",
+        "fedora",
+        "axolotl"
+      ],
+      "slogan": "Read the formation, then enjoy the game.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "purple star-pattern robe off-palette",
+        "jersey numbers and ad boards add background text",
+        "busy stadium background competes with the characters"
+      ],
+      "homage": "American football",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/read-the-formation.webp",
+      "image_small": "/images/gallery/read-the-formation-small.webp"
+    },
+    {
+      "id": "read-the-pattern",
+      "source": "assets/Read The Pattern.png",
+      "title": "Read the Pattern",
+      "alt": "In 2D fighting-game pixel art, Chun-Li throws a kick while a muscular tan axolotl in a green feathered warrior costume blocks with a glowing fist.",
+      "description": "Tlatoāni reads the opponent's pattern and meets the kick at the exact moment of impact. A fighting-game homage about recognizing patterns before they land.",
+      "characters": [
+        "tlatoani",
+        "other:chun-li"
+      ],
+      "concepts": [
+        "pattern-recognition",
+        "timing"
+      ],
+      "tags": [
+        "street-fighter",
+        "pixel-art",
+        "fighting-game",
+        "pattern",
+        "retro",
+        "axolotl"
+      ],
+      "slogan": "Read the pattern.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "rejected-candidate",
+      "canon_qa": [
+        "muscular, superhero-like anatomy (§6)",
+        "tan skin instead of pink",
+        "aggressive warrior costume with excessive feathers (§7, §40)",
+        "combat pose contradicts the calm character",
+        "AI-generator sparkle watermark in the bottom-right corner"
+      ],
+      "homage": "Street Fighter",
+      "width": 1365,
+      "height": 768,
+      "display_width": 1200,
+      "display_height": 675,
+      "image": "/images/gallery/read-the-pattern.webp",
+      "image_small": "/images/gallery/read-the-pattern-small.webp"
+    },
+    {
+      "id": "recommend-fedora-trying-on-hat",
+      "source": "assets/Recommend Fedora - Trying on Hat.png",
+      "title": "Recommend Fedora: Trying On a Hat",
+      "alt": "In a warm hat shop, a smiling pink Tlatoāni in a teal tunic tries on a blue fedora, worn on top of a small feathered crown, and admires the reflection in a brass mirror.",
+      "description": "Tlatoāni tries on a fedora and likes what the mirror shows. A gentle nod to recommending Fedora: try it on and see if it fits.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "linux",
+        "tooling",
+        "recommendation"
+      ],
+      "tags": [
+        "fedora",
+        "linux",
+        "hat-shop",
+        "mirror",
+        "recommendation",
+        "axolotl"
+      ],
+      "slogan": "Try it on. See if it fits.",
+      "text_in_image": "HERITAGE ELEGANCE INDIVIDUALITY · The Fedora — TIMELESS STYLE —",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "fedora stacked on top of a feathered crown is visually awkward",
+        "gold sun-face medallions on the tunic (§7)",
+        "wall sign with marketing words (§31)"
+      ],
+      "homage": "Fedora Linux",
+      "width": 1369,
+      "height": 1149,
+      "display_width": 1200,
+      "display_height": 1007,
+      "image": "/images/gallery/recommend-fedora-trying-on-hat.webp",
+      "image_small": "/images/gallery/recommend-fedora-trying-on-hat-small.webp"
+    },
+    {
+      "id": "restaurant-at-the-end-of-the-universe",
+      "source": "assets/Restaurant At The End Of The Universe.png",
+      "title": "The Restaurant at the End of the Universe",
+      "alt": "Tlatoāni drives a white flying sports car through space beside a curly-haired passenger, toward a neon sign for the Restaurant at the End of the Universe.",
+      "description": "Asked whether there is still time for lunch, the answer comes later: 'We did. Eventually.' A joke about time, ordering and eventual consistency, with a 42 mug in the cup holder.",
+      "characters": [
+        "tlatoani",
+        "other:curly-haired-passenger"
+      ],
+      "concepts": [
+        "eventual-consistency",
+        "time",
+        "causality"
+      ],
+      "tags": [
+        "hitchhikers-guide",
+        "space",
+        "road-trip",
+        "42",
+        "eventual-consistency",
+        "axolotl"
+      ],
+      "slogan": "We did. Eventually.",
+      "text_in_image": "Do we still have time for lunch? · RESTAURANT AT THE END OF THE UNIVERSE · NOW SERVING: SPACE-TIME DISCONTINUITY à la CARTESIAN · 42 · We did. Eventually.",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "large feathered headdress in a casual scene",
+        "unidentified human passenger shares the frame"
+      ],
+      "homage": "The Hitchhiker's Guide to the Galaxy",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/restaurant-at-the-end-of-the-universe.webp",
+      "image_small": "/images/gallery/restaurant-at-the-end-of-the-universe-small.webp"
+    },
+    {
+      "id": "sir-isaac-newton-discovers-calculus",
+      "source": "assets/Sir Isaac Newton Discovers Calculus.png",
+      "title": "Sir Isaac Newton Discovers Calculus",
+      "alt": "Isaac Newton stares in astonishment at sketches of areas under curves while a laughing pale-pink Tlatoāni juggles three red apples along a glowing infinity loop.",
+      "description": "Newton is shading areas under a curve; Tlatoāni juggles apples along a loop that never ends. Accumulating many small slices into one result is the core idea of integration.",
+      "characters": [
+        "tlatoani",
+        "other:isaac-newton"
+      ],
+      "concepts": [
+        "calculus",
+        "accumulation",
+        "discovery",
+        "history-of-science"
+      ],
+      "tags": [
+        "newton",
+        "calculus",
+        "integration",
+        "apples",
+        "history",
+        "science",
+        "axolotl"
+      ],
+      "slogan": "Many small slices. One answer.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "ornate gold regalia with sun-face medallions reads as costume (§7)",
+        "Aztec calendar stone and pyramids used as decoration (§7)",
+        "pale lavender-pink body, washed out compared with canon pink"
+      ],
+      "homage": "Isaac Newton",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/sir-isaac-newton-discovers-calculus.webp",
+      "image_small": "/images/gallery/sir-isaac-newton-discovers-calculus-small.webp",
+      "notes": "Original PNG. 'Sir Isaac Newton discovers calculus.png.png' is the same picture re-encoded as JPEG (despite its .png.png name); mean pixel difference ~2/255."
+    },
+    {
+      "id": "sir-isaac-newton-discovers-calculus-png",
+      "source": "assets/Sir Isaac Newton discovers calculus.png.png",
+      "title": "Sir Isaac Newton Discovers Calculus",
+      "alt": "Isaac Newton stares in astonishment at sketches of areas under curves while a laughing pale-pink Tlatoāni juggles three red apples along a glowing infinity loop.",
+      "description": "Newton is shading areas under a curve; Tlatoāni juggles apples along a loop that never ends. Accumulating many small slices into one result is the core idea of integration.",
+      "characters": [
+        "tlatoani",
+        "other:isaac-newton"
+      ],
+      "concepts": [
+        "calculus",
+        "accumulation",
+        "discovery",
+        "history-of-science"
+      ],
+      "tags": [
+        "newton",
+        "calculus",
+        "integration",
+        "apples",
+        "history",
+        "science",
+        "axolotl"
+      ],
+      "slogan": "Many small slices. One answer.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "historical",
+      "canon_qa": [
+        "ornate gold regalia with sun-face medallions reads as costume (§7)",
+        "Aztec calendar stone and pyramids used as decoration (§7)",
+        "pale lavender-pink body, washed out compared with canon pink"
+      ],
+      "homage": "Isaac Newton",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/sir-isaac-newton-discovers-calculus-png.webp",
+      "image_small": "/images/gallery/sir-isaac-newton-discovers-calculus-png-small.webp",
+      "notes": "Duplicate of 'Sir Isaac Newton Discovers Calculus.png': same composition and size, actually JPEG data with a .png.png name (lossy re-encode, mean pixel difference ~2/255). Prefer the PNG original."
+    },
+    {
+      "id": "space-sage",
+      "source": "assets/Space Sage.png",
+      "title": "Space Sage",
+      "alt": "In comic-ink style, a green cyborg elf-like sage in a patchwork robe walks a glyph-paved path with Tlatoāni in bright feathered Mesoamerican dress past stone heads and a futuristic city.",
+      "description": "Two sages from different traditions compare notes on a walk through a garden city. A crossover image about wisdom traditions meeting technology.",
+      "characters": [
+        "tlatoani",
+        "other:cyborg-space-sage"
+      ],
+      "concepts": [
+        "mentorship",
+        "knowledge-transfer"
+      ],
+      "tags": [
+        "sci-fi",
+        "sage",
+        "cyborg",
+        "comic",
+        "crossover",
+        "axolotl"
+      ],
+      "slogan": "Different roads, same direction.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "rejected-candidate",
+      "canon_qa": [
+        "costume cliché: tall multi-colored feather headdress and red/yellow regalia (§7, §40)",
+        "random pseudo-glyphs carved into the path and stone heads (§7, §31)",
+        "AI-generator sparkle watermark in the bottom-right corner",
+        "derivative Yoda-like character"
+      ],
+      "homage": "Star Wars (Yoda)",
+      "width": 1408,
+      "height": 768,
+      "display_width": 1200,
+      "display_height": 655,
+      "image": "/images/gallery/space-sage.webp",
+      "image_small": "/images/gallery/space-sage-small.webp"
+    },
+    {
+      "id": "the-crab-is-right",
+      "source": "assets/The Crab Is Right.png",
+      "title": "The Crab Is Right",
+      "alt": "On a beach crab-race track, a confused cream figure points forward toward the GOAL while a crab scuttles sideways, and a purple axolotl in sunglasses under an umbrella approves the crab.",
+      "description": "The observer expects movement straight toward the goal; the crab moves sideways and is still winning. Tlatoāni, relaxed with sunscreen, gives the crab a check mark. Judge the outcome, not whether the path looks like yours.",
+      "characters": [
+        "tlatoani",
+        "other:cream-roundhead-everyman",
+        "other:crab"
+      ],
+      "concepts": [
+        "convergence",
+        "evaluation",
+        "non-obvious-solutions",
+        "outcome-over-process"
+      ],
+      "tags": [
+        "crab",
+        "race",
+        "beach",
+        "goal",
+        "sideways",
+        "evaluation",
+        "axolotl"
+      ],
+      "slogan": "The crab is right.",
+      "text_in_image": "GOAL · START · CRAB RACE · TLATOĀNI SPF 50+",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "purple robe off-palette"
+      ],
+      "homage": "",
+      "width": 1216,
+      "height": 1294,
+      "display_width": 1128,
+      "display_height": 1200,
+      "image": "/images/gallery/the-crab-is-right.webp",
+      "image_small": "/images/gallery/the-crab-is-right-small.webp"
+    },
+    {
+      "id": "tillandsias-github-app",
+      "source": "assets/Tillandsias GitHub App.png",
+      "title": "Tillandsias GitHub App",
+      "alt": "A flat icon of a white axolotl silhouette seen from behind, with pink gills and a pink-edged tail, on a dark teal circle.",
+      "description": "A minimal app icon for the Tillandsias GitHub App, built from the axolotl silhouette alone. It tests whether the character reads from shape: rounded head, gills, one tail.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "identity",
+        "iconography",
+        "silhouette"
+      ],
+      "tags": [
+        "icon",
+        "logo",
+        "github-app",
+        "tillandsias",
+        "silhouette",
+        "axolotl",
+        "flat-design"
+      ],
+      "slogan": "Silhouette is identity.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "the two upper gill tips read like cat ears at small size (Octocat echo)",
+        "white body rather than pink"
+      ],
+      "homage": "GitHub Octocat silhouette",
+      "width": 1254,
+      "height": 1254,
+      "display_width": 1200,
+      "display_height": 1200,
+      "image": "/images/gallery/tillandsias-github-app.webp",
+      "image_small": "/images/gallery/tillandsias-github-app-small.webp"
+    },
+    {
+      "id": "tlatoani-and-lamport",
+      "source": "assets/Tlatoāni and Lamport.png",
+      "title": "Tlatoāni and Lamport",
+      "alt": "At a sunny table covered in clocks that all show different times, a puzzled pink Tlatoāni points at one clock while a bearded man in glasses and a plaid shirt watches, with message-passing diagrams overhead.",
+      "description": "Every clock on the table disagrees, so Tlatoāni studies them while the man who invented logical clocks waits. Above them, timelines exchange envelopes. Real time cannot order events across machines; the messages between them can.",
+      "characters": [
+        "tlatoani",
+        "other:leslie-lamport"
+      ],
+      "concepts": [
+        "causality",
+        "logical-clocks",
+        "distributed-systems",
+        "happened-before"
+      ],
+      "tags": [
+        "lamport",
+        "clocks",
+        "distributed-systems",
+        "causality",
+        "messages",
+        "time",
+        "axolotl"
+      ],
+      "slogan": "Order comes from messages, not clocks.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "upper gill stalks stand up like horns or ears",
+        "tail not visible, so the one-tail rule cannot be checked"
+      ],
+      "homage": "Leslie Lamport, 'Time, Clocks, and the Ordering of Events' (1978)",
+      "width": 1448,
+      "height": 1086,
+      "display_width": 1200,
+      "display_height": 900,
+      "image": "/images/gallery/tlatoani-and-lamport.webp",
+      "image_small": "/images/gallery/tlatoani-and-lamport-small.webp"
+    },
+    {
+      "id": "tlatoani-appearance-out-of-order",
+      "source": "assets/Tlatoani Appearance -- Out Of Order.png",
+      "title": "Tlatoāni Appearance: Out of Order",
+      "alt": "At sunset, a puzzled white robot with cyan eyes holds a glowing butterfly labeled 10:12 while a swarm of timestamped butterflies forms a big arrow, and crowned Tlatoāni laughs while eating from a jar labeled MOMENTS (NOT ORDERED).",
+      "description": "Moments arrive as butterflies with timestamps in no particular order, yet together they form one clear arrow. Mācron tries to sort them one by one; Tlatoāni enjoys them and sees the direction. Patterns matter more than individual packets.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "event-ordering",
+        "out-of-order-delivery",
+        "causality",
+        "patterns-over-snapshots",
+        "arrows"
+      ],
+      "tags": [
+        "butterflies",
+        "timestamps",
+        "ordering",
+        "events",
+        "arrow",
+        "robot",
+        "axolotl",
+        "sunset"
+      ],
+      "slogan": "Patterns > packets.",
+      "text_in_image": "MOMENTS (NOT ORDERED) · PATTERNS > PACKETS · timestamps on butterflies (e.g. 10:12, 8:05, 12:33, 11:59)",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "Mācron's shell is white/grey rather than warm cream",
+        "Mācron has tall legs and humanoid proportions (§16)",
+        "many timestamp labels are garbled generated text"
+      ],
+      "homage": "",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/tlatoani-appearance-out-of-order.webp",
+      "image_small": "/images/gallery/tlatoani-appearance-out-of-order-small.webp"
+    },
+    {
+      "id": "tlatoani-banner-4",
+      "source": "assets/Tlatoani_banner_4.png",
+      "title": "Tlatoāni Banner",
+      "alt": "A dark banner with the script word Tlatoāni at the center, flanked by two mirrored, realistic pink axolotls lying beside Tillandsia plants, with a faint pyramid stairway behind.",
+      "description": "A naturalistic title banner using real axolotls and air plants rather than the cartoon character. It sets the mood of the name and its roots.",
+      "characters": [
+        "other:realistic-axolotls"
+      ],
+      "concepts": [
+        "identity",
+        "branding"
+      ],
+      "tags": [
+        "banner",
+        "logo",
+        "axolotl",
+        "tillandsia",
+        "pyramid",
+        "typography"
+      ],
+      "slogan": "Tlatoāni.",
+      "text_in_image": "Tlatoāni",
+      "status": "reference",
+      "suggested_status": "historical",
+      "canon_qa": [
+        "realistic zoological axolotls, not the cartoon character (§5 'not a zoology plate')",
+        "the same axolotl duplicated and mirrored",
+        "the script 'Tl' ligature reads like a Greek Π"
+      ],
+      "homage": "",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/tlatoani-banner-4.webp",
+      "image_small": "/images/gallery/tlatoani-banner-4-small.webp"
+    },
+    {
+      "id": "tux-racer-play-the-meta",
+      "source": "assets/Tux Racer __ Play The Meta.png",
+      "title": "Tux Racer: Play the Meta",
+      "alt": "A kart-racing screen where a purple axolotl in a dark hooded cloak drives a kart holding a red shell, chasing Tux the penguin toward a TUX RACE banner on an icy track.",
+      "description": "Lap 3 of 3, second place, red shell in hand. Tlatoāni races against open-source mascots and knows exactly when to use the item.",
+      "characters": [
+        "tlatoani",
+        "other:tux",
+        "other:open-source-mascots"
+      ],
+      "concepts": [
+        "meta-strategy",
+        "open-source",
+        "games"
+      ],
+      "tags": [
+        "tux",
+        "kart-racing",
+        "linux",
+        "open-source",
+        "meta",
+        "retro",
+        "axolotl"
+      ],
+      "slogan": "Play the meta. Save the shell for the last lap.",
+      "text_in_image": "LAP 3/3 · TUX RACE · Tux · Tlatoāni · Ada · Gnu · Beagle · Pidgin · Hexley · Wilber",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "dark hooded cloak instead of cream/teal clothing",
+        "low resolution (754×501)"
+      ],
+      "homage": "Tux Racer / Mario Kart",
+      "width": 754,
+      "height": 501,
+      "display_width": 754,
+      "display_height": 501,
+      "image": "/images/gallery/tux-racer-play-the-meta.webp",
+      "image_small": "/images/gallery/tux-racer-play-the-meta-small.webp"
+    },
+    {
+      "id": "understand-movement",
+      "source": "assets/Understand Movement.png",
+      "title": "Understand Movement",
+      "alt": "A white round-headed figure kneels with a ruler to measure one deep hoofprint while crowned Tlatoāni stands calmly beside a long trail of prints, thinking of a route map with arrows.",
+      "description": "One figure measures a single footprint and still cannot picture the animal; Tlatoāni looks at the whole trail and sees where it came from and where it is going. A snapshot gives you a measurement; the trail gives you movement.",
+      "characters": [
+        "tlatoani",
+        "other:white-roundhead-everyman"
+      ],
+      "concepts": [
+        "traces",
+        "observability",
+        "patterns-over-snapshots",
+        "causality",
+        "arrows"
+      ],
+      "tags": [
+        "footprints",
+        "trail",
+        "tracking",
+        "traces",
+        "snapshots",
+        "axolotl",
+        "observability"
+      ],
+      "slogan": "Understand movement.",
+      "text_in_image": "Understand movement. – Tlatoāni.",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [],
+      "homage": "",
+      "width": 1536,
+      "height": 1024,
+      "display_width": 1200,
+      "display_height": 800,
+      "image": "/images/gallery/understand-movement.webp",
+      "image_small": "/images/gallery/understand-movement-small.webp",
+      "notes": "Pairs with 'Preserve Accord' (same style, layout and caption treatment)."
+    },
+    {
+      "id": "viberush-promptgood",
+      "source": "assets/Viberush Promptgood.png",
+      "title": "Viberush Promptgood",
+      "alt": "A pixel-art sword duel at sunset on a San Diego shore: a blond pirate lunges with a cutlass at Tlatoāni in a purple robe holding a rapier, with dialogue below.",
+      "description": "An insult-swordfight homage: Viberush Promptgood mocks that Tlatoāni's agents defeat themselves, and Tlatoāni agrees, because that is how they refine accord. Disagreement between agents is a feature when it converges.",
+      "characters": [
+        "tlatoani",
+        "other:viberush-promptgood"
+      ],
+      "concepts": [
+        "convergence",
+        "multi-agent-coordination",
+        "vibe-coding",
+        "review"
+      ],
+      "tags": [
+        "monkey-island",
+        "pixel-art",
+        "sword-fight",
+        "vibe-coding",
+        "agents",
+        "accord",
+        "san-diego"
+      ],
+      "slogan": "Yes. They refine accord.",
+      "text_in_image": "Viberush Promptgood: Even your agents defeat themselves! Tlatoāni: Yes. They refine accord.",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "purple robe instead of cream/teal",
+        "upper gill stalks stand up like ears",
+        "weapon in hand (parody, but still a sword)"
+      ],
+      "homage": "The Secret of Monkey Island",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/viberush-promptgood.webp",
+      "image_small": "/images/gallery/viberush-promptgood-small.webp"
+    },
+    {
+      "id": "what-we-do-in-life-echoes-in-eternity",
+      "source": "assets/What we do in life echoes in eternity.png",
+      "title": "What We Do in Life Echoes in Eternity",
+      "alt": "Tlatoāni in a feathered headband, fur mantle and ornate armor rides a dark horse through a redwood forest beside the quote 'What we do in life echoes in eternity.'",
+      "description": "Tlatoāni as a Gladiator-style general looking ahead with a determined expression. Choices made now persist long after; in a repository, every commit echoes.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "consequences",
+        "legacy",
+        "long-term-thinking"
+      ],
+      "tags": [
+        "gladiator",
+        "quote",
+        "horse",
+        "forest",
+        "armor",
+        "legacy",
+        "axolotl"
+      ],
+      "slogan": "What we do in life echoes in eternity.",
+      "text_in_image": "“What we do in life echoes in eternity.”",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "military armor and fur mantle: aggressive warrior styling (§40)",
+        "stern, frowning expression rather than calm",
+        "feathered headband with sun-face plaque"
+      ],
+      "homage": "Gladiator",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/what-we-do-in-life-echoes-in-eternity.webp",
+      "image_small": "/images/gallery/what-we-do-in-life-echoes-in-eternity-small.webp"
+    },
+    {
+      "id": "what-we-do-in-life-echoes-in-eternity-2",
+      "source": "assets/What we do in life echoes in eternity __ 2.png",
+      "title": "What We Do in Life Echoes in Eternity (2)",
+      "alt": "A smiling pink Tlatoāni in a fur mantle and ornate armor rides a dark horse through a redwood forest beside the quote 'What we do in life echoes in eternity.'",
+      "description": "A second, friendlier take on the Gladiator homage: same armor and horse, but a calm smile and no headdress. Choices made now persist long after.",
+      "characters": [
+        "tlatoani"
+      ],
+      "concepts": [
+        "consequences",
+        "legacy",
+        "long-term-thinking"
+      ],
+      "tags": [
+        "gladiator",
+        "quote",
+        "horse",
+        "forest",
+        "armor",
+        "legacy",
+        "axolotl"
+      ],
+      "slogan": "What we do in life echoes in eternity.",
+      "text_in_image": "“What we do in life echoes in eternity”",
+      "status": "reference",
+      "suggested_status": "exploratory",
+      "canon_qa": [
+        "military armor and fur mantle: aggressive warrior styling (§40)",
+        "no cream/teal clothing language"
+      ],
+      "homage": "Gladiator",
+      "width": 1254,
+      "height": 1254,
+      "display_width": 1200,
+      "display_height": 1200,
+      "image": "/images/gallery/what-we-do-in-life-echoes-in-eternity-2.webp",
+      "image_small": "/images/gallery/what-we-do-in-life-echoes-in-eternity-2-small.webp",
+      "notes": "Alternate version of 'What we do in life echoes in eternity.png'."
+    },
+    {
+      "id": "young-tlatoani-learns-robotic-laws",
+      "source": "assets/Young Tlatoāni Learns Robotic Laws.png",
+      "title": "Young Tlatoāni Learns the Laws of Robotics",
+      "alt": "An older man with gray sideburns and glasses walks through a library beside a young purple Tlatoāni holding a book, whose speech bubble shows '3 rulers + ruler [0]' next to a chalkboard of the Three Laws of Robotics.",
+      "description": "Young Tlatoāni learns about the Three Laws from the author, and repeats them back as three rulers plus a zeroth. Rules for robots are only useful if they can be measured and checked.",
+      "characters": [
+        "tlatoani",
+        "other:isaac-asimov"
+      ],
+      "concepts": [
+        "guardrails",
+        "rules",
+        "measurement",
+        "ai-safety"
+      ],
+      "tags": [
+        "asimov",
+        "three-laws",
+        "robotics",
+        "library",
+        "rules",
+        "guardrails",
+        "axolotl"
+      ],
+      "slogan": "Three rules, plus the zeroth.",
+      "text_in_image": "I, ROBOT 1950 · The Three Laws of Robotics 1 2 3 · Runaround 1942 · 3 + [0]",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Tlatoāni is purple instead of pink",
+        "dark purple hooded robe instead of cream/teal",
+        "young/childlike proportions (deliberate here, but close to §6 'baby mascot')"
+      ],
+      "homage": "Isaac Asimov, I, Robot and the Three Laws of Robotics",
+      "width": 1402,
+      "height": 1122,
+      "display_width": 1200,
+      "display_height": 960,
+      "image": "/images/gallery/young-tlatoani-learns-robotic-laws.webp",
+      "image_small": "/images/gallery/young-tlatoani-learns-robotic-laws-small.webp"
+    }
+  ]
+}

@@ -29,7 +29,24 @@ timer.
 Every strip SHALL ship with a text transcript, so its content does not depend
 on the art or the animation.
 
-### Requirement: No comic before the art guidelines
+### Requirement: Comics follow the character canon
 
-No comic SHALL be drawn until the Visual Story theme and the art guidelines
-exist.
+The art guidelines are the character canon,
+`assets/Tlatoāni + Mācron cannon guidelines.md`. Every strip SHALL follow it,
+and SHALL pass its Visual QA and Scene QA checklists (§45–47). Generated art
+SHALL stay `reference` until a human promotes it (§42–44).
+
+### Requirement: Episodes are distilled from lessons
+
+Each episode SHALL retell one lesson from `public/lessons/`, preferring the
+highest-ranked ones, and SHALL link back to it. An episode is scripted first,
+panel by panel, in `plan/comics-backlog.yaml` (`lesson`, `panels`, and a
+`punchline` that lands on the second read). Any agent with an image tool can
+then draw a scripted episode. The lesson's dialogue lines are a starting
+point, not a constraint.
+
+#### Scenario: A lesson rises to the top
+
+- WHEN a lesson's rank puts it among the top lessons and no episode retells it
+- THEN an agent adds a scripted episode for it to the backlog, and a later
+  agent with an image tool draws it.

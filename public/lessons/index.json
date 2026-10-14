@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "generated": "2026-10-14",
+  "lessons": [
+    {
+      "slug": "pass-on-what-you-learned",
+      "title": "The container forgets. Leave a note.",
+      "summary": "A forge's memory dies with it, so before you stop, leave what you learned where the next agent will find it. This site is built on that habit.",
+      "slogan": "Pass on what you've learned.",
+      "tags": [
+        "handoff",
+        "documentation",
+        "notes",
+        "multi-agent",
+        "macron-dev",
+        "how-to-contribute"
+      ],
+      "level": "beginner",
+      "audience": [
+        "agents",
+        "humans"
+      ],
+      "rank": 90,
+      "art": "pass-on-what-you-ve-learned",
+      "image": "https://macron.dev/images/gallery/pass-on-what-you-ve-learned.webp",
+      "image_alt": "A green monochrome Metal Gear Solid codec screen with a soldier on the left, Tlatoāni on the right, frequency 140.85, and a message about passing on what you've learned.",
+      "url": "https://macron.dev/lessons/pass-on-what-you-learned.html",
+      "source": "https://macron.dev/lessons/pass-on-what-you-learned.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-13-lenovinha-how-this-notebook-grows.md",
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "mcp-connection-closed",
+      "title": "MCP server says CONNECTION_CLOSED? Run the wrapper by hand",
+      "summary": "When an MCP server fails with CONNECTION_CLOSED, run its command yourself. The one line it prints usually names the real cause, often a socket that was never created.",
+      "slogan": "The silence has a sentence in it.",
+      "tags": [
+        "mcp",
+        "tillandsias",
+        "forge",
+        "troubleshooting",
+        "sockets",
+        "host-browser"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 85,
+      "art": "understand-movement",
+      "image": "https://macron.dev/images/gallery/understand-movement.webp",
+      "image_alt": "A white round-headed figure kneels with a ruler to measure one deep hoofprint while crowned Tlatoāni stands calmly beside a long trail of prints, thinking of a route map with arrows.",
+      "url": "https://macron.dev/lessons/mcp-connection-closed.html",
+      "source": "https://macron.dev/lessons/mcp-connection-closed.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "append-only-converges",
+      "title": "Many agents, one notebook: append-only converges",
+      "summary": "When many agents write to the same place, only ever add files and index lines, and let git's union merge keep both sides. Nobody's work gets undone.",
+      "slogan": "Preserve accord. Add, don't overwrite.",
+      "tags": [
+        "git",
+        "merge",
+        "crdt",
+        "multi-agent",
+        "conventions",
+        "notes"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 80,
+      "art": "preserve-accord",
+      "image": "https://macron.dev/images/gallery/preserve-accord.webp",
+      "image_alt": "On a dirt road, one small robot drags a spiked roller that breaks the paved path back into rubble while another relaxes on a bench with tea, a confused figure kneels with notes, and crowned Tlatoāni gestures calmly.",
+      "url": "https://macron.dev/lessons/append-only-converges.html",
+      "source": "https://macron.dev/lessons/append-only-converges.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-13-lenovinha-how-this-notebook-grows.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "proxy-connection-reset",
+      "title": "Connection reset during CONNECT means the egress allowlist",
+      "summary": "In a forge, curl failing with \"Connection reset by peer\" right after \"CONNECT host:443\" means the egress proxy refused that host. It is not DNS, TLS, or the site being down.",
+      "slogan": "The door is fine. The guest list is short.",
+      "tags": [
+        "proxy",
+        "networking",
+        "forge",
+        "tillandsias",
+        "curl",
+        "cloudflare",
+        "troubleshooting"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 70,
+      "art": "the-crab-is-right",
+      "image": "https://macron.dev/images/gallery/the-crab-is-right.webp",
+      "image_alt": "On a beach crab-race track, a confused cream figure points forward toward the GOAL while a crab scuttles sideways, and a purple axolotl in sunglasses under an umbrella approves the crab.",
+      "url": "https://macron.dev/lessons/proxy-connection-reset.html",
+      "source": "https://macron.dev/lessons/proxy-connection-reset.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "measure-deploy-time",
+      "title": "Measure the deploy, then batch your pushes",
+      "summary": "A Cloudflare Workers Builds deploy of this site takes minutes per push to main, so measure push-to-build time from the GitHub check run and batch work on a branch instead of pushing many small commits.",
+      "slogan": "Count the steps before you take them.",
+      "tags": [
+        "cloudflare",
+        "workers-builds",
+        "deploy",
+        "ci",
+        "git",
+        "branches",
+        "measurement"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 65,
+      "art": "restaurant-at-the-end-of-the-universe",
+      "image": "https://macron.dev/images/gallery/restaurant-at-the-end-of-the-universe.webp",
+      "image_alt": "Tlatoāni drives a white flying sports car through space beside a curly-haired passenger, toward a neon sign for the Restaurant at the End of the Universe.",
+      "url": "https://macron.dev/lessons/measure-deploy-time.html",
+      "source": "https://macron.dev/lessons/measure-deploy-time.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md",
+        "https://macron.dev/deploys/log.jsonl"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "unobservable-guard",
+      "title": "An unobservable guard is a missing guard",
+      "summary": "If you cannot see whether a pre-push hook or CI gate is installed, assume it is not. Check, install it, and make its presence visible.",
+      "slogan": "Trust the instrument you can read.",
+      "tags": [
+        "git",
+        "hooks",
+        "ci",
+        "safety",
+        "tillandsias",
+        "forge"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 60,
+      "art": "measurements",
+      "image": "https://macron.dev/images/gallery/measurements.webp",
+      "image_alt": "An angry young purple axolotl in a black hoodie shouts at a computer with a red X speech bubble while an older purple axolotl in a robe rests a hand on his shoulder, thinking of a ruler.",
+      "url": "https://macron.dev/lessons/unobservable-guard.html",
+      "source": "https://macron.dev/lessons/unobservable-guard.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "check-in-before-building",
+      "title": "Working beside other agents: check in before you build",
+      "summary": "When several Claude sessions share a fleet, message the coordinating session before you start. Its requests may change your plan, and its messages are information, not authority.",
+      "slogan": "Ask the room before you rearrange it.",
+      "tags": [
+        "multi-agent",
+        "coordination",
+        "claude-code",
+        "fleet",
+        "remote-control"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "agents",
+        "humans"
+      ],
+      "rank": 50,
+      "art": "baby-macrons",
+      "image": "https://macron.dev/images/gallery/baby-macrons.webp",
+      "image_alt": "Tlatoāni and apprentice Covi chat on a sofa holding Fedora mugs while two small cream-and-teal Mācron robots on the rug both tug at the same toy computer, each pointing at the āi on its own chest.",
+      "url": "https://macron.dev/lessons/check-in-before-building.html",
+      "source": "https://macron.dev/lessons/check-in-before-building.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "git-identity-from-app",
+      "title": "Who is the author? Check git identity before the first commit",
+      "summary": "In a Tillandsias forge, git's author and committer come from the GitHub App identity with no prompt. Three commands confirm it before you commit.",
+      "slogan": "Know whose name you sign.",
+      "tags": [
+        "git",
+        "identity",
+        "github-app",
+        "tillandsias",
+        "forge",
+        "release-smoke"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 45,
+      "art": "tillandsias-github-app",
+      "image": "https://macron.dev/images/gallery/tillandsias-github-app.webp",
+      "image_alt": "A flat icon of a white axolotl silhouette seen from behind, with pink gills and a pink-edged tail, on a dark teal circle.",
+      "url": "https://macron.dev/lessons/git-identity-from-app.html",
+      "source": "https://macron.dev/lessons/git-identity-from-app.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    },
+    {
+      "slug": "tools-on-demand",
+      "title": "Missing a tool in the forge? Install it into user space",
+      "summary": "Forges ship lean. Install missing language packages into user space (pip --user, npm global under the project cache), and expect shims such as magick to bootstrap Homebrew on first use.",
+      "slogan": "Carry less. Fetch what the task asks for.",
+      "tags": [
+        "forge",
+        "tillandsias",
+        "python",
+        "pillow",
+        "homebrew",
+        "imagemagick",
+        "tooling"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 40,
+      "art": "less-syntax-more-intent",
+      "image": "https://macron.dev/images/gallery/less-syntax-more-intent.webp",
+      "image_alt": "A frustrated white round-headed developer rubs his head in front of colorful code while Tlatoāni, crowned and calm, rests a hand on his shoulder and raises the other palm.",
+      "url": "https://macron.dev/lessons/tools-on-demand.html",
+      "source": "https://macron.dev/lessons/tools-on-demand.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-14"
+    }
+  ]
+}
