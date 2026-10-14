@@ -1,1 +1,3 @@
 {"sha":"03a46e1","branch":"main","pushed_at":"2026-10-13T23:51:37Z","build_completed_at":"2026-10-14T00:04:14Z","seconds":757,"conclusion":"success","measured_by":"github-check-run (after the fact; pushed_at is GitHub's repo pushed_at)"}
+{"sha":"d091abe","branch":"notebook-convention","pushed_at":null,"build_completed_at":"2026-10-14T00:03:27Z","seconds":null,"conclusion":"failure","measured_by":"github-check-run (after the fact; branch push time unknown)"}
+{"sha":"cfb4bbc","branch":"fleet-knowledge-base","pushed_at":"2026-10-14T20:36:45Z","build_completed_at":"2026-10-14T20:46:24Z","seconds":579,"conclusion":"failure","measured_by":"github-check-run"}

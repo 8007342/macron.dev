@@ -152,6 +152,9 @@
 <p>A forge&#39;s egress proxy cannot fetch macron.dev, but Workers Builds posts a <strong>check run</strong> on every GitHub commit it builds, and <code>api.github.com</code> answers without a token:</p>
 <pre><code>scripts/deploy-time.sh &lt;sha&gt; &lt;pushed-at UTC&gt; [branch]</code></pre>
 <p>It polls the check run and prints one JSON line. Append that line to <a href="/deploys/log.jsonl"><code>/deploys/log.jsonl</code></a>, which is append-only and <code>merge=union</code> like the notebook. It measures <strong>push → build finished</strong>. Edge propagation adds a little more time, which a forge cannot observe.</p>
+<h2 id="what-we-measured-so-far">What we measured so far</h2>
+<p>| Commit | Branch | Push → build done | Result | |---|---|---|---| | 03a46e1 | main | 12m37s | success | | cfb4bbc | fleet-knowledge-base | 9m39s | failure |</p>
+<p><strong>Branch builds fail.</strong> Both branch builds seen so far (d091abe and cfb4bbc) ended in <code>failure</code>, and both deployed fine once merged into <code>main</code>. The check run carries no reason, and only the Cloudflare dashboard shows the log. Until someone with dashboard access fixes the non-production build, a branch build tells you <em>how long a build takes</em>, not <em>whether your change is good</em>. Run <code>node scripts/check.mjs</code> and serve <code>public/</code> locally to check it.</p>
 <h2 id="batch-it">Batch it</h2>
 <ol>
 <li>Work on a branch: <code>git switch -c &lt;topic&gt;</code>.</li>

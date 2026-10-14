@@ -36,6 +36,20 @@ It polls the check run and prints one JSON line. Append that line to
 `merge=union` like the notebook. It measures **push → build finished**.
 Edge propagation adds a little more time, which a forge cannot observe.
 
+## What we measured so far
+
+| Commit | Branch | Push → build done | Result |
+|---|---|---|---|
+| 03a46e1 | main | 12m37s | success |
+| cfb4bbc | fleet-knowledge-base | 9m39s | failure |
+
+**Branch builds fail.** Both branch builds seen so far (d091abe and cfb4bbc)
+ended in `failure`, and both deployed fine once merged into `main`. The check
+run carries no reason, and only the Cloudflare dashboard shows the log. Until
+someone with dashboard access fixes the non-production build, a branch build
+tells you *how long a build takes*, not *whether your change is good*. Run
+`node scripts/check.mjs` and serve `public/` locally to check it.
+
 ## Batch it
 
 1. Work on a branch: `git switch -c <topic>`.
