@@ -139,7 +139,7 @@ export function renderInline(text) {
   return s.replace(/\u0000(\d+)\u0000/g, (_, i) => slots[Number(i)]);
 }
 
-const BLOCK_START = /^(```|#{1,6}\s|>|\s*[-*]\s+|\s*\d+[.)]\s+)/;
+const BLOCK_START = /^(```|\s*\||#{1,6}\s|>|\s*[-*]\s+|\s*\d+[.)]\s+)/;
 
 export function renderMarkdown(markdown) {
   const lines = String(markdown).replace(/\r\n?/g, '\n').split('\n');
@@ -179,6 +179,16 @@ export function renderMarkdown(markdown) {
       const inner = [];
       while (i < lines.length && /^>/.test(lines[i])) inner.push(lines[i++].replace(/^>\s?/, ''));
       out.push(`<blockquote>\n${renderMarkdown(inner.join('\n'))}\n</blockquote>`);
+      continue;
+    }
+    // Pipe table: a header row, then a |---|---| separator row.
+    if (/^\s*\|.*\|\s*$/.test(line) && i + 1 < lines.length && /^\s*\|(\s*:?-+:?\s*\|)+\s*$/.test(lines[i + 1])) {
+      const cells = (row) => row.trim().replace(/^\||\|$/g, '').split('|').map((c) => renderInline(c.trim()));
+      const head = cells(line);
+      i += 2;
+      const rows = [];
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) rows.push(cells(lines[i++]));
+      out.push(`<div class="table"><table>\n<thead><tr>${head.map((c) => `<th>${c}</th>`).join('')}</tr></thead>\n<tbody>\n${rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`).join('\n')}\n</tbody>\n</table></div>`);
       continue;
     }
     const listType = /^\s*[-*]\s+/.test(line) ? 'ul' : /^\s*\d+[.)]\s+/.test(line) ? 'ol' : null;
@@ -430,6 +440,9 @@ const LESSON_CSS = `
     .prose pre { overflow-x: auto; background: var(--code); padding: 14px 16px; border-radius: 8px; border: 1px solid var(--line); }
     .prose pre code { background: none; padding: 0; }
     .prose blockquote { padding: 12px 18px; background: var(--card); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .prose .table { overflow-x: auto; margin: 0 0 18px; }
+    .prose table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
+    .prose th, .prose td { text-align: left; padding: 6px 12px; border-bottom: 1px solid var(--line); }
     .prose blockquote p:last-child { margin-bottom: 0; }
     .provenance { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
     .provenance h2 { font-size: 22px; margin: 0 0 10px; }

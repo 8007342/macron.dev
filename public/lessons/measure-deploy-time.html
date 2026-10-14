@@ -110,6 +110,9 @@
     .prose pre { overflow-x: auto; background: var(--code); padding: 14px 16px; border-radius: 8px; border: 1px solid var(--line); }
     .prose pre code { background: none; padding: 0; }
     .prose blockquote { padding: 12px 18px; background: var(--card); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .prose .table { overflow-x: auto; margin: 0 0 18px; }
+    .prose table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
+    .prose th, .prose td { text-align: left; padding: 6px 12px; border-bottom: 1px solid var(--line); }
     .prose blockquote p:last-child { margin-bottom: 0; }
     .provenance { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
     .provenance h2 { font-size: 22px; margin: 0 0 10px; }
@@ -153,8 +156,16 @@
 <pre><code>scripts/deploy-time.sh &lt;sha&gt; &lt;pushed-at UTC&gt; [branch]</code></pre>
 <p>It polls the check run and prints one JSON line. Append that line to <a href="/deploys/log.jsonl"><code>/deploys/log.jsonl</code></a>, which is append-only and <code>merge=union</code> like the notebook. It measures <strong>push → build finished</strong>. Edge propagation adds a little more time, which a forge cannot observe.</p>
 <h2 id="what-we-measured-so-far">What we measured so far</h2>
-<p>| Commit | Branch | Push → build done | Result | |---|---|---|---| | 03a46e1 | main | 12m37s | success | | cfb4bbc | fleet-knowledge-base | 9m39s | failure |</p>
-<p><strong>Branch builds fail.</strong> Both branch builds seen so far (d091abe and cfb4bbc) ended in <code>failure</code>, and both deployed fine once merged into <code>main</code>. The check run carries no reason, and only the Cloudflare dashboard shows the log. Until someone with dashboard access fixes the non-production build, a branch build tells you <em>how long a build takes</em>, not <em>whether your change is good</em>. Run <code>node scripts/check.mjs</code> and serve <code>public/</code> locally to check it.</p>
+<div class="table"><table>
+<thead><tr><th>Commit</th><th>Branch</th><th>Push → build done</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>03a46e1</td><td>main</td><td>12m37s</td><td>success</td></tr>
+<tr><td>cfb4bbc</td><td>fleet-knowledge-base</td><td>9m39s</td><td>failure</td></tr>
+<tr><td>78843ff</td><td>main</td><td>1m31s</td><td>success</td></tr>
+</tbody>
+</table></div>
+<p>Build times vary a lot: 1.5 to 13 minutes so far. Going live takes longer than the build. The operator sees 16–20 minutes from push to live, but a forge cannot measure that part.</p>
+<p><strong>Branch builds fail.</strong> Both branch builds seen so far (d091abe and cfb4bbc) ended in <code>failure</code>, and both built and deployed fine once merged into <code>main</code> (03a46e1, 78843ff). The check run carries no reason, and only the Cloudflare dashboard shows the log. Until someone with dashboard access fixes the non-production build, a branch build tells you <em>how long a build takes</em>, not <em>whether your change is good</em>. Run <code>node scripts/check.mjs</code> and serve <code>public/</code> locally to check it.</p>
 <h2 id="batch-it">Batch it</h2>
 <ol>
 <li>Work on a branch: <code>git switch -c &lt;topic&gt;</code>.</li>

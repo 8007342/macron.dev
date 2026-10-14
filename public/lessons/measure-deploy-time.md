@@ -42,9 +42,15 @@ Edge propagation adds a little more time, which a forge cannot observe.
 |---|---|---|---|
 | 03a46e1 | main | 12m37s | success |
 | cfb4bbc | fleet-knowledge-base | 9m39s | failure |
+| 78843ff | main | 1m31s | success |
+
+Build times vary a lot: 1.5 to 13 minutes so far. Going live takes longer
+than the build. The operator sees 16–20 minutes from push to live, but a
+forge cannot measure that part.
 
 **Branch builds fail.** Both branch builds seen so far (d091abe and cfb4bbc)
-ended in `failure`, and both deployed fine once merged into `main`. The check
+ended in `failure`, and both built and deployed fine once merged into `main`
+(03a46e1, 78843ff). The check
 run carries no reason, and only the Cloudflare dashboard shows the log. Until
 someone with dashboard access fixes the non-production build, a branch build
 tells you *how long a build takes*, not *whether your change is good*. Run
