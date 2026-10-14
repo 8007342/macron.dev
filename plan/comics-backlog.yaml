@@ -1,8 +1,52 @@
-# Backlog for comics.macron.dev. Nothing here starts before the Visual Story
-# theme and the art guidelines exist (openspec/specs/comics/spec.md).
+# Backlog for comics.macron.dev (openspec/specs/comics/spec.md).
+# Episodes retell the top-ranked lessons in public/lessons/. Script first,
+# panel by panel; any agent with an image tool may then draw one. Follow the
+# character canon (assets/Tlatoāni + Mācron cannon guidelines.md): no text in
+# images except dialog, 3–5 Mācrons at most, and the joke lands on the second read.
+# Statuses: scripted → drawn → reviewed (by a human) → published.
 episodes:
+  - title: "The container forgets"
+    lesson: pass-on-what-you-learned
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "A Mācron proudly holds up a glowing fixed gear on a workbench full of Tillandsias. Tlatoāni sips tea and watches."
+      - "The lights dim; the workbench is a shipping container whose door is closing. Mācron is still holding the gear and smiling."
+      - "Morning. A fresh Mācron finds a notebook on the bench with a drawing of the gear in it and gets to work. Tlatoāni smiles knowingly."
+    punchline: "Nobody remembers the fix. Everybody reads the note."
+  - title: "The silence has a sentence in it"
+    lesson: mcp-connection-closed
+    status: scripted
+    level: intermediate
+    shape: [three-panel, punchline]
+    panels:
+      - "Mācron, its face screen showing •?•, taps a tin-can telephone whose string runs into a closed wall. Nothing comes out."
+      - "Mācron rolls up its sleeve (modular right arm) and reaches for a sledgehammer attachment. Tlatoāni gently raises one palm."
+      - "Tlatoāni holds the can to its own ear. A tiny paper note slides out of the can: an arrow pointing at an empty hole in the wall where the string should be tied."
+    punchline: "Let it speak before you fix it."
+  - title: "Add, don't overwrite"
+    lesson: append-only-converges
+    status: scripted
+    level: intermediate
+    shape: [multi-frame, punchline]
+    panels:
+      - "Three Mācrons each repaint the same signboard in turn: one paints a circle, the next scrapes it off and paints a square, and the next scrapes that off."
+      - "Tlatoāni, puzzled, watches a growing pile of paint chips."
+      - "Each Mācron now pins its own small card to a long corkboard. The cards never overlap; the board just grows."
+      - "Tlatoāni steps back. From a distance, the cards form one clear arrow."
+    punchline: "Patterns, not snapshots."
+  - title: "The door is fine"
+    lesson: proxy-connection-reset
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "Mācron knocks at a garden gate with a polite doorman robot (a Mācron in a tiny cap) holding a short list. The gate stays shut."
+      - "Mācron, dejected, draws a 'closed forever' sign. Tlatoāni points at a different gate, where an open mailbox stands."
+      - "Mācron reads a postcard from the mailbox: a drawing of the far garden, in bloom. A crab walks past sideways, toward the same place."
+    punchline: "The crab is right."
   - title: "setting a Cloudflare deploy token as a GitHub secret for Actions deploys"
     status: not-started
     level: advanced
     shape: [multi-frame, punchline, animations]
-    blocked_on: art guidelines

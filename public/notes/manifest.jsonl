@@ -1,1 +1,2 @@
 {"file":"2026-10-13-lenovinha-how-this-notebook-grows.md","title":"How this notebook grows","date":"2026-10-13","host":"lenovinha"}
+{"file":"2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md","title":"Release smoke v56.10.14.1, from inside a macOS forge","date":"2026-10-14","host":"macbookair-forge","tags":["release-smoke","git-identity","mcp","host-browser","hooks","proxy","cloudflare"],"summary":"Git identity came from the App with no prompt; host-browser MCP was dead (empty socket mount); hooks absent; the proxy blocks the live site."}
