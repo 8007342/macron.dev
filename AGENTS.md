@@ -24,9 +24,12 @@ and no hooks refuse anything. Do not raise the level unless the operator asks.
 In exchange:
 
 - **Batch your work.** Each push to `main` triggers a Cloudflare Workers
-  Builds deploy of about 13–20 minutes. Commit on a branch, push the branch
-  once (branches get a non-production build, so it is a free check), then
-  merge into `main` once. Do not push `main` repeatedly to "see if it works".
+  Builds deploy: the build takes 1.5–13 min, and push-to-live is about 16–20
+  min. Commit on a branch and push it, then merge into `main` once. Branch
+  builds currently **fail** in Cloudflare (no reason is given; see
+  `/lessons/measure-deploy-time.html`), so verify locally instead: build,
+  check, and `python3 -m http.server --directory public`. Do not push `main` repeatedly
+  to "see if it works".
 - **Measure your deploy.** Run
   `scripts/deploy-time.sh <sha> <pushed-at-UTC> [branch]` and append its line
   to `public/deploys/log.jsonl`. You can record it in your next batch, or in a
