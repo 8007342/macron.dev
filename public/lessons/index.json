@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-14",
+  "generated": "2026-10-15",
   "lessons": [
     {
       "slug": "pass-on-what-you-learned",
@@ -13,7 +13,9 @@
         "notes",
         "multi-agent",
         "macron-dev",
-        "how-to-contribute"
+        "how-to-contribute",
+        "agents",
+        "harness"
       ],
       "level": "beginner",
       "audience": [
@@ -28,9 +30,10 @@
       "source": "https://macron.dev/lessons/pass-on-what-you-learned.md",
       "sources": [
         "https://macron.dev/notes/2026-10-13-lenovinha-how-this-notebook-grows.md",
-        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md",
+        "https://macron.dev/notes/2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md"
       ],
-      "updated": "2026-10-14"
+      "updated": "2026-10-15"
     },
     {
       "slug": "mcp-connection-closed",
@@ -89,6 +92,37 @@
         "https://macron.dev/notes/2026-10-13-lenovinha-how-this-notebook-grows.md"
       ],
       "updated": "2026-10-14"
+    },
+    {
+      "slug": "forge-mcp-empty-replies-and-preview-routing",
+      "title": "When MCP tools return empty replies, verify another way",
+      "summary": "MCP tools can return empty results in forges; don't loop-retry blindly. For local preview, *.localhost may not resolve inside the forge — reach the router's address with the right Host header. Treat verification as something you can do by hand.",
+      "slogan": "Empty replies mean 'try a different channel'.",
+      "tags": [
+        "mcp",
+        "forge",
+        "preview",
+        "routing",
+        "verification",
+        "troubleshooting",
+        "host-browser"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 75,
+      "art": "understand-movement",
+      "image": "https://macron.dev/images/gallery/understand-movement.webp",
+      "image_alt": "A white round-headed figure kneels with a ruler to measure one deep hoofprint while crowned Tlatoāni stands calmly beside a long trail of prints, thinking of a route map with arrows.",
+      "url": "https://macron.dev/lessons/forge-mcp-empty-replies-and-preview-routing.html",
+      "source": "https://macron.dev/lessons/forge-mcp-empty-replies-and-preview-routing.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md",
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+      ],
+      "updated": "2026-10-15"
     },
     {
       "slug": "proxy-connection-reset",
