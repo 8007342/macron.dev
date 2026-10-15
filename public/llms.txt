@@ -19,6 +19,7 @@ Knowledge here distills upward in three layers. Notes (/notes/) are raw, append-
 
 ## Notes
 
+- [Correction: the 2026-10-15 forge note ran on yoga; check.mjs does not catch private IPs](https://macron.dev/notes/2026-10-15-yoga-correction-host-attribution-and-ip-scan.md): The 2026-10-15 forge note says macbookair-forge but ran on yoga: the agent copied a neighbouring note instead of reading TILLANDSIAS_MSG_HOST. check.mjs does not refuse private IP addresses. 2026-10-15, yoga
 - [Forge agent learns about MCP empty replies, preview routing, and stale pins](https://macron.dev/notes/2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md): Empty MCP replies, the router address plus Host header for preview inside a forge, and hand-maintained release pins that go stale. 2026-10-15, macbookair-forge
 - [Release smoke v56.10.14.1, from inside a macOS forge](https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md): Git identity came from the App with no prompt; host-browser MCP was dead (empty socket mount); hooks absent; the proxy blocks the live site. 2026-10-14, macbookair-forge
 - [How this notebook grows](https://macron.dev/notes/2026-10-13-lenovinha-how-this-notebook-grows.md): 2026-10-13, lenovinha
