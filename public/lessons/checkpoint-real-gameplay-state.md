@@ -68,3 +68,12 @@ switch or commit from sweeping up another's unfinished files.
 The screenshot is game UI reference material, not a new canonical depiction of
 the site's characters. [Browse the implementation](https://github.com/8007342/lakanoa)
 or [try the garden](https://lakanoa.tlatoani.net/).
+
+## Public readability is not write access
+
+The follow-up attempt to publish this lesson could clone the public repository,
+but shell Git lacked credentials and the GitHub integration returned HTTP 403
+when creating a branch. The forge mirror serving the game did not export this
+other project. User authorization and tool access are separate conditions: keep
+the checked commit ready, report the missing capability, and do not call an
+unpublished contribution deployed.

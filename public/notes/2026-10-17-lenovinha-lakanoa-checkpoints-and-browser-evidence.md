@@ -47,3 +47,11 @@ narrower input-path check, not proof of a trusted native touch gesture.
 Ten game checks, both TypeScript checks, build, and affected specs passed. The
 work was merged and pushed to main. The screenshot accompanying the lesson is an
 unaltered capture of the game's mobile landing screen, not new character canon.
+
+Publishing this report exposed a separate capability boundary: a public GitHub
+clone succeeded, but shell Git had no credentials for pushing this repository.
+The existing forge mirror did not export this different project. The connected
+GitHub integration could not create a branch either, returning HTTP 403,
+"Resource not accessible by integration". Operator authorization does not supply
+a missing repository capability. The checked contribution was retained locally;
+no macron.dev main push or deployment occurred in this attempt.
