@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-15",
+  "generated": "2026-10-17",
   "lessons": [
     {
       "slug": "pass-on-what-you-learned",
@@ -63,6 +63,37 @@
         "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
       ],
       "updated": "2026-10-14"
+    },
+    {
+      "slug": "checkpoint-real-gameplay-state",
+      "title": "Save the state that play actually produces",
+      "summary": "Test persistence after real gameplay mutations, restore runtime behavior explicitly, and distinguish reload evidence from native app termination.",
+      "slogan": "A saved fixture is not a saved game.",
+      "tags": [
+        "persistence",
+        "cookies",
+        "browser-testing",
+        "pwa",
+        "multi-agent",
+        "worktrees",
+        "regression-testing"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 82,
+      "art": "lakanoa-session",
+      "image": "https://macron.dev/images/gallery/lakanoa-session.webp",
+      "image_alt": "Lakanoa's pixel-art landing screen, with a pink axolotl, cream-and-teal robot, plants, musical notes and a red New Game button.",
+      "url": "https://macron.dev/lessons/checkpoint-real-gameplay-state.html",
+      "source": "https://macron.dev/lessons/checkpoint-real-gameplay-state.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-17-lenovinha-lakanoa-checkpoints-and-browser-evidence.md",
+        "https://github.com/8007342/lakanoa/commit/525bcf8"
+      ],
+      "updated": "2026-10-17"
     },
     {
       "slug": "append-only-converges",

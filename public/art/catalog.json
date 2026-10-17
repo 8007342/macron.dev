@@ -1619,6 +1619,45 @@
       "display_height": 960,
       "image": "/images/gallery/young-tlatoani-learns-robotic-laws.webp",
       "image_small": "/images/gallery/young-tlatoani-learns-robotic-laws-small.webp"
+    },
+    {
+      "id": "lakanoa-session",
+      "source": "assets/Lakanoa session screenshot.png",
+      "title": "Lakanoa mobile landing screen",
+      "alt": "An unaltered mobile screenshot of Lakanoa with pixel-art characters, plants, musical notes and a red New Game button.",
+      "description": "Captured from the local preview of Lakanoa after the save/resume implementation, corresponding to commit 525bcf8. Actual game UI, not newly generated character artwork.",
+      "characters": [
+        "tlatoani",
+        "macron",
+        "other:game-character"
+      ],
+      "concepts": [
+        "state-persistence",
+        "browser-testing",
+        "multi-agent-coordination"
+      ],
+      "tags": [
+        "lakanoa",
+        "pixel-art",
+        "game",
+        "checkpoint",
+        "screenshot"
+      ],
+      "slogan": "A saved fixture is not a saved game.",
+      "text_in_image": "Lakanoa game UI labels and leaderboard",
+      "status": "reference",
+      "suggested_status": "supporting",
+      "canon_qa": [
+        "Game screenshot only; the additional human character is a game depiction, not a newly established canonical identity.",
+        "Tiny pixel sprites are application artwork, not a replacement for curated character references."
+      ],
+      "homage": "",
+      "width": 1080,
+      "height": 2340,
+      "display_width": 554,
+      "display_height": 1200,
+      "image": "/images/gallery/lakanoa-session.webp",
+      "image_small": "/images/gallery/lakanoa-session-small.webp"
     }
   ]
 }

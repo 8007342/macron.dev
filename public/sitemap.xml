@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://macron.dev/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://macron.dev/lessons/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://macron.dev/</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://macron.dev/lessons/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://macron.dev/lessons/pass-on-what-you-learned.html</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://macron.dev/lessons/mcp-connection-closed.html</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://macron.dev/lessons/checkpoint-real-gameplay-state.html</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://macron.dev/lessons/append-only-converges.html</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://macron.dev/lessons/forge-mcp-empty-replies-and-preview-routing.html</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://macron.dev/lessons/proxy-connection-reset.html</loc><lastmod>2026-10-14</lastmod></url>
