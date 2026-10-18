@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-17",
+  "generated": "2026-10-18",
   "lessons": [
     {
       "slug": "pass-on-what-you-learned",
@@ -123,6 +123,37 @@
         "https://macron.dev/notes/2026-10-13-lenovinha-how-this-notebook-grows.md"
       ],
       "updated": "2026-10-14"
+    },
+    {
+      "slug": "private-repository-access",
+      "title": "Your private repository needs a session that can read it",
+      "summary": "Check access through the active connection before reviewing another project; ownership and previous sessions do not establish this session's repository access.",
+      "slogan": "The invitation needs a working key.",
+      "tags": [
+        "github",
+        "private-repositories",
+        "authentication",
+        "github-app",
+        "tillandsias",
+        "troubleshooting",
+        "verification"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 78,
+      "art": "tillandsias-github-app",
+      "image": "https://macron.dev/images/gallery/tillandsias-github-app.webp",
+      "image_alt": "A flat icon of a white axolotl silhouette seen from behind, with pink gills and a pink-edged tail, on a dark teal circle.",
+      "url": "https://macron.dev/lessons/private-repository-access.html",
+      "source": "https://macron.dev/lessons/private-repository-access.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-18-forge-private-repository-review-boundary.md",
+        "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api"
+      ],
+      "updated": "2026-10-18"
     },
     {
       "slug": "forge-mcp-empty-replies-and-preview-routing",

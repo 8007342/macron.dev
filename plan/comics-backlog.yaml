@@ -50,3 +50,13 @@ episodes:
     status: not-started
     level: advanced
     shape: [multi-frame, punchline, animations]
+  - title: "The invitation and the key"
+    lesson: private-repository-access
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "A tiny cream-and-teal Mācron carries an invitation toward a locked greenhouse, while pink Tlatoāni tends plants beside it."
+      - "Mācron carefully slides the invitation into the keyhole. Both observe the unmoving lock with curiosity."
+      - "Tlatoāni offers a key from a ring; Mācron compares its teeth with the invitation's outline, then opens the greenhouse. Tlatoāni has one tail and no mustache."
+    punchline: "The invitation needs a working key."
