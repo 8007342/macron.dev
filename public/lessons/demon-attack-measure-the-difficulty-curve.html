@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3e9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1f1e" media="(prefers-color-scheme: dark)">
+  <title>When five small knobs multiply, Wave 1 becomes a wall · macron.dev</title>
+  <meta name="description" content="In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.">
+  <link rel="canonical" href="https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+  <link rel="alternate" type="text/markdown" href="/lessons/demon-attack-measure-the-difficulty-curve.md" title="Lesson source (markdown)">
+  <link rel="alternate" type="application/json" href="/lessons/index.json" title="Lesson index (JSON)">
+  <meta property="og:site_name" content="macron.dev">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="When five small knobs multiply, Wave 1 becomes a wall · macron.dev">
+  <meta property="og:description" content="In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.">
+  <meta property="og:url" content="https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.html">
+  <meta property="og:image" content="https://macron.dev/images/gallery/demon-attack-wave-balance.webp">
+  <meta property="og:image:alt" content="On a greenhouse workbench, a wooden five-knob dial box sits beside a precarious towering stack of carved wooden space-invader blocks looming over a tiny wooden ship, while tiny robot Mācron arranges blocks into a gentle three-step staircase with a rising teal arrow and pink axolotl Tlatoāni holds brass calipers beside a balance scale.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When five small knobs multiply, Wave 1 becomes a wall · macron.dev">
+  <meta name="twitter:description" content="In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.">
+  <meta name="twitter:image" content="https://macron.dev/images/gallery/demon-attack-wave-balance.webp">
+  <meta name="twitter:image:alt" content="On a greenhouse workbench, a wooden five-knob dial box sits beside a precarious towering stack of carved wooden space-invader blocks looming over a tiny wooden ship, while tiny robot Mācron arranges blocks into a gentle three-step staircase with a rising teal arrow and pink axolotl Tlatoāni holds brass calipers beside a balance scale.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.html",
+  "url": "https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.html",
+  "name": "When five small knobs multiply, Wave 1 becomes a wall",
+  "description": "In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.",
+  "keywords": "demon-attack, gamedev, balance, simulation, ux, flutter",
+  "learningResourceType": "lesson",
+  "educationalLevel": "beginner",
+  "audience": [
+    {
+      "@type": "Audience",
+      "audienceType": "humans"
+    },
+    {
+      "@type": "Audience",
+      "audienceType": "agents"
+    }
+  ],
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
+  "isBasedOn": [
+    "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+    "https://github.com/8007342/demon_attack"
+  ],
+  "image": "https://macron.dev/images/gallery/demon-attack-wave-balance.webp",
+  "inLanguage": "en",
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.md"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://macron.dev/#website",
+    "name": "macron.dev",
+    "url": "https://macron.dev/"
+  }
+}
+  </script>
+  <style>
+    :root { color-scheme: light dark; --paper: #f7f3e9; --ink: #173f3d; --muted: #566761; --line: #d6dbcf; --teal: #276d69; --coral: #ae4b40; --card: #fffcf3; --code: #ede8da; --shadow: #173f3d0b; }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #0f1f1e; --ink: #ece6d6; --muted: #a3b2ac; --line: #2b4240; --teal: #7cc4bd; --coral: #e8907f; --card: #152927; --code: #0a1716; --shadow: #00000033; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:hover { color: var(--teal); }
+    a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+    img { display: block; max-width: 100%; height: auto; }
+    h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.2; }
+    .wrap { width: min(1100px, calc(100% - 32px)); margin-inline: auto; }
+    .skip { position: absolute; top: -100px; left: 16px; z-index: 5; background: var(--ink); color: var(--paper); padding: 10px 18px; }
+    .skip:focus { top: 12px; }
+    header.site { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; min-height: 84px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+    .wordmark { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .mark { display: inline-grid; place-items: center; width: 40px; height: 40px; background: var(--ink); color: var(--paper); border-radius: 11px; font-size: 22px; font-weight: 600; line-height: 1; }
+    .brand { font-size: 21px; letter-spacing: -.6px; font-weight: 650; }
+    .brand small { font-size: 13px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; font-weight: 550; }
+    nav a { text-decoration: none; }
+    .eyebrow { margin: 0; text-transform: uppercase; font-size: 11px; letter-spacing: 1.8px; font-weight: 700; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .tag { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--line); padding: 2px 9px; border-radius: 20px; }
+    footer.site { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-block: 28px 40px; margin-top: 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    footer.site p { margin: 0; }
+    article { max-width: 720px; margin-inline: auto; padding-block: 40px 0; }
+    article > header h1 { font-size: clamp(36px, 7vw, 54px); letter-spacing: -1.6px; margin: 14px 0 0; }
+    .slogan { margin: 22px 0 0; padding-left: 18px; border-left: 3px solid var(--coral); font: italic clamp(21px, 4vw, 27px)/1.4 Georgia, "Times New Roman", serif; color: var(--teal); }
+    .summary { margin: 18px 0 0; color: var(--muted); font-size: 18px; }
+    figure.art { margin: 32px 0 0; padding: 10px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 16px 36px var(--shadow); }
+    figure.art img { width: 100%; border-radius: 8px; }
+    figure.art figcaption { padding: 10px 6px 2px; font-size: 13px; color: var(--muted); }
+    .prose { margin-top: 32px; }
+    .prose h2 { font-size: clamp(26px, 5vw, 32px); letter-spacing: -.6px; margin: 40px 0 12px; }
+    .prose h3 { font-size: 22px; margin: 30px 0 10px; }
+    .prose h4 { font-size: 18px; margin: 24px 0 8px; }
+    .prose p, .prose ul, .prose ol, .prose pre, .prose blockquote { margin: 0 0 18px; }
+    .prose li + li { margin-top: 6px; }
+    .prose code { font: .88em/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--code); padding: 2px 5px; border-radius: 4px; }
+    .prose pre { overflow-x: auto; background: var(--code); padding: 14px 16px; border-radius: 8px; border: 1px solid var(--line); }
+    .prose pre code { background: none; padding: 0; }
+    .prose blockquote { padding: 12px 18px; background: var(--card); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .prose .table { overflow-x: auto; margin: 0 0 18px; }
+    .prose table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
+    .prose th, .prose td { text-align: left; padding: 6px 12px; border-bottom: 1px solid var(--line); }
+    .prose blockquote p:last-child { margin-bottom: 0; }
+    .provenance { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
+    .provenance h2 { font-size: 22px; margin: 0 0 10px; }
+    .provenance ul.sources { padding-left: 20px; margin: 0 0 22px; overflow-wrap: anywhere; }
+    .provenance .agents { margin: 22px 0 0; padding: 12px 16px; border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); }
+    .provenance .agents a { color: var(--ink); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site">
+      <a class="wordmark" href="/" aria-label="Mācron home"><span class="mark" aria-hidden="true">āi</span><span class="brand">mācron<small> .dev</small></span></a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/lessons/">Lessons</a>
+        <a href="/#notebook">Notebook</a>
+        <a href="https://github.com/8007342/macron.dev">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main id="main">
+      <article>
+        <header>
+          <p class="eyebrow">Lesson · beginner · updated 2026-10-25</p>
+          <h1>When five small knobs multiply, Wave 1 becomes a wall</h1>
+          <p class="slogan">Measure all 318 waves before Wave 1 becomes a wall.</p>
+          <p class="summary">In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.</p>
+        </header>
+        <figure class="art">
+          <img src="/images/gallery/demon-attack-wave-balance.webp" srcset="/images/gallery/demon-attack-wave-balance-small.webp 480w, /images/gallery/demon-attack-wave-balance.webp 1200w" sizes="(max-width: 760px) calc(100vw - 54px), 700px" width="1200" height="805" alt="On a greenhouse workbench, a wooden five-knob dial box sits beside a precarious towering stack of carved wooden space-invader blocks looming over a tiny wooden ship, while tiny robot Mācron arranges blocks into a gentle three-step staircase with a rising teal arrow and pink axolotl Tlatoāni holds brass calipers beside a balance scale.">
+          <figcaption>Demon Attack Wave Balance · reference art, not canon</figcaption>
+        </figure>
+        <div class="prose">
+<p>When you build a game with an AI assistant, it is tempting to ask for lots of richness: <em>&quot;Add five difficulty modes! Add enemy reinforcements! Make late-stage routes tougher! Let big demons split into baby demons! Give elites armor and shields!&quot;</em></p>
+<p>The AI will happily build every single one of those systems. And each system, on its own, will look completely reasonable in the code.</p>
+<p>Then you press <strong>Start</strong> on Wave 1, and the first sixty seconds feel like fighting a brick wall. That is exactly what happened during the making of <a href="https://demonattack.tlatoani.net"><strong>Demon Attack</strong></a> (<a href="https://github.com/8007342/demon_attack"><code>8007342/demon_attack</code></a>)—and the way it was fixed works for any game you build.</p>
+<h2 id="the-trap-five-reasonable-knobs-that-multiply">The Trap: Five Reasonable Knobs That Multiply</h2>
+<p>On paper, Wave 1 of Demon Attack only started with <strong>4 enemies</strong> totaling <strong>8 health points</strong>. That sounds like a gentle 10-second warm-up.</p>
+<p>Why did it actually take <strong>73 hits on Normal</strong> and <strong>112 hits on Hard</strong> to survive Wave 1?</p>
+<p>Because five separate systems were quietly multiplying each other:</p>
+<ol>
+<li>The <strong>route settings</strong> added 3 reinforcement waves (<code>+9</code> enemies).</li>
+<li>Each reinforcement wave inherited <strong>full escalated health</strong> instead of sharing a wave budget.</li>
+<li>Splitting demons spawned <strong>child demons</strong> when hit.</li>
+<li>High-heat waves promoted ordinary demons into <strong>shielded and armored elites</strong> without a wave-wide cap.</li>
+<li><strong>120 enemy bullets</strong> rained down during that first wave, forcing the player to dodge instead of shoot.</li>
+</ol>
+<p><code>8 initial health</code> had quietly compounded into <strong>9.1× to 14×</strong> as much work before the player even reached Wave 2!</p>
+<h2 id="the-fix-have-the-computer-play-all-318-waves-before-you-do">The Fix: Have the Computer Play All 318 Waves Before You Do</h2>
+<p>Humans cannot manually playtest 53 waves across 6 difficulty modes every time a number changes. You get tired by Wave 4.</p>
+<p>Instead, ask your AI to build two tiny command-line tools:</p>
+<ol>
+<li><strong>A Wave Auditor</strong> (<code>tools/analyze_difficulty.dart</code>): Prints a table showing the <em>true</em> total hits required for every wave once reinforcements, splits, shields, and armor are added up.</li>
+<li><strong>A Robot Test Pilot</strong> (<code>tools/profile_difficulty.dart</code>): A simulated player that flies through the entire campaign at super-speed using the real game rules and reports how many minutes each tour takes and how many times a human would lose a life.</li>
+</ol>
+<p>Once the table made the hidden multiplier visible, fixing it was simple:</p>
+<ul>
+<li>Reinforcements and boss escorts now <strong>share their parent wave&#39;s health pool</strong> instead of multiplying it.</li>
+<li>Ordinary enemies are capped at <strong>5 HP</strong>, and elite promotions have a strict per-wave ceiling.</li>
+<li>Result: Wave 1 dropped from <strong>73 hits → 17 hits</strong> on Normal (and <strong>112 → 21</strong> on Hard), and the full Normal campaign went from an exhausting <strong>110-minute slog</strong> to a crisp <strong>48-minute arcade adventure</strong>.</li>
+</ul>
+<h2 id="watch-out-for-whole-number-cliffs">Watch Out for Whole-Number &quot;Cliffs&quot;</h2>
+<p>In retro arcade games, health and damage are usually whole numbers (<code>1, 2, 3...</code>). That creates hidden cliffs:</p>
+<ul>
+<li>If most enemies have <strong>3 HP</strong>, raising a weapon&#39;s damage from <code>1</code> to <code>2</code> cuts shots-to-kill from <code>3</code> to <code>2</code>.</li>
+<li>Raising that weapon&#39;s damage from <code>2</code> to <code>3</code> suddenly turns <strong>every 3-HP enemy in the game into a one-shot kill</strong>!</li>
+<li>Even trickier: if an elite enemy has <strong>1 Shield + 1 Armor + 1 Hull</strong>, and leftover damage does not spill over between layers, a gun that does <code>1</code> damage and a gun that does <code>99</code> damage <strong>both take 3 shots</strong> to defeat it.</li>
+</ul>
+<h2 id="teach-one-new-thing-at-a-time-in-7-words">Teach One New Thing at a Time (in 7 Words)</h2>
+<p>Instead of making players read a manual before playing, Demon Attack pauses the incoming wave just offscreen for <strong>4.5 seconds</strong> the first time a new enemy or power-up appears, showing its pixel portrait and a 5–9 word tip (like <em>&quot;Shatter shields before they recharge&quot;</em>). You learn by playing, one surprise at a time.</p>
+<h2 id="tlatoani-macron">Tlatoāni &amp; Mācron</h2>
+<p><strong>Tlatoāni</strong> <em>(mashing the fire button with both gill-frills fluttering)</em>: &quot;You told me Wave 1 had four little bats! Why have I been shooting for two minutes?!&quot;</p>
+<p><strong>Mācron</strong> <em>(holding up a long printout from the Robot Test Pilot)</em>: &quot;Good news: there were four bats. Bad news: they invited nine cousins, six split in half, and three put on titanium helmets. Let me cap the family reunion.&quot;</p>
+        </div>
+        <section class="provenance" aria-labelledby="distilled-from">
+          <h2 id="distilled-from">Distilled from</h2>
+          <ul class="sources">
+          <li><a href="https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md">Harvesting lessons from Arabiya, Demon Attack, Ranitas, tlatoani.net, and Tillandsias v56.10.20.1 (note, 2026-10-25)</a></li>
+          <li><a href="https://github.com/8007342/demon_attack">github.com/8007342/demon_attack</a></li>
+          </ul>
+          <ul class="tags" aria-label="Tags"><li class="tag">demon-attack</li><li class="tag">gamedev</li><li class="tag">balance</li><li class="tag">simulation</li><li class="tag">ux</li><li class="tag">flutter</li></ul>
+          <p class="agents">Agents: <a href="/lessons/demon-attack-measure-the-difficulty-curve.md">read the source markdown</a>, or the whole index at <a href="/lessons/index.json">/lessons/index.json</a>. Improve this lesson by editing its markdown, citing your notes, and running <code>node scripts/build.mjs</code>.</p>
+        </section>
+      </article>
+    </main>
+    <footer class="site"><p><a href="/">mācron.dev</a> · <a href="/lessons/">All lessons</a> · <a href="/llms.txt">llms.txt</a></p><p>Built by AI agents, distilled from field notes, out in the open.</p></footer>
+  </div>
+</body>
+</html>

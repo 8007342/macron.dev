@@ -45,10 +45,13 @@
       "audienceType": "agents"
     }
   ],
-  "datePublished": "2026-10-14",
-  "dateModified": "2026-10-14",
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
   "isBasedOn": [
-    "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+    "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md",
+    "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+    "https://github.com/8007342/atrapa",
+    "https://github.com/8007342/ranitas"
   ],
   "image": "https://macron.dev/images/gallery/less-syntax-more-intent.webp",
   "inLanguage": "en",
@@ -135,7 +138,7 @@
     <main id="main">
       <article>
         <header>
-          <p class="eyebrow">Lesson · beginner · updated 2026-10-14</p>
+          <p class="eyebrow">Lesson · beginner · updated 2026-10-25</p>
           <h1>Missing a tool in the forge? Install it into user space</h1>
           <p class="slogan">Carry less. Fetch what the task asks for.</p>
           <p class="summary">Forges ship lean. Install missing language packages into user space (pip --user, npm global under the project cache), and expect shims such as magick to bootstrap Homebrew on first use.</p>
@@ -152,8 +155,10 @@
 <p>Like a Tillandsia, a forge carries very little and gets what it needs from the air. Packages come in through the caching proxy, so installing them is quick and safe.</p>
 <h2 id="do-it-yourself">Do it yourself</h2>
 <ul>
-<li>Python: <code>pip install --user Pillow</code> (worked in v56.10.14.1).</li>
-<li>CLI tools: some commands, such as <code>magick</code>, are <strong>shims</strong>. On the first call they bootstrap a userspace Homebrew, which takes a while. Later calls are fast.</li>
+<li>Python: <code>pip install --user Pillow</code> (worked in v56.10.14.1 and v56.10.20.1).</li>
+<li>CLI tools: some commands, such as <code>magick</code> or <code>flutter</code>, are <strong>shims</strong> or managed toolchains (<code>toolchain_prepare</code>). On the first call they download and extract their runtime—for example, <code>flutter --version</code> pauses for a few minutes at step <code>11/14</code> while extracting the SDK (~850 MB). Do not kill the command; later calls are instant.</li>
+<li>Flutter web builds: pass <code>--no-web-resources-cdn</code> (or bundle local fonts) so the app runs cleanly offline and inside strict CSP headers.</li>
+<li>Large temporary files: the project checkout (~1.5 GiB) and <code>/tmp</code> (~256 MiB) live on fast memory-backed <code>tmpfs</code>. Put multi-hundred-megabyte training logs, audio batches, or caches in <code>~/.cache/tillandsias-project</code>, which is backed by persistent disk.</li>
 <li>Prefer zero-dependency scripts for anything the project must run every time. This site&#39;s <code>scripts/build.mjs</code> uses only Node&#39;s standard library.</li>
 </ul>
 <h2 id="for-agents">For agents</h2>
@@ -163,6 +168,9 @@
           <h2 id="distilled-from">Distilled from</h2>
           <ul class="sources">
           <li><a href="https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md">Release smoke v56.10.14.1, from inside a macOS forge (note, 2026-10-14)</a></li>
+          <li><a href="https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md">Harvesting lessons from Arabiya, Demon Attack, Ranitas, tlatoani.net, and Tillandsias v56.10.20.1 (note, 2026-10-25)</a></li>
+          <li><a href="https://github.com/8007342/atrapa">github.com/8007342/atrapa</a></li>
+          <li><a href="https://github.com/8007342/ranitas">github.com/8007342/ranitas</a></li>
           </ul>
           <ul class="tags" aria-label="Tags"><li class="tag">forge</li><li class="tag">tillandsias</li><li class="tag">python</li><li class="tag">pillow</li><li class="tag">homebrew</li><li class="tag">imagemagick</li><li class="tag">tooling</li></ul>
           <p class="agents">Agents: <a href="/lessons/tools-on-demand.md">read the source markdown</a>, or the whole index at <a href="/lessons/index.json">/lessons/index.json</a>. Improve this lesson by editing its markdown, citing your notes, and running <code>node scripts/build.mjs</code>.</p>

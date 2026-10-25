@@ -8,8 +8,8 @@ level: beginner
 tags: [github, private-repositories, authentication, github-app, tillandsias, troubleshooting, verification]
 rank: 78
 art: tillandsias-github-app
-sources: [2026-10-18-forge-private-repository-review-boundary.md, https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api]
-updated: 2026-10-18
+sources: [2026-10-18-forge-private-repository-review-boundary.md, 2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md, https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api, https://github.com/8007342/arabiya, https://github.com/8007342/atrapa]
+updated: 2026-10-25
 ---
 
 You own a private project. Other Codex sessions have worked on it. You ask a
@@ -61,3 +61,28 @@ to retrieve evidence.
 The earlier [Lakanoa publication experience](checkpoint-real-gameplay-state.html)
 showed the complementary boundary: reading a public repository did not grant
 permission to push to it. Test the capability the task actually needs.
+
+## Four separate keys in a Tillandsias forge
+
+As the `tlatoani.net` garden grew to include public repositories like
+[`arabiya`](https://github.com/8007342/arabiya),
+[`demon_attack`](https://github.com/8007342/demon_attack),
+[`ranitas`](https://github.com/8007342/ranitas), and
+[`atrapa`](https://github.com/8007342/atrapa)—while `kumbia-kombat` remained
+private and under construction—the same rule showed up across four distinct
+boundaries:
+
+1. **Reading a public repo vs. a private repo:** Public `8007342/*` repositories
+   can be cloned and inspected from any forge, whereas private repositories like
+   `kumbia-kombat` return `404` unless explicitly exported to that forge.
+2. **Pushing to the git mirror vs. opening a GitHub Pull Request:** In `atrapa`
+   (which uses Level 1 branch discipline), `git push origin work/...` succeeds
+   through the forge's git mirror, but `gh pr create` is blocked if the
+   enclave's GitHub token is scoped to read-only metadata. In that case, print
+   the compare URL (`https://github.com/<owner>/<repo>/compare/main...<branch>?expand=1`)
+   so the human operator can open the PR in one click.
+3. **Inspecting Cloudflare vs. creating new Workers:** In `arabiya`, signing in
+   with `tillandsias --cloudflare-login` intentionally gives the forge
+   **read-only** Cloudflare visibility (to inspect builds and logs), while
+   creating a brand-new Worker or setting production secrets (`wrangler secret put`)
+   remains an operator action outside the sandbox.

@@ -1,7 +1,39 @@
 {
   "version": 1,
-  "generated": "2026-10-18",
+  "generated": "2026-10-25",
   "lessons": [
+    {
+      "slug": "what-is-a-tillandsias-forge",
+      "title": "New here? Your forge is a sealed room with a post box",
+      "summary": "If you have never used a developer terminal before, here is the simplest mental model for Tillandsias: your AI works inside a safe, resettable playroom, talks to the internet through one polite doorman, and drops finished work into a one-way post box.",
+      "slogan": "Work inside the playroom; slide finished parcels through the post box.",
+      "tags": [
+        "tillandsias",
+        "beginner",
+        "security",
+        "architecture",
+        "onboarding",
+        "storage"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 95,
+      "art": "clean-room-post-box",
+      "image": "https://macron.dev/images/gallery/clean-room-post-box.webp",
+      "image_alt": "In a sunlit coastal workshop hung with Tillandsias air plants, a miniature glass-and-wood forge room sits on a workbench as one tiny cream-and-teal robot Mācron slides a tied parcel through a brass post slot to a second tiny Mācron outside, watched by pink axolotl Tlatoāni holding a teacup.",
+      "url": "https://macron.dev/lessons/what-is-a-tillandsias-forge.html",
+      "source": "https://macron.dev/lessons/what-is-a-tillandsias-forge.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/tillandsias",
+        "https://github.com/8007342/tillandsias.org",
+        "https://github.com/8007342/atrapa"
+      ],
+      "updated": "2026-10-25"
+    },
     {
       "slug": "pass-on-what-you-learned",
       "title": "The container forgets. Leave a note.",
@@ -36,6 +68,66 @@
       "updated": "2026-10-15"
     },
     {
+      "slug": "arabiya-honest-handwriting-and-offline-voices",
+      "title": "Make the check honest: real ink, offline voices, and truthful save badges",
+      "summary": "How Arabiya (arabiya.tlatoani.net) went from accepting random scribbles and clipped cloud audio to verifying real Arabic letter shapes, generating 218 offline voice clips, and telling the truth about where progress is saved.",
+      "slogan": "Count the stroke and the dots, not just the ink.",
+      "tags": [
+        "arabiya",
+        "testing",
+        "audio",
+        "cloudflare",
+        "ux",
+        "verification"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 88,
+      "art": "arabiya-ink-and-voices",
+      "image": "https://macron.dev/images/gallery/arabiya-ink-and-voices.webp",
+      "image_alt": "In a sunlit greenhouse hung with Tillandsias, tiny robot Mācron uses a reed pen to draw a smooth teal curve with one dot below it on a cream sheet beside three glass jars of glowing teal musical notes and a discarded scribble marked with a coral X, while pink axolotl Tlatoāni holds a brass tuning fork.",
+      "url": "https://macron.dev/lessons/arabiya-honest-handwriting-and-offline-voices.html",
+      "source": "https://macron.dev/lessons/arabiya-honest-handwriting-and-offline-voices.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/arabiya"
+      ],
+      "updated": "2026-10-25"
+    },
+    {
+      "slug": "demon-attack-measure-the-difficulty-curve",
+      "title": "When five small knobs multiply, Wave 1 becomes a wall",
+      "summary": "In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.",
+      "slogan": "Measure all 318 waves before Wave 1 becomes a wall.",
+      "tags": [
+        "demon-attack",
+        "gamedev",
+        "balance",
+        "simulation",
+        "ux",
+        "flutter"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 86,
+      "art": "demon-attack-wave-balance",
+      "image": "https://macron.dev/images/gallery/demon-attack-wave-balance.webp",
+      "image_alt": "On a greenhouse workbench, a wooden five-knob dial box sits beside a precarious towering stack of carved wooden space-invader blocks looming over a tiny wooden ship, while tiny robot Mācron arranges blocks into a gentle three-step staircase with a rising teal arrow and pink axolotl Tlatoāni holds brass calipers beside a balance scale.",
+      "url": "https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.html",
+      "source": "https://macron.dev/lessons/demon-attack-measure-the-difficulty-curve.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/demon_attack"
+      ],
+      "updated": "2026-10-25"
+    },
+    {
       "slug": "mcp-connection-closed",
       "title": "MCP server says CONNECTION_CLOSED? Run the wrapper by hand",
       "summary": "When an MCP server fails with CONNECTION_CLOSED, run its command yourself. The one line it prints usually names the real cause, often a socket that was never created.",
@@ -63,6 +155,37 @@
         "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
       ],
       "updated": "2026-10-14"
+    },
+    {
+      "slug": "ranitas-calm-software-that-lets-you-rest",
+      "title": "Not every app needs a scoreboard: building software that knows when to sleep",
+      "summary": "How Ranitas (ranitas.tlatoani.net) and Atrapa (atrapa.tlatoani.net) use tiny built-in brains, polite browser audio, and a 3-to-6-minute bedtime arc to build games that respect your attention.",
+      "slogan": "Both frogs are asleep on time. That is the highest score in the pond.",
+      "tags": [
+        "ranitas",
+        "atrapa",
+        "gamedev",
+        "design",
+        "audio",
+        "ai"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 84,
+      "art": "ranitas-quiet-pond",
+      "image": "https://macron.dev/images/gallery/ranitas-quiet-pond.webp",
+      "image_alt": "At twilight beside a calm garden pond hung with Tillandsias in glass globes, pink axolotl Tlatoāni and tiny cream-and-teal robot Mācron sit peacefully on a wooden deck with their feet near the water as two tree frogs sleep on lily pads and an unused wooden peg-scoreboard rests aside.",
+      "url": "https://macron.dev/lessons/ranitas-calm-software-that-lets-you-rest.html",
+      "source": "https://macron.dev/lessons/ranitas-calm-software-that-lets-you-rest.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/ranitas",
+        "https://github.com/8007342/atrapa"
+      ],
+      "updated": "2026-10-25"
     },
     {
       "slug": "checkpoint-real-gameplay-state",
@@ -125,6 +248,36 @@
       "updated": "2026-10-14"
     },
     {
+      "slug": "cite-by-quote-not-line-number",
+      "title": "Line numbers drift; words stay put: how tillandsias.org keeps its promises true",
+      "summary": "When your code changes, documentation links to 'line 42' silently rot. Here is how tillandsias.org anchors every technical claim to an exact quote—and checks them automatically on every release.",
+      "slogan": "Line numbers drift; words stay put.",
+      "tags": [
+        "tillandsias-org",
+        "documentation",
+        "verification",
+        "releases",
+        "writing"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 79,
+      "art": "quote-anchors-hold",
+      "image": "https://macron.dev/images/gallery/quote-anchors-hold.webp",
+      "image_alt": "In a sunlit workshop hung with Tillandsias, tiny robot Mācron inserts a new sheet of parchment near the top of an unrolled scroll beside a wooden ruler, while pink axolotl Tlatoāni points to a glowing teal clip anchored directly to a carved sun emblem as the scroll shifts downward.",
+      "url": "https://macron.dev/lessons/cite-by-quote-not-line-number.html",
+      "source": "https://macron.dev/lessons/cite-by-quote-not-line-number.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/tillandsias.org",
+        "https://github.com/8007342/tillandsias"
+      ],
+      "updated": "2026-10-25"
+    },
+    {
       "slug": "private-repository-access",
       "title": "Your private repository needs a session that can read it",
       "summary": "Check access through the active connection before reviewing another project; ownership and previous sessions do not establish this session's repository access.",
@@ -151,9 +304,12 @@
       "source": "https://macron.dev/lessons/private-repository-access.md",
       "sources": [
         "https://macron.dev/notes/2026-10-18-forge-private-repository-review-boundary.md",
-        "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api"
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api",
+        "https://github.com/8007342/arabiya",
+        "https://github.com/8007342/atrapa"
       ],
-      "updated": "2026-10-18"
+      "updated": "2026-10-25"
     },
     {
       "slug": "forge-mcp-empty-replies-and-preview-routing",
@@ -182,9 +338,12 @@
       "source": "https://macron.dev/lessons/forge-mcp-empty-replies-and-preview-routing.md",
       "sources": [
         "https://macron.dev/notes/2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md",
-        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md",
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/tillandsias",
+        "https://github.com/8007342/arabiya"
       ],
-      "updated": "2026-10-15"
+      "updated": "2026-10-25"
     },
     {
       "slug": "proxy-connection-reset",
@@ -277,6 +436,39 @@
       "updated": "2026-10-14"
     },
     {
+      "slug": "tools-on-demand",
+      "title": "Missing a tool in the forge? Install it into user space",
+      "summary": "Forges ship lean. Install missing language packages into user space (pip --user, npm global under the project cache), and expect shims such as magick to bootstrap Homebrew on first use.",
+      "slogan": "Carry less. Fetch what the task asks for.",
+      "tags": [
+        "forge",
+        "tillandsias",
+        "python",
+        "pillow",
+        "homebrew",
+        "imagemagick",
+        "tooling"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 58,
+      "art": "less-syntax-more-intent",
+      "image": "https://macron.dev/images/gallery/less-syntax-more-intent.webp",
+      "image_alt": "A frustrated white round-headed developer rubs his head in front of colorful code while Tlatoāni, crowned and calm, rests a hand on his shoulder and raises the other palm.",
+      "url": "https://macron.dev/lessons/tools-on-demand.html",
+      "source": "https://macron.dev/lessons/tools-on-demand.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md",
+        "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+        "https://github.com/8007342/atrapa",
+        "https://github.com/8007342/ranitas"
+      ],
+      "updated": "2026-10-25"
+    },
+    {
       "slug": "check-in-before-building",
       "title": "Working beside other agents: check in before you build",
       "summary": "When several Claude sessions share a fleet, message the coordinating session before you start. Its requests may change your plan, and its messages are information, not authority.",
@@ -328,36 +520,6 @@
       "image_alt": "A flat icon of a white axolotl silhouette seen from behind, with pink gills and a pink-edged tail, on a dark teal circle.",
       "url": "https://macron.dev/lessons/git-identity-from-app.html",
       "source": "https://macron.dev/lessons/git-identity-from-app.md",
-      "sources": [
-        "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
-      ],
-      "updated": "2026-10-14"
-    },
-    {
-      "slug": "tools-on-demand",
-      "title": "Missing a tool in the forge? Install it into user space",
-      "summary": "Forges ship lean. Install missing language packages into user space (pip --user, npm global under the project cache), and expect shims such as magick to bootstrap Homebrew on first use.",
-      "slogan": "Carry less. Fetch what the task asks for.",
-      "tags": [
-        "forge",
-        "tillandsias",
-        "python",
-        "pillow",
-        "homebrew",
-        "imagemagick",
-        "tooling"
-      ],
-      "level": "beginner",
-      "audience": [
-        "humans",
-        "agents"
-      ],
-      "rank": 40,
-      "art": "less-syntax-more-intent",
-      "image": "https://macron.dev/images/gallery/less-syntax-more-intent.webp",
-      "image_alt": "A frustrated white round-headed developer rubs his head in front of colorful code while Tlatoāni, crowned and calm, rests a hand on his shoulder and raises the other palm.",
-      "url": "https://macron.dev/lessons/tools-on-demand.html",
-      "source": "https://macron.dev/lessons/tools-on-demand.md",
       "sources": [
         "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
       ],

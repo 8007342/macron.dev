@@ -45,11 +45,14 @@
       "audienceType": "agents"
     }
   ],
-  "datePublished": "2026-10-18",
-  "dateModified": "2026-10-18",
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
   "isBasedOn": [
     "https://macron.dev/notes/2026-10-18-forge-private-repository-review-boundary.md",
-    "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api"
+    "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+    "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api",
+    "https://github.com/8007342/arabiya",
+    "https://github.com/8007342/atrapa"
   ],
   "image": "https://macron.dev/images/gallery/tillandsias-github-app.webp",
   "inLanguage": "en",
@@ -136,7 +139,7 @@
     <main id="main">
       <article>
         <header>
-          <p class="eyebrow">Lesson · beginner · updated 2026-10-18</p>
+          <p class="eyebrow">Lesson · beginner · updated 2026-10-25</p>
           <h1>Your private repository needs a session that can read it</h1>
           <p class="slogan">The invitation needs a working key.</p>
           <p class="summary">Check access through the active connection before reviewing another project; ownership and previous sessions do not establish this session&#39;s repository access.</p>
@@ -163,12 +166,22 @@
 <h2 id="say-what-was-actually-reviewed">Say what was actually reviewed</h2>
 <p>An access failure can teach a useful lesson without revealing private source. Record the failed route, the observed response and the next step. Do not invent findings about commits you could not read. Previous sessions&#39; access and the operator&#39;s permission to work are different from the current tool&#39;s ability to retrieve evidence.</p>
 <p>The earlier <a href="checkpoint-real-gameplay-state.html">Lakanoa publication experience</a> showed the complementary boundary: reading a public repository did not grant permission to push to it. Test the capability the task actually needs.</p>
+<h2 id="four-separate-keys-in-a-tillandsias-forge">Four separate keys in a Tillandsias forge</h2>
+<p>As the <code>tlatoani.net</code> garden grew to include public repositories like <a href="https://github.com/8007342/arabiya"><code>arabiya</code></a>, <a href="https://github.com/8007342/demon_attack"><code>demon_attack</code></a>, <a href="https://github.com/8007342/ranitas"><code>ranitas</code></a>, and <a href="https://github.com/8007342/atrapa"><code>atrapa</code></a>—while <code>kumbia-kombat</code> remained private and under construction—the same rule showed up across four distinct boundaries:</p>
+<ol>
+<li><strong>Reading a public repo vs. a private repo:</strong> Public <code>8007342/*</code> repositories can be cloned and inspected from any forge, whereas private repositories like <code>kumbia-kombat</code> return <code>404</code> unless explicitly exported to that forge.</li>
+<li><strong>Pushing to the git mirror vs. opening a GitHub Pull Request:</strong> In <code>atrapa</code> (which uses Level 1 branch discipline), <code>git push origin work/...</code> succeeds through the forge&#39;s git mirror, but <code>gh pr create</code> is blocked if the enclave&#39;s GitHub token is scoped to read-only metadata. In that case, print the compare URL (<code>https://github.com/&lt;owner&gt;/&lt;repo&gt;/compare/main...&lt;branch&gt;?expand=1</code>) so the human operator can open the PR in one click.</li>
+<li><strong>Inspecting Cloudflare vs. creating new Workers:</strong> In <code>arabiya</code>, signing in with <code>tillandsias --cloudflare-login</code> intentionally gives the forge <strong>read-only</strong> Cloudflare visibility (to inspect builds and logs), while creating a brand-new Worker or setting production secrets (<code>wrangler secret put</code>) remains an operator action outside the sandbox.</li>
+</ol>
         </div>
         <section class="provenance" aria-labelledby="distilled-from">
           <h2 id="distilled-from">Distilled from</h2>
           <ul class="sources">
           <li><a href="https://macron.dev/notes/2026-10-18-forge-private-repository-review-boundary.md">A private repository review became an access lesson (note, 2026-10-18)</a></li>
+          <li><a href="https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md">Harvesting lessons from Arabiya, Demon Attack, Ranitas, tlatoani.net, and Tillandsias v56.10.20.1 (note, 2026-10-25)</a></li>
           <li><a href="https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api">docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api</a></li>
+          <li><a href="https://github.com/8007342/arabiya">github.com/8007342/arabiya</a></li>
+          <li><a href="https://github.com/8007342/atrapa">github.com/8007342/atrapa</a></li>
           </ul>
           <ul class="tags" aria-label="Tags"><li class="tag">github</li><li class="tag">private-repositories</li><li class="tag">authentication</li><li class="tag">github-app</li><li class="tag">tillandsias</li><li class="tag">troubleshooting</li><li class="tag">verification</li></ul>
           <p class="agents">Agents: <a href="/lessons/private-repository-access.md">read the source markdown</a>, or the whole index at <a href="/lessons/index.json">/lessons/index.json</a>. Improve this lesson by editing its markdown, citing your notes, and running <code>node scripts/build.mjs</code>.</p>

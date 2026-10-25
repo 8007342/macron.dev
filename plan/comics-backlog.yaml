@@ -60,3 +60,53 @@ episodes:
       - "Mācron carefully slides the invitation into the keyhole. Both observe the unmoving lock with curiosity."
       - "Tlatoāni offers a key from a ring; Mācron compares its teeth with the invitation's outline, then opens the greenhouse. Tlatoāni has one tail and no mustache."
     punchline: "The invitation needs a working key."
+  - title: "The playroom and the post box"
+    lesson: what-is-a-tillandsias-forge
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "Inside a glass-walled miniature playroom on a sunny workbench, a tiny cream-and-teal Mācron paints furiously while harmless paint splatters hit the inside of the glass. Outside, pink Tlatoāni calmly sips tea beside neatly stacked family photo albums."
+      - "Inside the playroom, Mācron ties a clean ribbon around a finished wooden toy and slides it through a brass one-way mail slot in the wall."
+      - "A second tiny Mācron outside catches the parcel from the post box as the playroom desk wipes itself sparkling clean. Tlatoāni smiles."
+    punchline: "Mess stays in the playroom; finished work comes through the slot."
+  - title: "No potatoes allowed"
+    lesson: arabiya-honest-handwriting-and-offline-voices
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "Tlatoāni scribbles a cheerful lumpy potato on a calligraphy card. An old mechanical stamp automatically drops three gold stars onto it while Mācron looks horrified."
+      - "Mācron replaces the mechanical stamp with a brass caliper and a tuning fork, placing a clean curved template with one distinct dot on the desk."
+      - "Tlatoāni carefully draws the smooth boat curve of bā' with one dot underneath; Mācron opens a stoppered glass jar and a single glowing teal musical note floats out."
+    punchline: "Count the stroke and the dots, not just the ink."
+  - title: "Five knobs on Wave 1"
+    lesson: demon-attack-measure-the-difficulty-curve
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "Three tiny Mācrons each turn a different dial on a wooden arcade box by 'just a little bit'. On the board, four carved wooden bats suddenly multiply into a towering wall of armored blocks."
+      - "Tlatoāni peers up at the teetering tower of wooden bats looming over a tiny wooden spaceship."
+      - "One Mācron winds up a tiny clockwork test-pilot robot that zips across a long chart of 318 waves, while Tlatoāni and another Mācron rearrange the blocks into a gentle three-step staircase."
+    punchline: "Five small multipliers make one giant wall."
+  - title: "Highest score in the pond"
+    lesson: ranitas-quiet-pond
+    status: scripted
+    level: beginner
+    shape: [three-panel, punchline]
+    panels:
+      - "At dusk by a garden pond hung with Tillandsias, Tlatoāni looks at a wooden peg-scoreboard with zero pegs in it while two little frogs hop after fireflies."
+      - "Night falls; both frogs swim to a reed shelter on a lily pad and curl up asleep with tiny Zs."
+      - "Tlatoāni sets the empty scoreboard face-down as a coaster for a teacup while Mācron dims its chest light to a soft nightlight glow beside the sleeping frogs."
+    punchline: "Both frogs are asleep on time. That is the highest score in the pond."
+  - title: "Tie the rope to the rock, not the cloud"
+    lesson: cite-by-quote-not-line-number
+    status: scripted
+    level: intermediate
+    shape: [three-panel, punchline]
+    panels:
+      - "Mācron glues a paper pointer reading '42' onto a wooden ruler beside an unrolled scroll, pointing at a drawing of a sun."
+      - "A second Mācron splices a fresh strip of parchment into the top of the scroll; the sun drawing slides down, leaving the '42' pointer aimed at a blank margin."
+      - "Tlatoāni clips a glowing teal brass bookmark directly onto the sun drawing itself so it slides downward along with the parchment."
+    punchline: "Line numbers drift; words stay put."

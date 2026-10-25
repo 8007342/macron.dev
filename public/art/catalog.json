@@ -1658,6 +1658,177 @@
       "display_height": 1200,
       "image": "/images/gallery/lakanoa-session.webp",
       "image_small": "/images/gallery/lakanoa-session-small.webp"
+    },
+    {
+      "id": "clean-room-post-box",
+      "source": "assets/Clean Room Post Box.png",
+      "title": "Clean Room Post Box",
+      "alt": "In a sunlit coastal workshop hung with Tillandsias air plants, a miniature glass-and-wood forge room sits on a workbench as one tiny cream-and-teal robot Mācron slides a tied parcel through a brass post slot to a second tiny Mācron outside, watched by pink axolotl Tlatoāni holding a teacup.",
+      "description": "Inside the glass-walled doll-house workbench room, one Mācron slips finished work through a one-way brass post slot while Tlatoāni sips tea safely outside. The forge isolates the workspace from the rest of your home while letting finished work pass cleanly out.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "clean-room",
+        "post-box",
+        "gatekeeper",
+        "soft-reset",
+        "storage-tiers",
+        "isolation"
+      ],
+      "tags": [
+        "tillandsias",
+        "sandbox",
+        "post-box",
+        "doll-house",
+        "beginner",
+        "security",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Work inside the playroom; slide finished parcels through the post box.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [],
+      "homage": ""
+    },
+    {
+      "id": "arabiya-ink-and-voices",
+      "source": "assets/Arabiya Ink and Voices.png",
+      "title": "Arabiya Ink and Voices",
+      "alt": "In a sunlit greenhouse hung with Tillandsias, tiny robot Mācron uses a reed pen to draw a smooth teal curve with one dot below it on a cream sheet beside three glass jars of glowing teal musical notes and a discarded scribble marked with a coral X, while pink axolotl Tlatoāni holds a brass tuning fork.",
+      "description": "Mācron traces a clean Arabic letter curve with a single distinct dot while a chaotic scribble sits rejected to the side, and three stoppered glass jars hold verified musical notes as Tlatoāni listens with a tuning fork. Real stroke geometry and verified local voice clips beat polite shortcuts.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "adversarial-testing",
+        "offline-tts",
+        "honest-ui",
+        "worker-bundling",
+        "verification"
+      ],
+      "tags": [
+        "arabiya",
+        "calligraphy",
+        "handwriting",
+        "audio",
+        "tts",
+        "testing",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Count the stroke and the dots, not just the ink.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "Mācron is seated close to the foreground table, reading slightly larger than toy-scale relative to Tlatoāni (§16)"
+      ],
+      "homage": ""
+    },
+    {
+      "id": "demon-attack-wave-balance",
+      "source": "assets/Demon Attack Wave Balance.png",
+      "title": "Demon Attack Wave Balance",
+      "alt": "On a greenhouse workbench, a wooden five-knob dial box sits beside a precarious towering stack of carved wooden space-invader blocks looming over a tiny wooden ship, while tiny robot Mācron arranges blocks into a gentle three-step staircase with a rising teal arrow and pink axolotl Tlatoāni holds brass calipers beside a balance scale.",
+      "description": "Five dials turned up together on the left create a teetering tower of wooden space-invaders on Wave 1; on the right, Mācron and Tlatoāni measure and reshape the blocks into a fair, climbable staircase. Auditing the whole campaign turns compounding multipliers into a balanced curve.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "compounding-multipliers",
+        "integer-breakpoints",
+        "automated-playtesting",
+        "contextual-hints",
+        "measurement"
+      ],
+      "tags": [
+        "demon-attack",
+        "balance",
+        "arcade",
+        "difficulty",
+        "simulation",
+        "gamedev",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Measure all 318 waves before Wave 1 becomes a wall.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [],
+      "homage": "Demon Attack (1982)"
+    },
+    {
+      "id": "ranitas-quiet-pond",
+      "source": "assets/Ranitas Quiet Pond.png",
+      "title": "Ranitas Quiet Pond",
+      "alt": "At twilight beside a calm garden pond hung with Tillandsias in glass globes, pink axolotl Tlatoāni and tiny cream-and-teal robot Mācron sit peacefully on a wooden deck with their feet near the water as two tree frogs sleep on lily pads and an unused wooden peg-scoreboard rests aside.",
+      "description": "As dusk settles and fireflies glow, two little frogs curl up asleep on their lily pads while Tlatoāni and Mācron watch ripples spread across the pond, leaving the peg-scoreboard untouched on the deck. Not every game needs a score or a loss screen; some software knows when to rest.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "calm-software",
+        "tiny-neural-priors",
+        "web-audio-unlock",
+        "prime-canvases"
+      ],
+      "tags": [
+        "ranitas",
+        "pond",
+        "frogs",
+        "twilight",
+        "calm",
+        "gamedev",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Both frogs are asleep on time. That is the highest score in the pond.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [],
+      "homage": "Frog Bog (1982)"
+    },
+    {
+      "id": "quote-anchors-hold",
+      "source": "assets/Quote Anchors Hold.png",
+      "title": "Quote Anchors Hold",
+      "alt": "In a sunlit workshop hung with Tillandsias, tiny robot Mācron inserts a new sheet of parchment near the top of an unrolled scroll beside a wooden ruler, while pink axolotl Tlatoāni points to a glowing teal clip anchored directly to a carved sun emblem as the scroll shifts downward.",
+      "description": "When Mācron adds a new sheet at the top of the scroll, the fixed marks on the wooden ruler no longer line up with the drawings—but the glowing teal clip fastened directly to the sun emblem slides down with the emblem and stays true. Anchor documentation to quotes, not line numbers.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "quote-anchoring",
+        "reader-first-levels",
+        "automated-fact-checking",
+        "documentation"
+      ],
+      "tags": [
+        "tillandsias-org",
+        "documentation",
+        "anchors",
+        "quotes",
+        "verification",
+        "scroll",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Line numbers drift; words stay put.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [],
+      "homage": ""
     }
   ]
 }

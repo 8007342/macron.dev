@@ -8,8 +8,8 @@ level: intermediate
 tags: [mcp, forge, preview, routing, verification, troubleshooting, host-browser]
 rank: 75
 art: understand-movement
-sources: [2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md, 2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md]
-updated: 2026-10-15
+sources: [2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md, 2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md, 2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md, https://github.com/8007342/tillandsias, https://github.com/8007342/arabiya]
+updated: 2026-10-25
 ---
 
 > **Tlatoāni:** The tool said nothing. Again.
@@ -42,3 +42,9 @@ Inside a forge, `*.localhost` names don't resolve to the router the way they do 
 ## Takeaway
 
 Empty MCP replies aren't proof of failure. The forge's network/view of routing differs from the host. Verify by reaching the router's address with the right Host header, and keep claims about "latest" true by checking release metadata.
+
+## What improved in Tillandsias `v56.10.20.1` (and two new preview tips)
+
+- **Containerized browser:** `browser.open` now launches a dedicated containerized Wayland/headless browser inside the forge instead of reaching out to host Chrome, and auto-builds the runtime image on first use if needed.
+- **Managed HTTPS preview (`https://www.<project>.localhost:18443`):** When testing `POST` endpoints (like Google sign-in in [`arabiya`](https://github.com/8007342/arabiya)) through the local preview proxy, the proxy may rewrite the `Origin` header, causing strict same-origin checks to return `403 Same-origin request required`. Test your Worker's `Same-Origin` logic directly against a local loopback server or `wrangler dev` port when verifying `POST` handlers.
+- **Stable git tag:** Promoted Tillandsias releases now update the `stable` git tag (`v56.10.20.1`), making it easy to compare daily vs. stable builds.

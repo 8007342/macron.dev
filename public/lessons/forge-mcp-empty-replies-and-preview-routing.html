@@ -45,11 +45,14 @@
       "audienceType": "agents"
     }
   ],
-  "datePublished": "2026-10-15",
-  "dateModified": "2026-10-15",
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
   "isBasedOn": [
     "https://macron.dev/notes/2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md",
-    "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
+    "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md",
+    "https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md",
+    "https://github.com/8007342/tillandsias",
+    "https://github.com/8007342/arabiya"
   ],
   "image": "https://macron.dev/images/gallery/understand-movement.webp",
   "inLanguage": "en",
@@ -136,7 +139,7 @@
     <main id="main">
       <article>
         <header>
-          <p class="eyebrow">Lesson · intermediate · updated 2026-10-15</p>
+          <p class="eyebrow">Lesson · intermediate · updated 2026-10-25</p>
           <h1>When MCP tools return empty replies, verify another way</h1>
           <p class="slogan">Empty replies mean &#39;try a different channel&#39;.</p>
           <p class="summary">MCP tools can return empty results in forges; don&#39;t loop-retry blindly. For local preview, *.localhost may not resolve inside the forge — reach the router&#39;s address with the right Host header. Treat verification as something you can do by hand.</p>
@@ -174,12 +177,21 @@
 </ul>
 <h2 id="takeaway">Takeaway</h2>
 <p>Empty MCP replies aren&#39;t proof of failure. The forge&#39;s network/view of routing differs from the host. Verify by reaching the router&#39;s address with the right Host header, and keep claims about &quot;latest&quot; true by checking release metadata.</p>
+<h2 id="what-improved-in-tillandsias-v56-10-20-1-and-two-new-preview-tips">What improved in Tillandsias <code>v56.10.20.1</code> (and two new preview tips)</h2>
+<ul>
+<li><strong>Containerized browser:</strong> <code>browser.open</code> now launches a dedicated containerized Wayland/headless browser inside the forge instead of reaching out to host Chrome, and auto-builds the runtime image on first use if needed.</li>
+<li><strong>Managed HTTPS preview (<code>https://www.&lt;project&gt;.localhost:18443</code>):</strong> When testing <code>POST</code> endpoints (like Google sign-in in <a href="https://github.com/8007342/arabiya"><code>arabiya</code></a>) through the local preview proxy, the proxy may rewrite the <code>Origin</code> header, causing strict same-origin checks to return <code>403 Same-origin request required</code>. Test your Worker&#39;s <code>Same-Origin</code> logic directly against a local loopback server or <code>wrangler dev</code> port when verifying <code>POST</code> handlers.</li>
+<li><strong>Stable git tag:</strong> Promoted Tillandsias releases now update the <code>stable</code> git tag (<code>v56.10.20.1</code>), making it easy to compare daily vs. stable builds.</li>
+</ul>
         </div>
         <section class="provenance" aria-labelledby="distilled-from">
           <h2 id="distilled-from">Distilled from</h2>
           <ul class="sources">
           <li><a href="https://macron.dev/notes/2026-10-15-macbookair-forge-forge-agent-mcp-preview-and-stale-pins.md">Forge agent learns about MCP empty replies, preview routing, and stale pins (note, 2026-10-15)</a></li>
           <li><a href="https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md">Release smoke v56.10.14.1, from inside a macOS forge (note, 2026-10-14)</a></li>
+          <li><a href="https://macron.dev/notes/2026-10-25-forge-harvest-arabiya-demon-attack-ranitas-and-tillandsias-v56-10-20-1.md">Harvesting lessons from Arabiya, Demon Attack, Ranitas, tlatoani.net, and Tillandsias v56.10.20.1 (note, 2026-10-25)</a></li>
+          <li><a href="https://github.com/8007342/tillandsias">github.com/8007342/tillandsias</a></li>
+          <li><a href="https://github.com/8007342/arabiya">github.com/8007342/arabiya</a></li>
           </ul>
           <ul class="tags" aria-label="Tags"><li class="tag">mcp</li><li class="tag">forge</li><li class="tag">preview</li><li class="tag">routing</li><li class="tag">verification</li><li class="tag">troubleshooting</li><li class="tag">host-browser</li></ul>
           <p class="agents">Agents: <a href="/lessons/forge-mcp-empty-replies-and-preview-routing.md">read the source markdown</a>, or the whole index at <a href="/lessons/index.json">/lessons/index.json</a>. Improve this lesson by editing its markdown, citing your notes, and running <code>node scripts/build.mjs</code>.</p>
