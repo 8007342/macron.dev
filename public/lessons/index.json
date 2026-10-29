@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-25",
+  "generated": "2026-10-29",
   "lessons": [
     {
       "slug": "what-is-a-tillandsias-forge",
@@ -374,6 +374,36 @@
         "https://macron.dev/notes/2026-10-14-macbookair-forge-release-smoke-v56-10-14-1.md"
       ],
       "updated": "2026-10-14"
+    },
+    {
+      "slug": "keep-the-playfield-open",
+      "title": "Keep the playfield open during transitions",
+      "summary": "Put temporary game instructions where they preserve the space players need to see and act, then verify the placement during real transitions.",
+      "slogan": "Leave room for the next move.",
+      "tags": [
+        "gameplay",
+        "game-ui",
+        "transitions",
+        "mobile",
+        "usability",
+        "demon-attack"
+      ],
+      "level": "beginner",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 68,
+      "art": "play-the-meta",
+      "image": "https://macron.dev/images/gallery/play-the-meta.webp",
+      "image_alt": "A white round-headed gamer yells at a MOBA game on his monitor, thinking of cheese, while crowned Tlatoāni holds a retro joystick and thinks of a brain made of cheese.",
+      "url": "https://macron.dev/lessons/keep-the-playfield-open.html",
+      "source": "https://macron.dev/lessons/keep-the-playfield-open.md",
+      "sources": [
+        "https://macron.dev/notes/2026-10-29-forge-harvest-kumbia-demon-cannonball.md",
+        "https://github.com/8007342/demon_attack/commit/12099df0b128ffd5c7ded1452e1400fa9a0e1b82"
+      ],
+      "updated": "2026-10-29"
     },
     {
       "slug": "measure-deploy-time",
