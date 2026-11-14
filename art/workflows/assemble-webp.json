@@ -1,0 +1,12 @@
+{
+  "1": {"class_type": "LoadImage", "_meta": {"title": "frame 1: drawing"}, "inputs": {"image": "$f1"}},
+  "2": {"class_type": "LoadImage", "_meta": {"title": "frame 2: look up"}, "inputs": {"image": "$f2"}},
+  "3": {"class_type": "LoadImage", "_meta": {"title": "frame 3: show it off"}, "inputs": {"image": "$f3"}},
+  "4": {"class_type": "ImageBatch", "_meta": {"title": "1+2"}, "inputs": {"image1": ["1", 0], "image2": ["2", 0]}},
+  "5": {"class_type": "ImageBatch", "_meta": {"title": "+3"}, "inputs": {"image1": ["4", 0], "image2": ["3", 0]}},
+  "6": {"class_type": "ImageBatch", "_meta": {"title": "+2 again (ping-pong back to 1)"}, "inputs": {"image1": ["5", 0], "image2": ["2", 0]}},
+  "7": {"class_type": "ImageScale", "_meta": {"title": "shrink to 512 wide"},
+        "inputs": {"image": ["6", 0], "upscale_method": "area", "width": 512, "height": 380, "crop": "center"}},
+  "8": {"class_type": "SaveAnimatedWEBP", "_meta": {"title": "save looping WebP"},
+        "inputs": {"images": ["7", 0], "filename_prefix": "macron-anim/learning-animations", "fps": 1.6, "lossless": false, "quality": 80, "method": "default"}}
+}

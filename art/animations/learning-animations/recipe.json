@@ -1,0 +1,72 @@
+{
+  "schema": "macron.dev/animation-recipe/v1",
+  "id": "learning-animations-loop",
+  "title": "Tlatoāni and Mācron learn to animate",
+  "made": "2026-11-14",
+  "how": "Every step ran headless through the forge's studio.run_workflow tool, in this project's own ComfyUI studio on the host GPU queue: one job at a time, every node class pinned and every model licence-admitted before queueing. Nothing was hand-painted or retouched.",
+  "engine": {"name": "comfyui", "ref": "v0.40.0", "tillandsias_pipeline": "56.11.10.1"},
+  "models": [
+    {"file": "qwen_image_edit_2511_fp8mixed.safetensors", "repo": "Comfy-Org/Qwen-Image-Edit", "revision": "f68ace85e60b4a02a323e394253731947657b7d2", "sha256": "c9fdc158e46d3b61ef75f21ae866ca2fe808bf4a53643120d1c1e87c19280a4e", "licence": "apache-2.0"},
+    {"file": "qwen_2.5_vl_7b_fp8_scaled.safetensors", "repo": "Comfy-Org/Qwen-Image", "revision": "1f12b17be14c89b026c51a91d67c32f84bb047bc", "sha256": "cb5636d852a0ea6a9075ab1bef496c0db7aef13c02350571e388aea959c5c0b4", "licence": "apache-2.0"},
+    {"file": "qwen_image_vae.safetensors", "repo": "Comfy-Org/Qwen-Image", "revision": "1f12b17be14c89b026c51a91d67c32f84bb047bc", "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f", "licence": "apache-2.0"},
+    {"file": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", "repo": "lightx2v/Qwen-Image-Edit-2511-Lightning", "revision": "107d238d68b8387e32843d0b4a2e24ceb0d3ad86", "sha256": "22226e8d05d354bb356627d428809f5afd7819399b077238a2b70a82883a904f", "licence": "apache-2.0"}
+  ],
+  "negative_prompt": "mustache, beard, second tail, scary, angry face, text, letters, watermark, extra robots, extra limbs, different camera angle, blurry",
+  "steps": [
+    {
+      "step": "0-rejected",
+      "what": "Text-only keyframe with SDXL base 1.0 (4 seeds). Rejected: none of the four drew an axolotl with gills or a cream robot with a screen face. Text alone does not carry our characters.",
+      "workflow": "art/workflows/keyframe-sdxl.json",
+      "seeds": [4207, 4208, 4209, 4210],
+      "prompt": "flat cartoon illustration, children's picture book style, clean bold outlines, soft pastel colors, plain warm cream background. On a wooden desk sit two friends making a flipbook animation together. Left: Tlatoāni, a small pink axolotl sage with one long tail, external feathery coral gills on both sides of the head, smooth rounded proportions, expressive dark eyes, calm knowing smile, a warm cream tunic with restrained teal geometric accents, holding a pencil. Right: Mācron, a toy-sized rounded desktop robot with a warm cream shell, dark face screen with two cyan happy eyes, small antenna orb, short toy-like arms, holding up a little paper flipbook showing a bouncing ball. Friendly, gentle, cozy, full bodies visible, centered composition",
+      "negative_prompt": "mustache, beard, mammal ears, fur, scales, second tail, dragon, lizard, realistic, photo, 3d render, scary, angry, sinister, weapons, armor, humanoid android, military robot, cyberpunk, text, watermark, signature, extra limbs, blurry, cropped"
+    },
+    {
+      "step": "1-keyframe",
+      "what": "Re-stage a canon-close catalog image (quote-anchors-hold) as a new scene with Qwen-Image-Edit, so the characters keep their look. Seed 101 kept; 102 was a close second.",
+      "workflow": "art/workflows/qwen-edit.json",
+      "init_image": {"source": "assets/Quote Anchors Hold.png", "sha256": "72fe39ab0051ea776055afa314e510c9236b0a402c9e863c89ef328fd0193759"},
+      "seeds": [101, 102], "kept_seed": 101,
+      "output_sha256": "ab577ee732701116973da4f52856c394b171d7c3baa2cdb465b044e036f8550e",
+      "prompt": "Keep the pink axolotl Tlatoāni and the small cream robot Mācron exactly as they are drawn (same faces, colors, clothing, one tail, cream shell, dark screen face with cyan eyes, antenna orb) and keep the same warm hand-drawn cartoon style. Change the scene: remove the scroll, ruler and blueprint. Both now sit side by side at the wooden table in the greenhouse workshop, facing the viewer, learning to make an animation together. On the table lies a small open paper flipbook; its page shows a simple drawing of a bouncing red ball. Mācron holds a pencil and is drawing on the flipbook; Tlatoāni leans in with a calm, delighted smile, pointing at the ball. Simple, uncluttered, friendly, cozy. No text.",
+      "negative_prompt": "mustache, beard, second tail, scary, angry face, text, letters, watermark, extra robots, extra limbs, blurry"
+    },
+    {
+      "step": "2-look-up",
+      "what": "Pose edit of the keyframe. Same camera and framing, so frames line up.",
+      "workflow": "art/workflows/qwen-edit.json",
+      "init_image": {"from_step": "1-keyframe"},
+      "seeds": [301, 302], "kept_seed": 301,
+      "output_sha256": "36f74189cd4f14f61a36b714ad98cbbf0753cbfc484ad74a968b348056891622",
+      "prompt": "Keep everything in this picture exactly the same: same camera, same framing, same table, same background, same characters, same style. Only change the poses: the small cream robot Mācron raises his pencil and turns his screen face up toward Tlatoāni with curious cyan eyes; the red ball drawn on the flipbook page is now higher, in the middle of the page. The pink axolotl Tlatoāni nods with a calm, knowing smile, one hand resting on the table. No text."
+    },
+    {
+      "step": "3-show-it-off",
+      "what": "Pose edit of the keyframe.",
+      "workflow": "art/workflows/qwen-edit.json",
+      "init_image": {"from_step": "1-keyframe"},
+      "seeds": [201, 202], "kept_seed": 201,
+      "output_sha256": "fe43ed71721ee95ea58230ebf0d757657be67cc270997508cb3d5ff226feed80",
+      "prompt": "Keep everything in this picture exactly the same: same camera, same framing, same table, same background, same characters, same style. Only change the poses: the small cream robot Mācron now lifts the open flipbook up with both hands to show it, his screen face shows big happy cyan eyes; the red ball drawn on the page is now near the top of the page. The pink axolotl Tlatoāni claps softly, with a delighted gentle smile. No text."
+    },
+    {
+      "step": "x-squash-rejected",
+      "what": "A 'ball squashes at the bottom' frame (seeds 401, 402). Rejected against the canon: Mācron's 'focused' eyes read as angry and Tlatoāni looked worried. Friendly beats complete.",
+      "workflow": "art/workflows/qwen-edit.json",
+      "init_image": {"from_step": "1-keyframe"},
+      "seeds": [401, 402],
+      "prompt": "Keep everything in this picture exactly the same: same camera, same framing, same table, same background, same characters, same style. Only change the poses: the small cream robot Mācron flips a page of the flipbook with one hand, his screen face shows focused cyan eyes; the red ball drawn on the new page sits at the very bottom, squashed slightly flat as if it just bounced. The pink axolotl Tlatoāni leans closer with gentle curious surprise, gills lifted. No text."
+    },
+    {
+      "step": "4-assemble",
+      "what": "Batch the frames as a ping-pong loop 1 → 2 → 3 → 2, scale down, and save a looping lossy WebP at 1.6 fps, all with core ComfyUI nodes (no GPU model).",
+      "workflow": "art/workflows/assemble-webp.json",
+      "inputs": {"f1": "1-keyframe", "f2": "2-look-up", "f3": "3-show-it-off"},
+      "outputs": [
+        {"file": "public/images/gallery/learning-animations-loop.webp", "size": "512x380", "frames": 4, "sha256": "7ce6022b53f5a73140ada3fba93c72f747ef1b9969f1081d44640c20abc5b1a4"},
+        {"file": "public/images/gallery/learning-animations-loop-small.webp", "size": "480x356", "frames": 4, "overrides": {"$node:7.width": 480, "$node:7.height": 356}, "sha256": "9e26f2c256db3d1213eb3be2664f079d52d376324880fe02002e7757a1157166"}
+      ]
+    }
+  ],
+  "timings": "Qwen edits took about 13 s each warm (about 22 s for the first of a batch, while the model loads); the SDXL keyframes took about 9 s each; assembly took about 1 s."
+}

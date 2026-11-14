@@ -44,6 +44,10 @@ for source, name, width in (
 GALLERY.mkdir(parents=True, exist_ok=True)
 total = 0
 for item in json.loads(CATALOG.read_text(encoding="utf-8"))["items"]:
+    if item.get("animated"):
+        # Animated WebPs come from their own studio workflow (the item's
+        # "recipe") and are committed as-is; re-encoding would flatten them.
+        continue
     for suffix, side in (("", 1200), ("-small", 480)):
         destination = GALLERY / f"{item['id']}{suffix}.webp"
         save_copy(ROOT / item["source"], destination, side, GALLERY_QUALITY)
