@@ -1,12 +1,13 @@
 """Build the web assets for the "how it was made" breakdown.
 
 usage: python breakdown.py BLOCKOUT_DIR FINAL_FRAMES_DIR OUT_DIR [--frames 48] [--fps 12]
+                            [--name learning-animations-loop] [--width 640] [--prefix breakdown]
 
 BLOCKOUT_DIR holds wire/, clay/ and depth/ (from blockout.py); FINAL_FRAMES_DIR
 holds the generated frames in order (PNG). Writes:
-  learning-animations-loop.webp        the final loop (FRAMES frames, lossy)
-  learning-animations-loop-small.webp  the same at 480 px wide
-  breakdown-wire.webp, breakdown-depth.webp, breakdown-final.webp
+  NAME.webp                  the final loop (FRAMES frames, lossy, WIDTH px)
+  NAME-small.webp            the same at 480 px wide
+  PREFIX-wire.webp, PREFIX-depth.webp, PREFIX-final.webp
                                        320 px loops of each stage, in step
 This only packs and scales frames: no pixel of the final loop is painted here.
 """
@@ -19,6 +20,10 @@ args = sys.argv[4:]
 N = int(args[args.index("--frames") + 1]) if "--frames" in args else 48
 FPS = float(args[args.index("--fps") + 1]) if "--fps" in args else 12.0
 ms = round(1000 / FPS)
+NAME = args[args.index("--name") + 1] if "--name" in args else "learning-animations-loop"
+WIDTH = int(args[args.index("--width") + 1]) if "--width" in args else 640
+PREFIX = args[args.index("--prefix") + 1] if "--prefix" in args else "breakdown"
+Q = int(args[args.index("--quality") + 1]) if "--quality" in args else 82
 os.makedirs(out, exist_ok=True)
 
 
@@ -36,8 +41,8 @@ def save(frames, path, width, quality):
 
 
 final = load(fin, N)
-save(final, os.path.join(out, "learning-animations-loop.webp"), 640, 82)
-save(final, os.path.join(out, "learning-animations-loop-small.webp"), 480, 78)
+save(final, os.path.join(out, f"{NAME}.webp"), WIDTH, Q)
+save(final, os.path.join(out, f"{NAME}-small.webp"), 480, Q - 4)
 for name in ("wire", "depth"):
-    save(load(os.path.join(blk, name), N), os.path.join(out, f"breakdown-{name}.webp"), 320, 70)
-save(final, os.path.join(out, "breakdown-final.webp"), 320, 72)
+    save(load(os.path.join(blk, name), N), os.path.join(out, f"{PREFIX}-{name}.webp"), 320, 70)
+save(final, os.path.join(out, f"{PREFIX}-final.webp"), 320, 72)

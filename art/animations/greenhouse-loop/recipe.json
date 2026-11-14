@@ -1,0 +1,208 @@
+{
+  "schema": "macron.dev/animation-recipe/v2",
+  "id": "greenhouse-loop",
+  "title": "Tlatoāni and Mācron in the greenhouse",
+  "made": "2026-11-14",
+  "what_the_loop_shows": "72 frames at 12 fps (6 s), looping, with a slow camera arc that pushes in toward the table and returns. On a sunny greenhouse terrace above the sea (pergola, hanging glass globes with air plants, a woven lantern, plant shelves, a teal runner on a round table), Mācron sits on the tabletop drawing in a flipbook. The red ball on the left page pops up into the air, bounces three times, lower each time, and comes to rest; Mācron watches it and looks up at Tlatoāni, who sits on a stool, points and smiles, gills swaying; then Mācron draws again.",
+  "how": "A Blender blockout of the whole terrace (bpy, headless in the forge) sets the room, the contacts, the character motion and the camera path, and renders a depth video. Qwen-Image-Edit re-staged the canon 'Chess Tlatoāni vs Mācron' picture into a flipbook scene, and that still is the identity and style reference. Wan 2.2 Fun VACE 14B, run headless through studio.queue_workflow, draws 81 frames of the 72-frame cycle in one run; a blend of the 8 overlapping frames closes the loop. Nothing was painted by hand.",
+  "engine": {
+    "name": "comfyui",
+    "ref": "v0.40.0",
+    "tillandsias_pipeline": "56.11.10.1"
+  },
+  "tools": {
+    "blender": "bpy 5.3.0 wheel on Python 3.13 (uv), CPU rendering: Workbench (clay, wire) and EEVEE (depth)",
+    "pillow": "13.0.0, only for packing frames, the loop blend and the WebP encoding"
+  },
+  "models": [
+    {
+      "file": "wan2.2_fun_vace_high_noise_14B_fp8_scaled.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "23130f30207f6c8697a5bead113ddc9904cfbb5e8fa51a550df3cee4d21fb54c",
+      "licence": "apache-2.0"
+    },
+    {
+      "file": "wan2.2_fun_vace_low_noise_14B_fp8_scaled.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "ca55a5cc543e28576edbd2079f8c1de05f71cd9e85bf96fab635f55663dbcb69",
+      "licence": "apache-2.0"
+    },
+    {
+      "file": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68",
+      "licence": "apache-2.0"
+    },
+    {
+      "file": "wan_2.1_vae.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b",
+      "licence": "apache-2.0"
+    }
+  ],
+  "prompt": "Richly detailed warm hand-drawn 2D cartoon illustration come to life, clean ink outlines, soft golden sunlight and dappled shadows, a slow smooth camera arc around the table. A sunny greenhouse terrace overlooking the sea: wooden pergola beams draped with trailing green ivy leaves, hanging glass globes holding air plants, a glowing woven lantern, tiered wooden shelves full of potted plants and pink-tipped air plants, palm trees and a blue bay with a white seaside town in the distance. At a round wooden table with a teal patterned runner, a big pink axolotl with large feathery coral gills, freckles and rosy cheeks, wearing a cream robe with teal patterned trim, sits on a wooden stool; he has a cheerful, relaxed, happy smile, points at the bouncing ball and nods, gills gently swaying, his one pink tail swinging. On the tabletop beside a glass jar sits a small robot with a plain smooth cream body and a small teal chest panel, whose dark screen face shows exactly two glowing cyan eyes, with an antenna orb on top; he holds a yellow pencil and draws in an open paper flipbook. A shiny red ball he drew on the left page pops up off the paper into the air, bounces three times on the page, each bounce lower, and comes to rest; the robot throws both arms up in delight and looks up at the axolotl, then goes back to drawing. Smooth, gentle, friendly motion.",
+  "negative_prompt": "three eyes, third eye, extra eyes, camouflage, patterned robot, worried, sad, raised eyebrows, red beads, berries, cut, scene change, flicker, morphing, melting, distorted face, extra limbs, extra robots, extra characters, extra axolotls, red light on robot, mustache, beard, second tail, 3d render, grey clay, text, watermark, scary, angry, blurry, low quality, static, frozen",
+  "steps": [
+    {
+      "step": "1-keyframe",
+      "what": "Re-stage the canon picture 'Chess Tlatoāni vs Mācron' with Qwen-Image-Edit-2511 (Lightning 4-step LoRA, 4 steps, cfg 1): chessboard out, flipbook and red ball in, everything else kept. Two seeds; seed 302 shipped (seed 301 put the pencil in Tlatoāni's hand).",
+      "workflow": "art/workflows/qwen-edit.json",
+      "input": {
+        "file": "assets/Chess Tlatoāni vs Mācron.png",
+        "sha256": "8adaf0a328d1e1b7f2d6b6769651dfdcec4017cfb27c2b794a988086a99ffb16"
+      },
+      "seed": 302,
+      "prompt": "Keep the same picture, the same greenhouse terrace, the same lighting and exactly the same two characters (the pink axolotl in the teal patterned robe and the small cream robot with the dark screen face and cyan eyes). Remove the chessboard and chess pieces. On the round wooden table between them lies an open paper flipbook with a little red ball drawn on its left page. The robot holds a yellow pencil and is drawing in the flipbook with a happy face. The axolotl leans in, smiling calmly, watching the flipbook. Keep the hanging glass globes, the lantern, the vines, the plants and the sea view.",
+      "negative_prompt": "chessboard, chess pieces, text, watermark, extra characters, extra robots, frown, sad",
+      "models": [
+        {
+          "file": "qwen_image_edit_2511_fp8mixed.safetensors",
+          "repo": "Comfy-Org/Qwen-Image-Edit",
+          "revision": "f68ace85e60b4a02a323e394253731947657b7d2",
+          "sha256": "c9fdc158e46d3b61ef75f21ae866ca2fe808bf4a53643120d1c1e87c19280a4e",
+          "licence": "apache-2.0"
+        },
+        {
+          "file": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+          "repo": "Comfy-Org/Qwen-Image",
+          "revision": "1f12b17be14c89b026c51a91d67c32f84bb047bc",
+          "sha256": "cb5636d852a0ea6a9075ab1bef496c0db7aef13c02350571e388aea959c5c0b4",
+          "licence": "apache-2.0"
+        },
+        {
+          "file": "qwen_image_vae.safetensors",
+          "repo": "Comfy-Org/Qwen-Image",
+          "revision": "1f12b17be14c89b026c51a91d67c32f84bb047bc",
+          "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f",
+          "licence": "apache-2.0"
+        },
+        {
+          "file": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+          "repo": "lightx2v/Qwen-Image-Edit-2511-Lightning",
+          "revision": "107d238d68b8387e32843d0b4a2e24ceb0d3ad86",
+          "sha256": "22226e8d05d354bb356627d428809f5afd7819399b077238a2b70a82883a904f",
+          "licence": "apache-2.0"
+        }
+      ],
+      "output": {
+        "file": "art/animations/greenhouse-loop/identity-reference.png",
+        "sha256": "d71bee9c3e2eea6250c29d73f78909a7fbeb746d24fc0a254021d82664e51d85"
+      },
+      "gpu_time": "about 35 s for both seeds"
+    },
+    {
+      "step": "2-blockout",
+      "what": "Build the terrace, the 72-frame cyclic motion and the camera arc; render clay, wire and depth at 768x576. In the depth pass Mācron's two eyes are marked pure white (see attempts).",
+      "command": "python art/tools/blockout_room.py OUT_DIR   (bpy venv)",
+      "tool": "art/tools/blockout_room.py",
+      "cpu_time": "about 10 min for 216 renders on 20 cores"
+    },
+    {
+      "step": "3-pack-control",
+      "what": "Pack 81 depth frames (frame i = depth i mod 72) and an all-white mask as multi-frame PNGs.",
+      "command": "python art/tools/pack_control.py OUT_DIR/depth 81 control.png mask.png",
+      "inputs_sha256": {
+        "control": "3a8924bd3198ce65e9b4a3c9a5577df80c9d60ec0834ed24405248ea679bbd79",
+        "mask": "347b5cc9b219f3755aa24499ee9001a3bc08c43ee9202576eaca60fd0246a4d1"
+      }
+    },
+    {
+      "step": "4-wan-vace",
+      "what": "One Wan 2.2 Fun VACE run: depth video as control, the step-1 still as reference, 768x576, 81 frames, 20 steps split 10/10 between the high- and low-noise experts, cfg 3.5, shift 8, euler/simple.",
+      "workflow": "art/workflows/wan-vace-room.json",
+      "workflow_sha256": "e64a1cfbb06622b544f1d61eb80d7ee91a392d3a1d4145f467fe31382de3e5c2",
+      "inputs": {
+        "control": "step 3",
+        "mask": "step 3",
+        "reference": "art/animations/greenhouse-loop/identity-reference.png"
+      },
+      "overrides": {
+        "seed": 31
+      },
+      "gpu_time": "about 31 min on an RTX A5000 (warm)"
+    },
+    {
+      "step": "5-close-the-loop",
+      "what": "Frames 72-80 redraw the moments of frames 0-8 in the same run. Blend frame 72+k into frame k for k < 8. With a moving camera, raw frame differences are large everywhere (mean 13), so the loop is judged by 'jolt': how much a step differs from the average of its two neighbours.",
+      "command": "python art/tools/loop_blend.py CLIP_DIR 72 8 FINAL_DIR",
+      "measured": {
+        "mean_abs_step_0_255": 13.0,
+        "wrap_step": 16.85,
+        "wrap_neighbours": [
+          17.62,
+          16.2
+        ],
+        "wrap_jolt": -0.06,
+        "wrap_jolt_without_blend": -0.6,
+        "max_abs_jolt_anywhere": 0.98
+      }
+    },
+    {
+      "step": "6-web",
+      "what": "Encode the final and the breakdown loops as lossy WebP at 12 fps.",
+      "command": "python art/tools/breakdown.py OUT_DIR FINAL_DIR WEB_DIR --frames 72 --fps 12 --name greenhouse-loop --width 640 --quality 72 --prefix room",
+      "outputs": [
+        {
+          "file": "public/images/gallery/greenhouse-loop.webp",
+          "size": "640x480",
+          "frames": 72,
+          "bytes": 2920928,
+          "sha256": "6313ce150909bee444d3eb77e78841ccc890c738ac37580d238c944b67559f56"
+        },
+        {
+          "file": "public/images/gallery/greenhouse-loop-small.webp",
+          "size": "480x360",
+          "frames": 72,
+          "bytes": 1959172,
+          "sha256": "da14913b9fe00931b12193537a8cc7b31863cc3b7067759cd4511bb90b5c12b4"
+        },
+        {
+          "file": "public/images/howto/learning-animations/room-wire.webp",
+          "size": "320x240",
+          "frames": 72,
+          "sha256": "547ee659cd5a5a1e8ac971d043858a00651d91f78263936a32f23815128d82da"
+        },
+        {
+          "file": "public/images/howto/learning-animations/room-depth.webp",
+          "size": "320x240",
+          "frames": 72,
+          "sha256": "38a25ce52ce80435802121f81a66e3ffecd7d001ae8d678bdecfc2185d3f12bb"
+        },
+        {
+          "file": "public/images/howto/learning-animations/room-final.webp",
+          "size": "320x240",
+          "frames": 72,
+          "sha256": "5d419cf4a3e795cccd18850ac597fafd6bd05419bebd6dcfb91ba9e9ca62c1cb"
+        }
+      ]
+    }
+  ],
+  "attempts_that_did_not_ship": [
+    {
+      "what": "Run 1 (seed 31): the same scene, before the fixes below",
+      "why": "Rich and steady, but Mācron had three eyes in every frame, the vines (chains of spheres in the blockout) came out as strings of red beads, and Tlatoāni's gills were small. The prompt said 'two glowing cyan eyes'."
+    },
+    {
+      "what": "Run 2 (seed 31): leaf-shaped vines, bigger gills, raised eye geometry, 'exactly two eyes' in the prompt and 'three eyes' in the negative",
+      "why": "Still three eyes. At 2.5 m from the camera a 3 cm bump is about two grey levels in the depth video, so the control said nothing about eyes and the model kept its own idea."
+    },
+    {
+      "what": "Run 3 (seed 32): Mācron's eyes marked pure white in the depth pass",
+      "why": "Two eyes in every frame: the fix worked. But this seed drew the ball as red marks on the page that never hopped, and put a camouflage-like pattern on Mācron's body."
+    },
+    {
+      "what": "Run 4, first try",
+      "why": "Failed after 20 s with a host-side container timeout before reaching ComfyUI; the identical resubmission ran."
+    }
+  ],
+  "earlier_version": "art/animations/learning-animations/recipe.json (v2: a 48-frame loop with a fixed camera in a sparse blockout).",
+  "credits": [
+    "kumbia-kombat (github.com/8007342/kumbia-kombat, LESSONS_LEARNED.md): Blender as a bpy venv; identity from a reference and pose from a bare control; prompt and control must agree.",
+    "demon_attack: Qwen-Image-Edit settings and studio etiquette.",
+    "The terrace, its props and both characters' looks come from the canon picture 'Chess Tlatoāni vs Mācron' in assets/."
+  ]
+}

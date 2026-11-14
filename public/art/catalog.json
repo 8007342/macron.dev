@@ -1871,6 +1871,52 @@
         "the first 8 frames are a blend of two drawings of the same quiet moment (to close the loop), so their lines are slightly softer"
       ],
       "homage": ""
+    },
+    {
+      "id": "greenhouse-loop",
+      "source": "public/images/gallery/greenhouse-loop.webp",
+      "animated": true,
+      "recipe": "art/animations/greenhouse-loop/recipe.json",
+      "title": "Greenhouse Flipbook",
+      "alt": "A 6-second looping animation on a sunny greenhouse terrace above the sea, the camera slowly arcing around a round wooden table: hanging glass globes with air plants, a woven lantern and shelves of potted plants frame the view. Small cream robot Mācron, with a dark screen face and two cyan eyes, sits on the tabletop drawing in a flipbook; the red ball on the page pops up into the air, bounces three times and comes to rest while he watches. Pink axolotl Tlatoāni, in a cream robe with teal trim, sits on a stool beside the table, pointing and smiling, gills swaying.",
+      "description": "A drawn ball pops off its page in the canon greenhouse while the camera drifts around the table. Every frame was drawn by a video model, but the room, the contacts, the motion and the camera path were all set first in a Blender blockout, which is why the table stays put while the camera moves.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "animation",
+        "blockout",
+        "control-signals",
+        "camera-motion",
+        "consistency",
+        "reproducibility",
+        "provenance"
+      ],
+      "tags": [
+        "comfyui",
+        "studio",
+        "blender",
+        "wan-vace",
+        "qwen-image-edit",
+        "depth",
+        "greenhouse",
+        "flipbook",
+        "animated-webp",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Block the world first; then let the model draw it.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "Tlatoāni's brows are drawn slightly raised, which reads as sheepish rather than calm in some frames",
+        "Tlatoāni wears a sleeveless cream robe here; the canon picture gives him sleeves and a teal patterned outer robe",
+        "the vines above the table are drawn as loose floating leaves",
+        "the first 8 frames are a blend of two drawings of the same moment (to close the loop), so their lines are slightly softer"
+      ],
+      "homage": ""
     }
   ]
 }

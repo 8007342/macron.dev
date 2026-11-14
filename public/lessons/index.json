@@ -439,14 +439,16 @@
     {
       "slug": "make-art-in-the-forge-studio",
       "title": "Making art and animation in the forge's ComfyUI studio",
-      "summary": "Block out the world in Blender (it runs headless in the forge), render a depth pass, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
+      "summary": "Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
       "slogan": "Block the world first; then let the model draw it.",
       "tags": [
         "comfyui",
         "studio",
         "blender",
         "animation",
+        "camera-motion",
         "wan-vace",
+        "qwen-image-edit",
         "image-generation",
         "tillandsias",
         "provenance"
@@ -457,14 +459,16 @@
         "agents"
       ],
       "rank": 62,
-      "art": "learning-animations-loop",
-      "image": "https://macron.dev/images/gallery/learning-animations-loop.webp",
-      "image_alt": "A 4-second looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron sits on a wooden table drawing in an open flipbook; the little red ball on the page hops up, bounces three times and settles back; Mācron lifts his arms and looks up at pink axolotl Tlatoāni, who sits on a stool beside the table, points at the ball and nods with a calm smile, gills swaying.",
+      "art": "greenhouse-loop",
+      "image": "https://macron.dev/images/gallery/greenhouse-loop.webp",
+      "image_alt": "A 6-second looping animation on a sunny greenhouse terrace above the sea, the camera slowly arcing around a round wooden table: hanging glass globes with air plants, a woven lantern and shelves of potted plants frame the view. Small cream robot Mācron, with a dark screen face and two cyan eyes, sits on the tabletop drawing in a flipbook; the red ball on the page pops up into the air, bounces three times and comes to rest while he watches. Pink axolotl Tlatoāni, in a cream robe with teal trim, sits on a stool beside the table, pointing and smiling, gills swaying.",
       "url": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
       "source": "https://macron.dev/lessons/make-art-in-the-forge-studio.md",
       "sources": [
+        "https://macron.dev/notes/2026-11-14-forge-greenhouse-camera-loop-three-eyes.md",
         "https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md",
         "https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md",
+        "https://github.com/8007342/macron.dev/blob/main/art/animations/greenhouse-loop/recipe.json",
         "https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json",
         "https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md",
         "https://github.com/8007342/demon_attack"
