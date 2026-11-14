@@ -1836,15 +1836,16 @@
       "animated": true,
       "recipe": "art/animations/learning-animations/recipe.json",
       "title": "Learning to Animate",
-      "alt": "A four-frame looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron draws a red ball in a paper flipbook on a wooden table, looks up at pink axolotl Tlatoāni, then proudly lifts the flipbook while Tlatoāni claps softly, and looks up again.",
-      "description": "Mācron draws the ball, checks with Tlatoāni, and shows off the page; the ball climbs a little higher each time. An animation is just a few drawings that agree with each other. This loop was made the same way: one keyframe, then small edits of it, so every frame keeps the same camera and the same characters.",
+      "alt": "A 4-second looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron sits on a wooden table drawing in an open flipbook; the little red ball on the page hops up, bounces three times and settles back; Mācron lifts his arms and looks up at pink axolotl Tlatoāni, who sits on a stool beside the table, points at the ball and nods with a calm smile, gills swaying.",
+      "description": "A drawn ball comes alive and bounces back onto its page while Mācron cheers and Tlatoāni nods. The loop itself was made the way it shows: a Blender blockout of the world set every contact and movement, and a video model drew the frames to match, so the ball lands where the page is and nobody changes shape between frames.",
       "characters": [
         "tlatoani",
         "macron"
       ],
       "concepts": [
         "animation",
-        "keyframes",
+        "blockout",
+        "control-signals",
         "consistency",
         "reproducibility",
         "provenance"
@@ -1852,19 +1853,22 @@
       "tags": [
         "comfyui",
         "studio",
-        "qwen-image-edit",
+        "blender",
+        "wan-vace",
+        "depth",
         "flipbook",
         "animated-webp",
         "axolotl",
         "robot"
       ],
-      "slogan": "Change one thing per frame; keep everything else still.",
+      "slogan": "Block the world first; then let the model draw it.",
       "text_in_image": "",
       "status": "reference",
       "suggested_status": "canonical-candidate",
       "canon_qa": [
-        "frames are separate edits, so small details (plants, the second ball on the page) shimmer slightly between frames",
-        "seated at the table, Mācron reads close to Tlatoāni's height; canon prefers him clearly smaller (§15)"
+        "Mācron reads small at 640 px and his arms are hard to see in some frames",
+        "Tlatoāni's gills are drawn as long feathery fronds, more than in the canon images",
+        "the first 8 frames are a blend of two drawings of the same quiet moment (to close the loop), so their lines are slightly softer"
       ],
       "homage": ""
     }

@@ -130,6 +130,9 @@ export function renderInline(text) {
   let s = String(text).replace(/\u0000/g, '');
   s = s.replace(/`([^`]+)`/g, (_, code) => keep(`<code>${escapeHtml(code)}</code>`));
   s = escapeHtml(s);
+  // Images: only the site's own /images/ files, so a lesson cannot hotlink.
+  s = s.replace(/!\[([^\]]*)\]\((\/images\/[A-Za-z0-9._\/-]+)\)/g, (_, alt, src) =>
+    keep(`<img src="${src}" alt="${alt}" loading="lazy" decoding="async">`));
   s = s.replace(/\[([^\]]+)\]\(([^()\s]+)\)/g, (_, label, url) => {
     const href = safeHref(url);
     return href === null ? label : `${keep(`<a href="${href}">`)}${label}${keep('</a>')}`;
@@ -442,6 +445,7 @@ const LESSON_CSS = `
     .prose blockquote { padding: 12px 18px; background: var(--card); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
     .prose .table { overflow-x: auto; margin: 0 0 18px; }
     .prose table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
+    .prose img { display: block; width: 100%; max-width: 320px; height: auto; border-radius: 6px; }
     .prose th, .prose td { text-align: left; padding: 6px 12px; border-bottom: 1px solid var(--line); }
     .prose blockquote p:last-child { margin-bottom: 0; }
     .provenance { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }

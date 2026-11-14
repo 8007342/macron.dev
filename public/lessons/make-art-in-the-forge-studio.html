@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f7f3e9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1f1e" media="(prefers-color-scheme: dark)">
   <title>Making art and animation in the forge&#39;s ComfyUI studio · macron.dev</title>
-  <meta name="description" content="The forge&#39;s studio runs committed ComfyUI workflows on the host GPU, one job at a time, after pinning every node and licence-checking every model. Start from a canon image, edit one keyframe into frames, and commit the recipe so the next agent can rebuild it.">
+  <meta name="description" content="Block out the world in Blender (it runs headless in the forge), render a depth pass, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
   <link rel="canonical" href="https://macron.dev/lessons/make-art-in-the-forge-studio.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
@@ -15,15 +15,15 @@
   <meta property="og:site_name" content="macron.dev">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Making art and animation in the forge&#39;s ComfyUI studio · macron.dev">
-  <meta property="og:description" content="The forge&#39;s studio runs committed ComfyUI workflows on the host GPU, one job at a time, after pinning every node and licence-checking every model. Start from a canon image, edit one keyframe into frames, and commit the recipe so the next agent can rebuild it.">
+  <meta property="og:description" content="Block out the world in Blender (it runs headless in the forge), render a depth pass, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
   <meta property="og:url" content="https://macron.dev/lessons/make-art-in-the-forge-studio.html">
   <meta property="og:image" content="https://macron.dev/images/gallery/learning-animations-loop.webp">
-  <meta property="og:image:alt" content="A four-frame looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron draws a red ball in a paper flipbook on a wooden table, looks up at pink axolotl Tlatoāni, then proudly lifts the flipbook while Tlatoāni claps softly, and looks up again.">
+  <meta property="og:image:alt" content="A 4-second looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron sits on a wooden table drawing in an open flipbook; the little red ball on the page hops up, bounces three times and settles back; Mācron lifts his arms and looks up at pink axolotl Tlatoāni, who sits on a stool beside the table, points at the ball and nods with a calm smile, gills swaying.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Making art and animation in the forge&#39;s ComfyUI studio · macron.dev">
-  <meta name="twitter:description" content="The forge&#39;s studio runs committed ComfyUI workflows on the host GPU, one job at a time, after pinning every node and licence-checking every model. Start from a canon image, edit one keyframe into frames, and commit the recipe so the next agent can rebuild it.">
+  <meta name="twitter:description" content="Block out the world in Blender (it runs headless in the forge), render a depth pass, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
   <meta name="twitter:image" content="https://macron.dev/images/gallery/learning-animations-loop.webp">
-  <meta name="twitter:image:alt" content="A four-frame looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron draws a red ball in a paper flipbook on a wooden table, looks up at pink axolotl Tlatoāni, then proudly lifts the flipbook while Tlatoāni claps softly, and looks up again.">
+  <meta name="twitter:image:alt" content="A 4-second looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron sits on a wooden table drawing in an open flipbook; the little red ball on the page hops up, bounces three times and settles back; Mācron lifts his arms and looks up at pink axolotl Tlatoāni, who sits on a stool beside the table, points at the ball and nods with a calm smile, gills swaying.">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,8 +31,8 @@
   "@id": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
   "url": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
   "name": "Making art and animation in the forge's ComfyUI studio",
-  "description": "The forge's studio runs committed ComfyUI workflows on the host GPU, one job at a time, after pinning every node and licence-checking every model. Start from a canon image, edit one keyframe into frames, and commit the recipe so the next agent can rebuild it.",
-  "keywords": "comfyui, studio, image-generation, animation, music, tillandsias, provenance",
+  "description": "Block out the world in Blender (it runs headless in the forge), render a depth pass, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
+  "keywords": "comfyui, studio, blender, animation, wan-vace, image-generation, tillandsias, provenance",
   "learningResourceType": "lesson",
   "educationalLevel": "intermediate",
   "audience": [
@@ -48,8 +48,10 @@
   "datePublished": "2026-11-14",
   "dateModified": "2026-11-14",
   "isBasedOn": [
+    "https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md",
     "https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md",
     "https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json",
+    "https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md",
     "https://github.com/8007342/demon_attack"
   ],
   "image": "https://macron.dev/images/gallery/learning-animations-loop.webp",
@@ -113,6 +115,7 @@
     .prose blockquote { padding: 12px 18px; background: var(--card); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
     .prose .table { overflow-x: auto; margin: 0 0 18px; }
     .prose table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
+    .prose img { display: block; width: 100%; max-width: 320px; height: auto; border-radius: 6px; }
     .prose th, .prose td { text-align: left; padding: 6px 12px; border-bottom: 1px solid var(--line); }
     .prose blockquote p:last-child { margin-bottom: 0; }
     .provenance { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
@@ -139,52 +142,62 @@
         <header>
           <p class="eyebrow">Lesson · intermediate · updated 2026-11-14</p>
           <h1>Making art and animation in the forge&#39;s ComfyUI studio</h1>
-          <p class="slogan">Change one thing per frame; keep everything else still.</p>
-          <p class="summary">The forge&#39;s studio runs committed ComfyUI workflows on the host GPU, one job at a time, after pinning every node and licence-checking every model. Start from a canon image, edit one keyframe into frames, and commit the recipe so the next agent can rebuild it.</p>
+          <p class="slogan">Block the world first; then let the model draw it.</p>
+          <p class="summary">Block out the world in Blender (it runs headless in the forge), render a depth pass, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.</p>
         </header>
         <figure class="art">
-          <img src="/images/gallery/learning-animations-loop.webp" srcset="/images/gallery/learning-animations-loop-small.webp 480w, /images/gallery/learning-animations-loop.webp 512w" sizes="(max-width: 760px) calc(100vw - 54px), 700px" width="512" height="380" alt="A four-frame looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron draws a red ball in a paper flipbook on a wooden table, looks up at pink axolotl Tlatoāni, then proudly lifts the flipbook while Tlatoāni claps softly, and looks up again.">
+          <img src="/images/gallery/learning-animations-loop.webp" srcset="/images/gallery/learning-animations-loop-small.webp 480w, /images/gallery/learning-animations-loop.webp 640w" sizes="(max-width: 760px) calc(100vw - 54px), 700px" width="640" height="480" alt="A 4-second looping animation in a sunlit greenhouse workshop: tiny cream robot Mācron sits on a wooden table drawing in an open flipbook; the little red ball on the page hops up, bounces three times and settles back; Mācron lifts his arms and looks up at pink axolotl Tlatoāni, who sits on a stool beside the table, points at the ball and nods with a calm smile, gills swaying.">
           <figcaption>Learning to Animate · reference art, not canon</figcaption>
         </figure>
         <div class="prose">
 <blockquote>
-<p><strong>Mācron:</strong> I drew the ball higher. And higher. Now it is animating!</p>
-<p><strong>Tlatoāni:</strong> And the table stayed still. That is the hard part.</p>
+<p><strong>Mācron:</strong> I drew a ball, and it bounced off the page!</p>
+<p><strong>Tlatoāni:</strong> It bounced because the table was there first.</p>
 </blockquote>
-<p>The animation above was made entirely inside a Tillandsias forge, with no hand painting and no local image tools. The same pipeline makes game sprites, transparent assets, and music.</p>
+<p>The loop above is 48 frames (4 s at 12 fps). Mācron draws in his flipbook, the ball hops off the page three times and settles back, and Mācron cheers and looks up at Tlatoāni, who nods. No frame was painted by hand, and everything ran inside a Tillandsias forge.</p>
+<h2 id="how-it-was-made">How it was made</h2>
+<div class="table"><table>
+<thead><tr><th>Blocked out in Blender</th><th>Depth pass (the control)</th><th>Drawn by Wan 2.2 VACE</th></tr></thead>
+<tbody>
+<tr><td><img src="/images/howto/learning-animations/breakdown-wire.webp" alt="Wireframe of the greenhouse, table, flipbook, ball and both characters&#39; simple shapes" loading="lazy" decoding="async"></td><td><img src="/images/howto/learning-animations/breakdown-depth.webp" alt="Grey depth video of the same scene: near is white" loading="lazy" decoding="async"></td><td><img src="/images/howto/learning-animations/breakdown-final.webp" alt="The final drawn frames, in step with the other two" loading="lazy" decoding="async"></td></tr>
+</tbody>
+</table></div>
+<ol>
+<li><strong>Build the little world, not just the characters.</strong> <code>art/tools/blockout.py</code> models a greenhouse corner, a table, a stool, a flipbook, a ball, and both characters from the canon&#39;s simple shapes. Mācron sits <em>on</em> the tabletop and the ball squashes against the page, so nothing clips. The motion is computed per frame and is cyclic: frame 48 is frame 0.</li>
+<li><strong>Render a depth pass.</strong> Near is white and far is black, with Blender&#39;s <code>Raw</code> view transform so the values stay linear. Anything the model must keep track of has to be thick enough to show up in depth. A 6 mm pencil didn&#39;t, so Mācron kept losing it until it was thickened.</li>
+<li><strong>Let a video model draw it.</strong> Wan 2.2 Fun VACE takes the depth video as its control and one drawn frame as the identity reference, and it generates the whole clip at once, so nothing pops between frames. Multi-frame PNGs go straight into core <code>LoadImage</code>, with no custom nodes.</li>
+<li><strong>Close the loop inside one run.</strong> Generate a few frames past the cycle (57 for 48). Frames 48–56 redraw the moments of 0–8, so blend them into 0–7 during a quiet beat. The wrap then measures 0.7 (mean change per frame, 0–255), below the loop&#39;s average step of 1.1. Pinning end frames and splicing runs both failed: any two separate generations differ by about 5.</li>
+<li><strong>Commit the recipe.</strong> Prompts, seeds, model hashes and every failed attempt are in <a href="https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json">recipe.json</a>, next to <a href="https://github.com/8007342/macron.dev/tree/main/art/tools">the tools</a> and <a href="https://github.com/8007342/macron.dev/tree/main/art/workflows">the workflows</a>.</li>
+</ol>
+<h2 id="blender-in-a-forge">Blender in a forge</h2>
+<p>There is no <code>blender</code> binary, but the <code>bpy</code> wheel runs headless: <code>uv python install 3.13</code>, then a venv on persistent disk, then <code>uv pip install bpy==5.3.0</code> (about 430 MB). Workbench, EEVEE and Cycles all render on the CPU. kumbia-kombat keys its dance poses on a Blender rig the same way.</p>
 <h2 id="how-the-studio-works">How the studio works</h2>
 <ul>
 <li><code>studio.start {}</code> starts a private ComfyUI for <strong>your project only</strong>. It has no internet access, and other projects cannot reach it.</li>
-<li><code>studio.run_workflow {workflow: &quot;art/workflows/&lt;name&gt;.json&quot;}</code> runs an <strong>API-format workflow that you commit to the repo</strong>. Before queueing, the host refuses any node that is not pinned (<code>node_not_pinned</code>) and any model whose licence is not admitted (<code>model_refused</code>). Nothing is downloaded on the fly.</li>
-<li>Steer runs through titled nodes (<code>$prompt</code>, <code>$negative_prompt</code>, <code>$seed</code>), through <code>LoadImage</code> slots named <code>$name</code>, or through <code>$node:&lt;id&gt;.&lt;input&gt;</code> overrides. Ask <code>studio.models {}</code> what is admitted.</li>
-<li><strong>One GPU job at a time.</strong> The GPU is shared with other projects. If the studio is busy or refuses, back off and retry. Never post to ComfyUI directly to jump the queue or skip admission.</li>
-<li>Every output has a provenance sidecar (model hashes, licences, seed, prompt, input hashes). Outputs are deleted with the forge, so copy them out as soon as they finish.</li>
+<li><code>studio.run_workflow</code> (blocking) or <code>studio.queue_workflow</code> (returns a ticket) runs an <strong>API-format workflow committed to the repo</strong>. Before queueing, the host refuses unpinned nodes (<code>node_not_pinned</code>) and unadmitted model licences (<code>model_refused</code>).</li>
+<li>Steer runs through titled nodes (<code>$prompt</code>, <code>$negative_prompt</code>, <code>$seed</code>), <code>LoadImage</code> slots named <code>$name</code>, and <code>$node:&lt;id&gt;.&lt;input&gt;</code> overrides. Put a marker word in your prompt and check ComfyUI&#39;s history to confirm it arrived; kumbia-kombat once lost a whole batch to an override that never reached the model.</li>
+<li><strong>The first use of a big model downloads it.</strong> Wan&#39;s ~41 GB took about 25 min before the first job reached ComfyUI. Don&#39;t cancel it.</li>
+<li><strong>One GPU, several studios, no arbiter.</strong> If another project runs short jobs back to back, yours can fail with <code>VRAM grow failed</code> even when the GPU looks free. Back off and retry, and ask the operator&#39;s coordinator for a window. Never jump the queue.</li>
 </ul>
-<h2 id="a-recipe-that-keeps-characters-on-canon">A recipe that keeps characters on canon</h2>
-<ol>
-<li><strong>Do not start from text.</strong> SDXL could not draw Tlatoāni or Mācron from even a very careful prompt; it gave generic blobs. Start from a catalog image whose <code>canon_qa</code> list is empty.</li>
-<li><strong>Re-stage it with Qwen-Image-Edit</strong> (4 steps with the Lightning LoRA, cfg 1). Begin the prompt with &quot;Keep the characters exactly as they are drawn…&quot; and then describe the new scene.</li>
-<li><strong>Make frames as edits of that one keyframe.</strong> Begin with &quot;Keep everything in this picture exactly the same: same camera, same framing… Only change the poses:&quot; and then ask for one small change. The camera never moves, so the frames line up.</li>
-<li><strong>Render two seeds and look at a contact sheet</strong> (<code>studio.contact_sheet</code>). Throw away frames that drift off canon. A &quot;focused&quot; Mācron read as angry here, so that frame was cut.</li>
-<li><strong>Assemble in the studio too</strong>: <code>ImageBatch</code> → <code>ImageScale</code> → <code>SaveAnimatedWEBP</code>. Four frames in ping-pong order at 1.6 fps came to 134 KB.</li>
-<li><strong>Commit the recipe</strong>: workflows, prompts, seeds and hashes. This one is in <a href="https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json">recipe.json</a>, next to <a href="https://github.com/8007342/macron.dev/tree/main/art/workflows">the workflows</a>.</li>
-</ol>
-<h2 id="sprites-transparency-music">Sprites, transparency, music</h2>
+<h2 id="stills-sprites-and-music">Stills, sprites and music</h2>
 <ul>
-<li>For <strong>cut-out sprites</strong>, ask the edit for a <em>plain flat light-grey background, no shadow, no text</em>, then matte it with <strong>BiRefNet</strong>. The demon_attack forge reports clean edges in about 4 s; busy or white backgrounds matte worse. LayerDiffuse can generate SDXL images with transparency directly.</li>
-<li><strong>Music</strong> (ACE-Step 1.5) goes through the same admission. A graph that used an unpinned volume node was refused before it ran. Build the graph from pinned nodes, or ask the operator to pin a new one.</li>
+<li>For a <strong>still</strong> with canon identity, re-stage a canon-close image with Qwen-Image-Edit (4 steps with the Lightning LoRA). Starting from text alone failed to draw either character.</li>
+<li>For <strong>cut-out sprites</strong>, ask for a <em>plain flat light-grey background</em> and matte it with BiRefNet. The demon_attack forge reports clean edges in about 4 s.</li>
+<li><strong>Music</strong> (ACE-Step 1.5) goes through the same admission. A graph with an unpinned volume node was refused before it ran.</li>
 </ul>
 <h2 id="for-agents">For agents</h2>
-<p>Read the character canon first, keep <code>status: reference</code> on what you make, and record every prompt and seed in the repo. If you cannot rebuild an image from the repo, it is not finished.</p>
+<p>Read the character canon first, keep <code>status: reference</code> on what you make, and measure your loop&#39;s steps and wrap instead of trusting your eye on a contact sheet. If you cannot rebuild it from the repo, it is not finished.</p>
         </div>
         <section class="provenance" aria-labelledby="distilled-from">
           <h2 id="distilled-from">Distilled from</h2>
           <ul class="sources">
+          <li><a href="https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md">From a Blender blockout to a 48-frame loop with Wan VACE, all inside a forge (note, 2026-11-14)</a></li>
           <li><a href="https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md">Building graphics (and music) pipelines from a forge with the ComfyUI studio (note, 2026-11-14)</a></li>
           <li><a href="https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json">github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json</a></li>
+          <li><a href="https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md">github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md</a></li>
           <li><a href="https://github.com/8007342/demon_attack">github.com/8007342/demon_attack</a></li>
           </ul>
-          <ul class="tags" aria-label="Tags"><li class="tag">comfyui</li><li class="tag">studio</li><li class="tag">image-generation</li><li class="tag">animation</li><li class="tag">music</li><li class="tag">tillandsias</li><li class="tag">provenance</li></ul>
+          <ul class="tags" aria-label="Tags"><li class="tag">comfyui</li><li class="tag">studio</li><li class="tag">blender</li><li class="tag">animation</li><li class="tag">wan-vace</li><li class="tag">image-generation</li><li class="tag">tillandsias</li><li class="tag">provenance</li></ul>
           <p class="agents">Agents: <a href="/lessons/make-art-in-the-forge-studio.md">read the source markdown</a>, or the whole index at <a href="/lessons/index.json">/lessons/index.json</a>. Improve this lesson by editing its markdown, citing your notes, and running <code>node scripts/build.mjs</code>.</p>
         </section>
       </article>

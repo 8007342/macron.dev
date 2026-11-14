@@ -1,72 +1,76 @@
 {
-  "schema": "macron.dev/animation-recipe/v1",
+  "schema": "macron.dev/animation-recipe/v2",
   "id": "learning-animations-loop",
   "title": "Tlatoāni and Mācron learn to animate",
   "made": "2026-11-14",
-  "how": "Every step ran headless through the forge's studio.run_workflow tool, in this project's own ComfyUI studio on the host GPU queue: one job at a time, every node class pinned and every model licence-admitted before queueing. Nothing was hand-painted or retouched.",
+  "what_the_loop_shows": "48 frames at 12 fps (4 s), looping. In a sunlit greenhouse workshop, tiny Mācron sits on the tabletop behind an open flipbook, drawing. The little red ball on the left page hops up off the paper, bounces three times (each lower) and settles back on the page. Mācron lifts his arms and turns his face up toward Tlatoāni, who sits on a stool beside the table, points at the ball and nods with a calm smile, gills swaying; then Mācron goes back to drawing.",
+  "how": "A Blender blockout (bpy, headless in the forge) sets the world, the contacts and the motion and renders a depth pass. Wan 2.2 Fun VACE 14B, run headless through studio.queue_workflow in this project's ComfyUI studio, draws all 57 frames in one clip from that depth video and one identity image. A deterministic blend of the 8 overlapping frames closes the loop. Nothing was painted by hand.",
   "engine": {"name": "comfyui", "ref": "v0.40.0", "tillandsias_pipeline": "56.11.10.1"},
+  "tools": {
+    "blender": "bpy 5.3.0 wheel on Python 3.13 (uv), CPU rendering: Workbench (clay, wire) and EEVEE (depth)",
+    "pillow": "13.0.0, only for packing frames and the final WebP encoding"
+  },
   "models": [
-    {"file": "qwen_image_edit_2511_fp8mixed.safetensors", "repo": "Comfy-Org/Qwen-Image-Edit", "revision": "f68ace85e60b4a02a323e394253731947657b7d2", "sha256": "c9fdc158e46d3b61ef75f21ae866ca2fe808bf4a53643120d1c1e87c19280a4e", "licence": "apache-2.0"},
-    {"file": "qwen_2.5_vl_7b_fp8_scaled.safetensors", "repo": "Comfy-Org/Qwen-Image", "revision": "1f12b17be14c89b026c51a91d67c32f84bb047bc", "sha256": "cb5636d852a0ea6a9075ab1bef496c0db7aef13c02350571e388aea959c5c0b4", "licence": "apache-2.0"},
-    {"file": "qwen_image_vae.safetensors", "repo": "Comfy-Org/Qwen-Image", "revision": "1f12b17be14c89b026c51a91d67c32f84bb047bc", "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f", "licence": "apache-2.0"},
-    {"file": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", "repo": "lightx2v/Qwen-Image-Edit-2511-Lightning", "revision": "107d238d68b8387e32843d0b4a2e24ceb0d3ad86", "sha256": "22226e8d05d354bb356627d428809f5afd7819399b077238a2b70a82883a904f", "licence": "apache-2.0"}
+    {"file": "wan2.2_fun_vace_high_noise_14B_fp8_scaled.safetensors", "repo": "Comfy-Org/Wan-2.2", "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04", "sha256": "23130f30207f6c8697a5bead113ddc9904cfbb5e8fa51a550df3cee4d21fb54c", "licence": "apache-2.0"},
+    {"file": "wan2.2_fun_vace_low_noise_14B_fp8_scaled.safetensors", "repo": "Comfy-Org/Wan-2.2", "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04", "sha256": "ca55a5cc543e28576edbd2079f8c1de05f71cd9e85bf96fab635f55663dbcb69", "licence": "apache-2.0"},
+    {"file": "umt5_xxl_fp8_e4m3fn_scaled.safetensors", "repo": "Comfy-Org/Wan-2.2", "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04", "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68", "licence": "apache-2.0"},
+    {"file": "wan_2.1_vae.safetensors", "repo": "Comfy-Org/Wan-2.2", "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04", "sha256": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b", "licence": "apache-2.0"}
   ],
-  "negative_prompt": "mustache, beard, second tail, scary, angry face, text, letters, watermark, extra robots, extra limbs, different camera angle, blurry",
+  "prompt": "Warm hand-drawn 2D cartoon animation with clean ink outlines and soft sunlit colours, static camera, in a sunlit greenhouse workshop with wooden beams, hanging glass globes and potted plants. A tiny cream robot with a cream body, a small teal chest panel, a dark screen face, two glowing cyan eyes and an antenna orb sits on a wooden table behind an open paper flipbook, always holding a yellow pencil and drawing. On the left page lies a little red ball he drew; it hops up off the page, bounces three times, each lower, and lands back on the page; the robot throws up his arms in delight and turns to look up, then goes back to drawing. Beside the table, a pink axolotl with feathery coral gills, a cream tunic with teal trim and one tail sits on a wooden stool, points at the ball and nods with a calm smile, gills gently swaying. Smooth, gentle, friendly motion.",
+  "negative_prompt": "camera movement, zoom, cut, flicker, morphing, melting, distorted face, extra limbs, extra robots, extra characters, red light on robot, mustache, beard, second tail, 3d render, grey clay, text, watermark, scary, angry, blurry, low quality, static",
   "steps": [
     {
-      "step": "0-rejected",
-      "what": "Text-only keyframe with SDXL base 1.0 (4 seeds). Rejected: none of the four drew an axolotl with gills or a cream robot with a screen face. Text alone does not carry our characters.",
-      "workflow": "art/workflows/keyframe-sdxl.json",
-      "seeds": [4207, 4208, 4209, 4210],
-      "prompt": "flat cartoon illustration, children's picture book style, clean bold outlines, soft pastel colors, plain warm cream background. On a wooden desk sit two friends making a flipbook animation together. Left: Tlatoāni, a small pink axolotl sage with one long tail, external feathery coral gills on both sides of the head, smooth rounded proportions, expressive dark eyes, calm knowing smile, a warm cream tunic with restrained teal geometric accents, holding a pencil. Right: Mācron, a toy-sized rounded desktop robot with a warm cream shell, dark face screen with two cyan happy eyes, small antenna orb, short toy-like arms, holding up a little paper flipbook showing a bouncing ball. Friendly, gentle, cozy, full bodies visible, centered composition",
-      "negative_prompt": "mustache, beard, mammal ears, fur, scales, second tail, dragon, lizard, realistic, photo, 3d render, scary, angry, sinister, weapons, armor, humanoid android, military robot, cyberpunk, text, watermark, signature, extra limbs, blurry, cropped"
+      "step": "1-blockout",
+      "what": "Build the world and the 48-frame cyclic motion; render wire, clay and depth passes at 640x480.",
+      "command": "python art/tools/blockout.py OUT_DIR   (bpy venv)",
+      "tool": "art/tools/blockout.py",
+      "cpu_time": "about 5.5 min for 144 renders on 20 cores"
     },
     {
-      "step": "1-keyframe",
-      "what": "Re-stage a canon-close catalog image (quote-anchors-hold) as a new scene with Qwen-Image-Edit, so the characters keep their look. Seed 101 kept; 102 was a close second.",
-      "workflow": "art/workflows/qwen-edit.json",
-      "init_image": {"source": "assets/Quote Anchors Hold.png", "sha256": "72fe39ab0051ea776055afa314e510c9236b0a402c9e863c89ef328fd0193759"},
-      "seeds": [101, 102], "kept_seed": 101,
-      "output_sha256": "ab577ee732701116973da4f52856c394b171d7c3baa2cdb465b044e036f8550e",
-      "prompt": "Keep the pink axolotl Tlatoāni and the small cream robot Mācron exactly as they are drawn (same faces, colors, clothing, one tail, cream shell, dark screen face with cyan eyes, antenna orb) and keep the same warm hand-drawn cartoon style. Change the scene: remove the scroll, ruler and blueprint. Both now sit side by side at the wooden table in the greenhouse workshop, facing the viewer, learning to make an animation together. On the table lies a small open paper flipbook; its page shows a simple drawing of a bouncing red ball. Mācron holds a pencil and is drawing on the flipbook; Tlatoāni leans in with a calm, delighted smile, pointing at the ball. Simple, uncluttered, friendly, cozy. No text.",
-      "negative_prompt": "mustache, beard, second tail, scary, angry face, text, letters, watermark, extra robots, extra limbs, blurry"
+      "step": "2-pack-control",
+      "what": "Pack 57 depth frames (frame i = depth i mod 48) and an all-white mask as multi-frame PNGs, which core LoadImage reads as image batches.",
+      "command": "python art/tools/pack_control.py OUT_DIR/depth 57 control.png mask.png",
+      "inputs_sha256": {"control": "1fb4d6d06bb5c6420daeee513ee65c43dfa04bf688e31fd76b44c0169844fa3c", "mask": "e90072b4050a2030b13a7a2b73a3c60124bd697e7d17ed352086a9c693a17b8a"}
     },
     {
-      "step": "2-look-up",
-      "what": "Pose edit of the keyframe. Same camera and framing, so frames line up.",
-      "workflow": "art/workflows/qwen-edit.json",
-      "init_image": {"from_step": "1-keyframe"},
-      "seeds": [301, 302], "kept_seed": 301,
-      "output_sha256": "36f74189cd4f14f61a36b714ad98cbbf0753cbfc484ad74a968b348056891622",
-      "prompt": "Keep everything in this picture exactly the same: same camera, same framing, same table, same background, same characters, same style. Only change the poses: the small cream robot Mācron raises his pencil and turns his screen face up toward Tlatoāni with curious cyan eyes; the red ball drawn on the flipbook page is now higher, in the middle of the page. The pink axolotl Tlatoāni nods with a calm, knowing smile, one hand resting on the table. No text."
+      "step": "3-wan-vace",
+      "what": "One Wan 2.2 Fun VACE run: depth video as control, identity-reference.png as the reference image, 640x480, 57 frames, 20 steps split 10/10 between the high- and low-noise experts, cfg 3.5, shift 8, euler/simple.",
+      "workflow": "art/workflows/wan-vace-loop.json",
+      "workflow_sha256": "25bf6c370bedd09c03476635498ebf2bc3b2f85e4219005328c9c80c514311e7",
+      "inputs": {"control": "step 2", "mask": "step 2", "reference": "art/animations/learning-animations/identity-reference.png"},
+      "reference_sha256": "e56edd4a15784132ef0b01cc80db4c3b8e6a36b3164eeaafebdb275365b09501",
+      "overrides": {"seed": 21, "$node:20.length": 57},
+      "gpu_time": "about 10 min on an RTX A5000 (warm)"
     },
     {
-      "step": "3-show-it-off",
-      "what": "Pose edit of the keyframe.",
-      "workflow": "art/workflows/qwen-edit.json",
-      "init_image": {"from_step": "1-keyframe"},
-      "seeds": [201, 202], "kept_seed": 201,
-      "output_sha256": "fe43ed71721ee95ea58230ebf0d757657be67cc270997508cb3d5ff226feed80",
-      "prompt": "Keep everything in this picture exactly the same: same camera, same framing, same table, same background, same characters, same style. Only change the poses: the small cream robot Mācron now lifts the open flipbook up with both hands to show it, his screen face shows big happy cyan eyes; the red ball drawn on the page is now near the top of the page. The pink axolotl Tlatoāni claps softly, with a delighted gentle smile. No text."
+      "step": "4-close-the-loop",
+      "what": "Frames 48-56 redraw the moments of frames 0-8 in the same run. Blend frame 48+k into frame k for k < 8 (weights rising from 1/9 to 8/9 toward the first drawing). The overlap is a quiet beat (Mācron drawing, ball at rest), so this evens out line shimmer and never mixes two poses.",
+      "command": "python art/tools/loop_blend.py CLIP_DIR 48 8 FINAL_DIR",
+      "measured": {"mean_abs_step_0_255": 1.11, "max_step": 2.7, "wrap_step_47_to_0": 0.7, "wrap_without_blend": 2.8}
     },
     {
-      "step": "x-squash-rejected",
-      "what": "A 'ball squashes at the bottom' frame (seeds 401, 402). Rejected against the canon: Mācron's 'focused' eyes read as angry and Tlatoāni looked worried. Friendly beats complete.",
-      "workflow": "art/workflows/qwen-edit.json",
-      "init_image": {"from_step": "1-keyframe"},
-      "seeds": [401, 402],
-      "prompt": "Keep everything in this picture exactly the same: same camera, same framing, same table, same background, same characters, same style. Only change the poses: the small cream robot Mācron flips a page of the flipbook with one hand, his screen face shows focused cyan eyes; the red ball drawn on the new page sits at the very bottom, squashed slightly flat as if it just bounced. The pink axolotl Tlatoāni leans closer with gentle curious surprise, gills lifted. No text."
-    },
-    {
-      "step": "4-assemble",
-      "what": "Batch the frames as a ping-pong loop 1 → 2 → 3 → 2, scale down, and save a looping lossy WebP at 1.6 fps, all with core ComfyUI nodes (no GPU model).",
-      "workflow": "art/workflows/assemble-webp.json",
-      "inputs": {"f1": "1-keyframe", "f2": "2-look-up", "f3": "3-show-it-off"},
+      "step": "5-web",
+      "what": "Encode the final and the breakdown loops as lossy WebP at 12 fps.",
+      "command": "python art/tools/breakdown.py OUT_DIR FINAL_DIR WEB_DIR --frames 48 --fps 12",
       "outputs": [
-        {"file": "public/images/gallery/learning-animations-loop.webp", "size": "512x380", "frames": 4, "sha256": "7ce6022b53f5a73140ada3fba93c72f747ef1b9969f1081d44640c20abc5b1a4"},
-        {"file": "public/images/gallery/learning-animations-loop-small.webp", "size": "480x356", "frames": 4, "overrides": {"$node:7.width": 480, "$node:7.height": 356}, "sha256": "9e26f2c256db3d1213eb3be2664f079d52d376324880fe02002e7757a1157166"}
+        {"file": "public/images/gallery/learning-animations-loop.webp", "size": "640x480", "frames": 48, "bytes": 1235060, "sha256": "3f572116f5877655b88ce40ba21cb770845c87e1f8e8fd2af2f2c220f1372e0c"},
+        {"file": "public/images/gallery/learning-animations-loop-small.webp", "size": "480x360", "frames": 48, "bytes": 657016, "sha256": "84cdab171288df00d564d3fbe92fcedabcdf737dffabc595128d93b800311677"},
+        {"file": "public/images/howto/learning-animations/breakdown-wire.webp", "size": "320x240", "frames": 48, "sha256": "bc33f9326d6876b85668977a79a3fb64f116287f1a80ced43072bf4259338b1f"},
+        {"file": "public/images/howto/learning-animations/breakdown-depth.webp", "size": "320x240", "frames": 48, "sha256": "b149d553aacce51cace9e6fe451c91cfc5a8922c2c4006493101e977f66816e5"},
+        {"file": "public/images/howto/learning-animations/breakdown-final.webp", "size": "320x240", "frames": 48, "sha256": "41325933866ab3bab371f71379f0c2849a1275b78accab9eb900e853e0dbfbc9"}
       ]
     }
   ],
-  "timings": "Qwen edits took about 13 s each warm (about 22 s for the first of a batch, while the model loads); the SDXL keyframes took about 9 s each; assembly took about 1 s."
+  "identity_reference_provenance": "identity-reference.png is frame 0 of an earlier Wan VACE pass (seed 21, same workflow and prompt, 49 frames) driven by the previous blockout state: before the pencil and Mācron's arms were thickened so the depth pass shows them. That pass in turn used the v1 keyframe (below) as its reference.",
+  "attempts_that_did_not_ship": [
+    {"what": "Two-image Qwen-Image-Edit keyframe (picture 1: the v1 keyframe; picture 2: the Blender clay render)", "workflow": "art/workflows/qwen-edit-layout.json", "seeds": [501, 502], "why": "Both drew two robots and kept picture 1's table: picture and control disagreed, so the model drew both (kumbia-kombat lesson A5)."},
+    {"what": "VACE from depth, ball on the right page next to Mācron", "seed": 11, "why": "The ball merged into Mācron as a red chest light, and the first hop flew to the top of the frame. The ball moved to the left page, clear of him, and the hops were lowered."},
+    {"what": "Pinning one frame at both ends (mask black) to force the loop closed", "seed": 21, "why": "Wan's VAE packs frames in groups of four, and a lone kept frame is redrawn, not copied: the ends still differed by 4.0. Mācron's pencil came and went, because at 6 mm it did not show in the depth pass."},
+    {"what": "A 25-frame bridge regenerating the seam between 9 + 8 kept frames", "why": "Kept frames are redrawn too (they differ by 5-6 from their inputs), so splicing two runs made two jumps (6.9 and 12.8). Generating past the cycle in one run and blending the overlap worked instead."},
+    {"what": "v1 (published first in PR #2): four Qwen-Image-Edit pose edits of one keyframe in ping-pong order", "workflows": ["art/workflows/keyframe-sdxl.json", "art/workflows/qwen-edit.json", "art/workflows/assemble-webp.json"], "why": "Each frame was an independent edit, so details shimmered and the motion jumped. The operator rejected it, rightly. Its keyframe (Qwen-Image-Edit-2511 + Lightning, seed 101, from 'Quote Anchors Hold', sha256 ab577ee7…) is still the root of this loop's identity."}
+  ],
+  "credits": [
+    "kumbia-kombat (github.com/8007342/kumbia-kombat, LESSONS_LEARNED.md): Blender as a bpy venv; identity from a reference and pose from a bare control; prompt and control must agree; check what reached the model (verified here with a marker string in ComfyUI's history).",
+    "demon_attack: Qwen-Image-Edit settings and studio etiquette (see the first studio note)."
+  ]
 }
