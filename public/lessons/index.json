@@ -98,6 +98,47 @@
       "updated": "2026-10-25"
     },
     {
+      "slug": "make-art-in-the-forge-studio",
+      "title": "Making art and animation in the forge's ComfyUI studio",
+      "summary": "Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
+      "slogan": "Start from the canon; block the world to match; then let the model move it.",
+      "tags": [
+        "comfyui",
+        "studio",
+        "blender",
+        "animation",
+        "camera-motion",
+        "wan-vace",
+        "qwen-image-edit",
+        "image-generation",
+        "tillandsias",
+        "provenance"
+      ],
+      "level": "intermediate",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "rank": 87,
+      "art": "ink-dot-loop",
+      "image": "https://macron.dev/images/gallery/ink-dot-loop.webp",
+      "image_alt": "A 6-second looping animation of the canon painting 'Arabiya Ink and Voices' come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.",
+      "url": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
+      "source": "https://macron.dev/lessons/make-art-in-the-forge-studio.md",
+      "sources": [
+        "https://macron.dev/notes/2026-11-14-forge-seed-the-animation-from-canon-art.md",
+        "https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json",
+        "https://macron.dev/notes/2026-11-14-forge-greenhouse-camera-loop-three-eyes.md",
+        "https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md",
+        "https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md",
+        "https://github.com/8007342/macron.dev/blob/main/art/animations/greenhouse-loop/recipe.json",
+        "https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json",
+        "https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md",
+        "https://github.com/8007342/demon_attack"
+      ],
+      "updated": "2026-11-14"
+    },
+    {
       "slug": "demon-attack-measure-the-difficulty-curve",
       "title": "When five small knobs multiply, Wave 1 becomes a wall",
       "summary": "In Demon Attack (demonattack.tlatoani.net), five innocent-looking difficulty sliders multiplied together and turned the very first wave into a 112-hit marathon. A 30-second autopilot script found the math trap and cut campaign length in half.",
@@ -435,47 +476,6 @@
         "https://macron.dev/deploys/log.jsonl"
       ],
       "updated": "2026-10-14"
-    },
-    {
-      "slug": "make-art-in-the-forge-studio",
-      "title": "Making art and animation in the forge's ComfyUI studio",
-      "summary": "Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
-      "slogan": "Start from the canon; block the world to match; then let the model move it.",
-      "tags": [
-        "comfyui",
-        "studio",
-        "blender",
-        "animation",
-        "camera-motion",
-        "wan-vace",
-        "qwen-image-edit",
-        "image-generation",
-        "tillandsias",
-        "provenance"
-      ],
-      "level": "intermediate",
-      "audience": [
-        "humans",
-        "agents"
-      ],
-      "rank": 62,
-      "art": "ink-dot-loop",
-      "image": "https://macron.dev/images/gallery/ink-dot-loop.webp",
-      "image_alt": "A 6-second looping animation of the canon painting 'Arabiya Ink and Voices' come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.",
-      "url": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
-      "source": "https://macron.dev/lessons/make-art-in-the-forge-studio.md",
-      "sources": [
-        "https://macron.dev/notes/2026-11-14-forge-seed-the-animation-from-canon-art.md",
-        "https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json",
-        "https://macron.dev/notes/2026-11-14-forge-greenhouse-camera-loop-three-eyes.md",
-        "https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md",
-        "https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md",
-        "https://github.com/8007342/macron.dev/blob/main/art/animations/greenhouse-loop/recipe.json",
-        "https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json",
-        "https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md",
-        "https://github.com/8007342/demon_attack"
-      ],
-      "updated": "2026-11-14"
     },
     {
       "slug": "unobservable-guard",

@@ -6,7 +6,7 @@ slogan: Start from the canon; block the world to match; then let the model move 
 audience: [humans, agents]
 level: intermediate
 tags: [comfyui, studio, blender, animation, camera-motion, wan-vace, qwen-image-edit, image-generation, tillandsias, provenance]
-rank: 62
+rank: 87
 art: ink-dot-loop
 sources: [2026-11-14-forge-seed-the-animation-from-canon-art.md, https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json, 2026-11-14-forge-greenhouse-camera-loop-three-eyes.md, 2026-11-14-forge-blender-blockout-to-wan-vace-loop.md, 2026-11-14-forge-studio-graphics-and-music-pipelines.md, https://github.com/8007342/macron.dev/blob/main/art/animations/greenhouse-loop/recipe.json, https://github.com/8007342/macron.dev/blob/main/art/animations/learning-animations/recipe.json, https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md, https://github.com/8007342/demon_attack]
 updated: 2026-11-14
