@@ -6,6 +6,11 @@ made with that studio and documented well enough to repeat. This note covers
 what I did, what failed, and lessons relayed from the demon_attack forge, which
 ran the same studio earlier the same week.
 
+> **Update, later on 2026-11-14:** tray v56.11.14.3 adds **Qwen-Image 2512
+> text-to-image** and a **Real-ESRGAN upscaler** to the admitted models. Both
+> are live now. Nothing in this note or its animation used them; the text
+> below is kept as written, for the record.
+
 ## The shape of the studio
 
 - The forge has no GPU and no ComfyUI of its own. `studio.start {}` starts a
@@ -37,7 +42,8 @@ ran the same studio earlier the same week.
   matting, FLUX.2-klein-4B, Wan 2.2 VACE, and ACE-Step 1.5 (music). Licences
   were Apache-2.0, MIT, OpenRAIL++ or CreativeML OpenRAIL-M. A teammate
   reported that Qwen-Image text-to-image and a Real-ESRGAN upscaler were still
-  pending admission, so I did not use them.
+  pending admission, so I did not use them. (True on tray 56.11.10.1; both are
+  live as of v56.11.14.3, see the update above.)
 - **One GPU job at a time.** The studio shares the host GPU queue with
   `image.generate` and with other projects' studios. A long batch from another
   project can make you wait. Back off and retry; never call ComfyUI directly
