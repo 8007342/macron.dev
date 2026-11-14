@@ -3,7 +3,7 @@
 The third note of the day. After the 48-frame loop, the user said it looked much
 simpler than the art on the other pages and asked for refinements: a rich,
 full room and maybe some camera movement. This is what that took, including
-the three runs that didn't ship.
+the runs that didn't ship and a fix the operator asked for afterwards.
 
 ## Borrow the room from the canon
 
@@ -59,7 +59,37 @@ of 255, peaking near 17.6 where the arc is fastest), so that number says
 nothing. What matters is whether the wrap's step looks like its neighbours'.
 I measured *jolt*: each step minus the average of the two steps around it.
 The blended wrap has a jolt of −0.06; the loop averages 0.25 and never goes
-past 1.0. Without the blend, the wrap's jolt was −0.6.
+past 1.0. Without the blend, the wrap's jolt was −0.6. (The re-run below
+measured −0.08, 0.24 and 0.86.)
+
+## Legs through the stool
+
+After the loop was published, the operator spotted that Tlatoāni's legs went
+through his stool. The video model hadn't invented that; the blockout had.
+His legs hung straight down from hips placed inside the seat's footprint, so
+the depth video showed them through the seat top in every frame, and Wan drew
+what the depth said.
+
+The fix went into the blockout, not the seed. He now sits with his hips on the
+seat top, thighs forward and short shins hanging in front of the seat's edge,
+and the stool turns with him so its front faces where his knees go.
+`blockout_room.py --check` builds a BVH of each of his legs and tail segments
+and tests it against the stool, the tabletop, the pedestal and the feet in
+every frame. On the old geometry it reported both legs through the seat top
+in every frame it sampled; on the new one, 0 overlaps in 72 frames. Run 5
+used the same seed and settings, with "sits on top of a wooden stool with his
+short legs hanging down in front of it" in the prompt and "legs through the
+stool" in the negative. His legs hang in front of the stool in every frame.
+
+The lesson: "contacts are computed" was true for the contacts I thought about
+(Mācron's feet, the ball, the table rim) and false for one I didn't. A check
+that runs over every frame catches the ones you forget.
+
+The re-run also brought the phone-sized loop under 1 MB. Every frame of a
+moving camera is new, so smaller WebP settings alone didn't get there (384 px
+was still 1.2 MB). The small loop keeps every other frame: 36 frames at 6 fps,
+480×360, 0.87 MB, still six seconds long. The full loop is 72 frames at
+640×480, 2.8 MB.
 
 ## The studio side
 
@@ -78,7 +108,8 @@ past 1.0. Without the blend, the wrap's jolt was −0.6.
   rendered at 768×576 and published at 640×480 instead of being upscaled.
 - Timings: the keyframe edit took 35 s for two seeds, the blockout about
   10 min of CPU for 216 renders, each Wan run about 31 min, and the web
-  encode under a minute. The final loop is 2.9 MB as WebP at 640 px.
+  encode under a minute. The final loop was 2.9 MB as WebP at 640 px (2.8 MB
+after the re-run).
 
 Everything that ran is in the repo: `art/tools/blockout_room.py`,
 `art/workflows/wan-vace-room.json`, and

@@ -2,6 +2,7 @@
 
 Run headless with the `bpy` wheel (Python 3.13):
     python blockout_room.py OUT_DIR [--frames 72] [--passes clay,wire,depth] [--only N] [--size 768x576]
+    python blockout_room.py OUT_DIR --check     # report limb/prop intersections in every frame, render nothing
 
 The room follows the canon's greenhouse terrace (the "Chess Tlatoāni vs Mācron"
 picture): a round wooden table with a runner, tiered plant shelves on both
@@ -10,7 +11,8 @@ rafters, hanging glass globes with air plants, a lantern, vines, potted plants
 and foreground leaves. Tlatoāni sits on a stool at the left of the table;
 Mācron sits on the tabletop behind an open flipbook. Contacts are computed
 (Mācron's feet on the tabletop, the ball's squash keeps it on the page, the
-table's rim clears Tlatoāni's tunic), so nothing clips.
+table's rim clears Tlatoāni's tunic, his legs hang in front of the stool), and
+`--check` tests his legs and tail against the stool and the table in every frame.
 
 The camera makes a slow arc around the table, pushing in at mid-loop. It is a
 closed loop (frame FRAMES equals frame 0), and so is every motion. Beats, in
@@ -207,17 +209,23 @@ pencil = cyl("pencil", (0, -0.025, -0.105), 0.011, 0.11, rot=(-60, 0, 0), color=
 
 # ---------------------------------------------------------------- Tlatoāni (on a stool, left of the table)
 TLA = Vector((-0.92, 0.3, 0))
-box("stool-top", TLA + Vector((0, 0, 0.43)), (0.36, 0.36, 0.05), color=WOOD, bevel=0.01)
+SEAT = 0.455                                          # stool-top height: Tlatoāni's hips rest here
+stool = pivot("stool", TLA, rot=(0, 0, 32))             # turned with him, so his legs leave over its front edge
+box("stool-top", (0, 0, SEAT - 0.025), (0.36, 0.36, 0.05), color=WOOD, bevel=0.01, parent=stool)
 for sx in (-0.14, 0.14):
     for sy in (-0.14, 0.14):
-        box(f"stool-leg{sx}{sy}", TLA + Vector((sx, sy, 0.2)), (0.04, 0.04, 0.41), color=WOOD_D)
-tla = pivot("tlatoani", TLA + Vector((0, 0, 0.455)), rot=(0, 0, 32))   # faces the book and the viewer
+        box(f"stool-leg{sx}{sy}", (sx, sy, 0.2), (0.04, 0.04, 0.41), color=WOOD_D, parent=stool)
+tla = pivot("tlatoani", TLA + Vector((0, 0, SEAT)), rot=(0, 0, 32))   # faces the book and the viewer
 sphere("tla-body", (0, 0, 0.27), (0.21, 0.18, 0.27), color=PINK, parent=tla)
 sphere("tla-tunic", (0, 0, 0.2), (0.225, 0.195, 0.22), color=TEAL, parent=tla)
 cyl("tla-hem", (0, 0, 0.03), 0.2, 0.04, color=CREAM, parent=tla)
+# Seated: thighs run forward along the seat top, and the shins hang in front of its edge
+# (the seat's front edge is at y = -0.18 here; the knees are past it at y = -0.26).
 for sx in (-0.09, 0.09):
-    l = pivot(f"tla-hip{sx}", (sx, -0.1, 0.05), parent=tla, rot=(25, 0, 0))
-    capsule(f"tla-leg{sx}", 0.3, 0.05, PINK, l)
+    l = pivot(f"tla-hip{sx}", (sx, -0.08, 0.055), parent=tla, rot=(-90, 0, 0))
+    capsule(f"tla-leg{sx}", 0.18, 0.05, PINK, l)
+    k = pivot(f"tla-knee{sx}", (sx, -0.26, 0.055), parent=tla, rot=(-12, 0, 0))
+    capsule(f"tla-shin{sx}", 0.17, 0.045, PINK, k)
 tail_root = pivot("tla-tail", (0.0, 0.17, 0.12), parent=tla)
 tail_segs, prev = [], tail_root
 for i in range(5):
@@ -389,6 +397,39 @@ def setup(kind):
         world.color = (0, 0, 0)
         scene.view_settings.view_transform = "Raw"
 
+
+def check_clips(frames):
+    """Report any frame where Tlatoāni's legs or tail cut into the stool or the table."""
+    from mathutils.bvhtree import BVHTree
+    dg = bpy.context.evaluated_depsgraph_get()
+
+    def tree(o):
+        m = o.evaluated_get(dg).to_mesh()
+        mw = o.matrix_world
+        t = BVHTree.FromPolygons([mw @ v.co for v in m.vertices], [p.vertices[:] for p in m.polygons])
+        o.evaluated_get(dg).to_mesh_clear()
+        return t
+
+    movers = [o for o in scene.objects if o.type == "MESH" and o.name.startswith(("tla-leg", "tla-shin", "tla-tailseg"))]
+    fixed = [o for o in scene.objects if o.type == "MESH" and o.name.startswith(("stool-", "tabletop", "pedestal", "foot"))]
+    still = {o.name: tree(o) for o in fixed}
+    bad = 0
+    for f in frames:
+        pose(f)
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        for o in movers:
+            t = tree(o)
+            for name, s in still.items():
+                if t.overlap(s):
+                    bad += 1
+                    print(f"clip frame {f:03d}: {o.name} x {name}")
+    print(f"clip check: {len(frames)} frames, {len(movers)} limbs, {len(fixed)} props, {bad} overlaps")
+    return bad
+
+
+if "--check" in args:
+    sys.exit(1 if check_clips(range(FRAMES) if ONLY is None else ONLY) else 0)
 
 for kind in PASSES:
     setup(kind)

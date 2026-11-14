@@ -984,8 +984,12 @@ hand, and everything ran inside a Tillandsias forge.
    `art/tools/blockout_room.py` models the terrace from that picture: pergola,
    hanging globes, lantern, shelves of pots, a round table, a stool, the
    flipbook, the ball, and both characters from the canon's simple shapes.
-   Contacts are computed, so nothing clips. The motion *and* the camera arc
-   are cyclic: frame 72 is frame 0.
+   The motion *and* the camera arc are cyclic: frame 72 is frame 0.
+   Placing contacts by hand isn't enough. The first version shipped with
+   Tlatoāni's legs through his stool, because the blockout had them there and
+   the video model drew what the depth said. Now `--check` tests his legs and
+   tail against the stool and the table in every frame and fails on any
+   overlap.
 3. **Render a depth pass, and mark what depth can't show.** Near is white,
    with Blender's `Raw` view transform so values stay linear. Anything the
    model must keep has to show up in it. Mācron's eyes are a few centimetres
@@ -1000,8 +1004,8 @@ hand, and everything ran inside a Tillandsias forge.
 5. **Close the loop inside one run.** Generate past the cycle (81 for 72) and
    blend frames 72–79 into 0–7. With a moving camera every frame differs a lot
    from the last, so judge the seam by its *jolt*: how far the wrap's step
-   differs from the average of its neighbours. Here it is −0.06, against
-   0.25 on average across the loop.
+   differs from the average of its neighbours. Here it is −0.08, against
+   0.24 on average across the loop.
 6. **Commit the recipe.** Prompts, seeds, model hashes and every failed run
    are in
    [recipe.json](https://github.com/8007342/macron.dev/blob/main/art/animations/greenhouse-loop/recipe.json),
