@@ -1917,6 +1917,52 @@
         "the first 8 frames are a blend of two drawings of the same moment (to close the loop), so their lines are slightly softer"
       ],
       "homage": ""
+    },
+    {
+      "id": "ink-dot-loop",
+      "source": "public/images/gallery/ink-dot-loop.webp",
+      "animated": true,
+      "recipe": "art/animations/ink-dot-loop/recipe.json",
+      "title": "The Dot That Hops",
+      "alt": "A 6-second looping animation of the canon painting 'Arabiya Ink and Voices' come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.",
+      "description": "The canon painting itself is the video model's reference, and the Blender blockout was fitted to the painting's own framing, so the first frame's depth lines up with the art. That is why both characters stay on model: the model starts from canon instead of inventing it.",
+      "characters": [
+        "tlatoani",
+        "macron"
+      ],
+      "concepts": [
+        "animation",
+        "blockout",
+        "control-signals",
+        "reference-art",
+        "camera-motion",
+        "consistency",
+        "reproducibility",
+        "provenance"
+      ],
+      "tags": [
+        "comfyui",
+        "studio",
+        "blender",
+        "wan-vace",
+        "depth",
+        "greenhouse",
+        "arabiya",
+        "animated-webp",
+        "axolotl",
+        "robot"
+      ],
+      "slogan": "Start from the canon; let the model move it.",
+      "text_in_image": "",
+      "status": "reference",
+      "suggested_status": "canonical-candidate",
+      "canon_qa": [
+        "both characters stay on model with the painting (Mācron's rounded shell and smile, Tlatoāni's sleeved robe and gills) in every frame checked",
+        "the hopping dot is small at this size; it reads best in the full-size loop",
+        "a faint dot stays drawn on the page while the hopping dot is in the air",
+        "the first 8 frames are a blend of two drawings of the same moment (to close the loop), so their lines are slightly softer"
+      ],
+      "homage": ""
     }
   ]
 }

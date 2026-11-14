@@ -1,0 +1,165 @@
+{
+  "schema": "macron.dev/animation-recipe/v2",
+  "id": "ink-dot-loop",
+  "title": "The dot that hops (seeded from 'Arabiya Ink and Voices')",
+  "made": "2026-11-14",
+  "what_the_loop_shows": "72 frames at 12 fps (6 s), looping, with a very slow camera drift. The scene is the canon painting 'Arabiya Ink and Voices': in a sunlit greenhouse, Mācron writes a teal curve with a reed pen; the round dot under the curve pops off the paper, bounces three times and settles back in its place. Mācron looks up at Tlatoāni and lifts his free hand a little; Tlatoāni, tuning fork in hand, smiles and nods.",
+  "how": "The video model's reference is the canon painting itself, unedited. A Blender blockout is fitted to it: every proxy is placed by un-projecting its pixel position in the painting through the frame-0 camera at a chosen distance, so frame 0's depth lines up with the painting. The camera moves only a little (+-4 degree arc, 6 % push-in), so the model stays close to what the painting shows. Wan 2.2 Fun VACE 14B draws 81 frames of the 72-frame cycle in one run; a blend of the 8 overlapping frames closes the loop. Nothing was painted by hand.",
+  "engine": {
+    "name": "comfyui",
+    "ref": "v0.40.0",
+    "tillandsias_pipeline": "56.11.10.1"
+  },
+  "tools": {
+    "blender": "bpy 5.3.0 wheel on Python 3.13 (uv), CPU rendering: Workbench (clay, wire) and EEVEE (depth)",
+    "pillow": "13.0.0, only for packing frames, the loop blend and the WebP encoding"
+  },
+  "models": [
+    {
+      "file": "wan2.2_fun_vace_high_noise_14B_fp8_scaled.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "23130f30207f6c8697a5bead113ddc9904cfbb5e8fa51a550df3cee4d21fb54c",
+      "licence": "apache-2.0"
+    },
+    {
+      "file": "wan2.2_fun_vace_low_noise_14B_fp8_scaled.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "ca55a5cc543e28576edbd2079f8c1de05f71cd9e85bf96fab635f55663dbcb69",
+      "licence": "apache-2.0"
+    },
+    {
+      "file": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68",
+      "licence": "apache-2.0"
+    },
+    {
+      "file": "wan_2.1_vae.safetensors",
+      "repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "sha256": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b",
+      "licence": "apache-2.0"
+    }
+  ],
+  "prompt": "Richly detailed warm hand-drawn 2D cartoon illustration come to life, clean ink outlines, soft golden afternoon light, a very slow gentle camera drift. A sunny greenhouse with wooden beams, hanging glass globes holding air plants, a woven lantern, big monstera leaves and potted plants, palm trees and the sea beyond. At a rustic wooden table, a toy-sized rounded robot with a warm cream shell and teal trim, a dark screen face with exactly two glowing cyan eyes and a small smile, and a small antenna orb, writes with a carved reed pen on a sheet of paper: a teal curve with one round teal dot below it. The round teal dot pops up off the paper into the air, bounces three times on the page, each bounce lower, and settles back in its place; the robot looks up at his friend and lifts his free hand a little in delight, then goes back to writing. Beside him a pink axolotl with large feathery coral gills, freckles and rosy cheeks, one long pink tail, wearing a cream robe with teal geometric trim, holds a small brass tuning fork, keeps both eyes open with a calm happy smile and nods, gills gently swaying, tail swinging. Glass jars with glowing teal music notes, a small teal ink pot, a coral wooden X and a scribbled paper lie on the table. Smooth, gentle, friendly motion.",
+  "negative_prompt": "three eyes, third eye, extra eyes, winking, wink, squinting, closed eyes, sleepy, stretched arm, long arm, elongated limbs, camouflage, worried, sad, mustache, beard, second tail, extra limbs, extra robots, extra characters, extra axolotls, text, letters, watermark, cut, scene change, flicker, morphing, melting, distorted face, 3d render, grey clay, scary, angry, blurry, low quality, static, frozen",
+  "steps": [
+    {
+      "step": "1-reference",
+      "what": "The canon painting, unedited, is the identity, style and composition reference.",
+      "input": {
+        "file": "assets/Arabiya Ink and Voices.png",
+        "size": "1264x848",
+        "sha256": "a5bb30dcbe4fd448a173f15de454394fdedbd556b7d9e54408e8950d78746ac7"
+      }
+    },
+    {
+      "step": "2-blockout",
+      "what": "Fit the scene to the painting (proxies placed through the frame-0 camera at the painting's pixel positions; checked by drawing the depth pass's edges over the painting with --overlay), animate the 72-frame cycle and the camera drift, and render clay, wire and depth at 768x512. In the depth pass Mācron's two eyes and the hopping dot are marked pure white. --check tests the dot, the pen, both of Mācron's arms and Tlatoāni's arms and tail against the tabletop and the props in every frame: 0 overlaps.",
+      "tool": "art/tools/blockout_canon.py",
+      "tool_sha256": "c780bca7d5d60bb332a676a8f4be4b98642a0e09542e4d6b28772f04c4fa277d",
+      "command": "python art/tools/blockout_canon.py OUT_DIR   (bpy venv); --overlay assets/PAINTING.png to fit; --check for intersections"
+    },
+    {
+      "step": "3-pack-control",
+      "what": "Pack 81 depth frames (frame i = depth i mod 72) and an all-white mask as multi-frame PNGs.",
+      "command": "python art/tools/pack_control.py OUT_DIR/depth 81 control.png mask.png",
+      "inputs_sha256": {
+        "control": "fbd5dd38ffafb213fa58ea5d45d998edd1163012603143dea5b476603f65683d",
+        "mask": "3dad72243d357f0593414814280ce224478f56437f6a327db2ba75232898ee95"
+      }
+    },
+    {
+      "step": "4-wan-vace",
+      "what": "One Wan 2.2 Fun VACE run: depth video as control, the painting as reference, 768x512, 81 frames, 20 steps split 10/10 between the high- and low-noise experts, cfg 3.5, shift 8, euler/simple.",
+      "workflow": "art/workflows/wan-vace-canon.json",
+      "workflow_sha256": "4af3918e5edb3f0d2d00d371898119f4fb8d76781eebaf68dc07470d0689de6b",
+      "inputs": {
+        "control": "step 3",
+        "mask": "step 3",
+        "reference": "assets/Arabiya Ink and Voices.png"
+      },
+      "overrides": {
+        "seed": 31
+      },
+      "gpu_time": "about 23 min on an RTX A5000 (warm)"
+    },
+    {
+      "step": "5-close-the-loop",
+      "what": "Blend frame 72+k into frame k for k < 8; judge the seam by jolt (a step minus the mean of its two neighbours).",
+      "command": "python art/tools/loop_blend.py CLIP_DIR 72 8 FINAL_DIR",
+      "measured": {
+        "mean_abs_step_0_255": 11.35,
+        "wrap_step": 12.83,
+        "wrap_neighbours": [
+          12.44,
+          11.99
+        ],
+        "wrap_jolt": 0.62,
+        "max_abs_jolt_anywhere": 1.79,
+        "max_jolt_frame": 12,
+        "mean_abs_jolt": 0.42
+      }
+    },
+    {
+      "step": "6-web",
+      "what": "Encode the final and the breakdown loops as lossy WebP; the small one (served to phones and on lesson cards) keeps every other frame at 6 fps.",
+      "command": "python art/tools/breakdown.py OUT_DIR FINAL_DIR WEB_DIR --frames 72 --fps 12 --name ink-dot-loop --width 640 --quality 60 --prefix canon --light --light-quality 55",
+      "outputs": [
+        {
+          "file": "public/images/gallery/ink-dot-loop.webp",
+          "size": "640x427",
+          "frames": 72,
+          "bytes": 2909654,
+          "sha256": "c8898f88101406ae16ed3fac28cbec6301de8d5c23aa3ef7bdad43b3d195cda2"
+        },
+        {
+          "file": "public/images/gallery/ink-dot-loop-small.webp",
+          "size": "480x320",
+          "frames": 36,
+          "fps": 6,
+          "bytes": 958614,
+          "sha256": "dbf189d9d24739fe7d32b1aafefa078ca11f58fe949eed008d0dd30713f91fd4"
+        },
+        {
+          "file": "public/images/howto/learning-animations/canon-wire.webp",
+          "size": "320x213",
+          "frames": 72,
+          "sha256": "978c0223a888651b8d36bca1756ad11a71a718b27d0beb0adf8a4a316440d60e"
+        },
+        {
+          "file": "public/images/howto/learning-animations/canon-depth.webp",
+          "size": "320x213",
+          "frames": 72,
+          "sha256": "b0f83be0dce7430b16a4eccee8ebed0d5cfb8712f85eb97ca2a4fe3f522d6e15"
+        },
+        {
+          "file": "public/images/howto/learning-animations/canon-final.webp",
+          "size": "320x213",
+          "frames": 72,
+          "sha256": "41b6296dad00c87f9f8cc43ba6863c7a69b38d9166e2b4ecc7c29c6b3f6f8cec"
+        }
+      ]
+    }
+  ],
+  "attempts_that_did_not_ship": [
+    {
+      "what": "First queue of run 1",
+      "why": "Failed 16 s in with gpu_memory_busy: the image.generate engine (sd-server) held about 18 GB, and gpu.status listed no holder. Queued again once it was gone."
+    },
+    {
+      "what": "Run 1 (seed 31): Mācron's free arm swung out toward Tlatoāni (32 and 30 degrees)",
+      "why": "Much closer to canon than the greenhouse loop, but the model drew the swung arm as a long stretched tube poking Tlatoāni's cheek, and Tlatoāni gave a sly half-wink for a beat. Run 2 lifts the hand only 18 degrees, makes the hops higher (17, 9 and 4 cm) and the dot bigger (2 cm), and adds wink and stretched-arm terms to the negative."
+    }
+  ],
+  "earlier_version": "art/animations/greenhouse-loop/recipe.json (a 72-frame loop with a +-10 degree camera arc, from a blockout modelled from scratch and a Qwen re-stage of 'Chess Tlatoāni vs Mācron' as the reference).",
+  "credits": [
+    "The operator, for the idea: seed the animation from the repo's canon paintings instead of building the frame from scratch.",
+    "The painting 'Arabiya Ink and Voices' in assets/ (macron.dev canon art) gives the room, the props, both characters and the style.",
+    "kumbia-kombat (github.com/8007342/kumbia-kombat, LESSONS_LEARNED.md): Blender as a bpy venv; identity from a reference and pose from a bare control; prompt and control must agree.",
+    "demon_attack: GPU sharing etiquette."
+  ]
+}

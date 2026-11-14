@@ -2,14 +2,14 @@
 
 usage: python breakdown.py BLOCKOUT_DIR FINAL_FRAMES_DIR OUT_DIR [--frames 48] [--fps 12]
                             [--name learning-animations-loop] [--width 640] [--prefix breakdown]
-                            [--quality 82] [--light]
+                            [--quality 82] [--light] [--light-quality 60]
 
 BLOCKOUT_DIR holds wire/, clay/ and depth/ (from blockout.py); FINAL_FRAMES_DIR
 holds the generated frames in order (PNG). Writes:
   NAME.webp                  the final loop (FRAMES frames, lossy, WIDTH px)
   NAME-small.webp            the same at 480 px wide (the site serves it to phones
                              and on lesson cards); with --light, every other frame
-                             (half the fps, same duration) at q60, to stay under ~1 MB
+                             (half the fps, same duration) at q60 (--light-quality), to stay under ~1 MB
   PREFIX-wire.webp, PREFIX-depth.webp, PREFIX-final.webp
                                        320 px loops of each stage, in step
 This only packs and scales frames: no pixel of the final loop is painted here.
@@ -27,6 +27,7 @@ NAME = args[args.index("--name") + 1] if "--name" in args else "learning-animati
 WIDTH = int(args[args.index("--width") + 1]) if "--width" in args else 640
 PREFIX = args[args.index("--prefix") + 1] if "--prefix" in args else "breakdown"
 LIGHT = "--light" in args
+LQ = int(args[args.index("--light-quality") + 1]) if "--light-quality" in args else 60
 Q = int(args[args.index("--quality") + 1]) if "--quality" in args else 82
 os.makedirs(out, exist_ok=True)
 
@@ -47,7 +48,7 @@ def save(frames, path, width, quality, step=1):
 final = load(fin, N)
 save(final, os.path.join(out, f"{NAME}.webp"), WIDTH, Q)
 if LIGHT:
-    save(final[::2], os.path.join(out, f"{NAME}-small.webp"), 480, 60, step=2)
+    save(final[::2], os.path.join(out, f"{NAME}-small.webp"), 480, LQ, step=2)
 else:
     save(final, os.path.join(out, f"{NAME}-small.webp"), 480, Q - 4)
 for name in ("wire", "depth"):

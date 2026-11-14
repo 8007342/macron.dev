@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f7f3e9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1f1e" media="(prefers-color-scheme: dark)">
   <title>Making art and animation in the forge&#39;s ComfyUI studio · macron.dev</title>
-  <meta name="description" content="Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
+  <meta name="description" content="Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
   <link rel="canonical" href="https://macron.dev/lessons/make-art-in-the-forge-studio.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
@@ -15,15 +15,15 @@
   <meta property="og:site_name" content="macron.dev">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Making art and animation in the forge&#39;s ComfyUI studio · macron.dev">
-  <meta property="og:description" content="Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
+  <meta property="og:description" content="Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
   <meta property="og:url" content="https://macron.dev/lessons/make-art-in-the-forge-studio.html">
-  <meta property="og:image" content="https://macron.dev/images/gallery/greenhouse-loop.webp">
-  <meta property="og:image:alt" content="A 6-second looping animation on a sunny greenhouse terrace above the sea, the camera slowly arcing around a round wooden table: hanging glass globes with air plants, a woven lantern and shelves of potted plants frame the view. Small cream robot Mācron, with a dark screen face and two cyan eyes, sits on the tabletop drawing in a flipbook; the red ball on the page pops up into the air, bounces three times and comes to rest while he watches. Pink axolotl Tlatoāni, in a cream robe with teal trim, sits on a stool beside the table, pointing and smiling, gills swaying.">
+  <meta property="og:image" content="https://macron.dev/images/gallery/ink-dot-loop.webp">
+  <meta property="og:image:alt" content="A 6-second looping animation of the canon painting &#39;Arabiya Ink and Voices&#39; come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Making art and animation in the forge&#39;s ComfyUI studio · macron.dev">
-  <meta name="twitter:description" content="Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
-  <meta name="twitter:image" content="https://macron.dev/images/gallery/greenhouse-loop.webp">
-  <meta name="twitter:image:alt" content="A 6-second looping animation on a sunny greenhouse terrace above the sea, the camera slowly arcing around a round wooden table: hanging glass globes with air plants, a woven lantern and shelves of potted plants frame the view. Small cream robot Mācron, with a dark screen face and two cyan eyes, sits on the tabletop drawing in a flipbook; the red ball on the page pops up into the air, bounces three times and comes to rest while he watches. Pink axolotl Tlatoāni, in a cream robe with teal trim, sits on a stool beside the table, pointing and smiling, gills swaying.">
+  <meta name="twitter:description" content="Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.">
+  <meta name="twitter:image" content="https://macron.dev/images/gallery/ink-dot-loop.webp">
+  <meta name="twitter:image:alt" content="A 6-second looping animation of the canon painting &#39;Arabiya Ink and Voices&#39; come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,7 +31,7 @@
   "@id": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
   "url": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
   "name": "Making art and animation in the forge's ComfyUI studio",
-  "description": "Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
+  "description": "Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
   "keywords": "comfyui, studio, blender, animation, camera-motion, wan-vace, qwen-image-edit, image-generation, tillandsias, provenance",
   "learningResourceType": "lesson",
   "educationalLevel": "intermediate",
@@ -48,6 +48,8 @@
   "datePublished": "2026-11-14",
   "dateModified": "2026-11-14",
   "isBasedOn": [
+    "https://macron.dev/notes/2026-11-14-forge-seed-the-animation-from-canon-art.md",
+    "https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json",
     "https://macron.dev/notes/2026-11-14-forge-greenhouse-camera-loop-three-eyes.md",
     "https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md",
     "https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md",
@@ -56,7 +58,7 @@
     "https://github.com/8007342/kumbia-kombat/blob/main/LESSONS_LEARNED.md",
     "https://github.com/8007342/demon_attack"
   ],
-  "image": "https://macron.dev/images/gallery/greenhouse-loop.webp",
+  "image": "https://macron.dev/images/gallery/ink-dot-loop.webp",
   "inLanguage": "en",
   "encoding": {
     "@type": "MediaObject",
@@ -144,36 +146,37 @@
         <header>
           <p class="eyebrow">Lesson · intermediate · updated 2026-11-14</p>
           <h1>Making art and animation in the forge&#39;s ComfyUI studio</h1>
-          <p class="slogan">Block the world first; then let the model draw it.</p>
-          <p class="summary">Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.</p>
+          <p class="slogan">Start from the canon; block the world to match; then let the model move it.</p>
+          <p class="summary">Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.</p>
         </header>
         <figure class="art">
-          <img src="/images/gallery/greenhouse-loop.webp" srcset="/images/gallery/greenhouse-loop-small.webp 480w, /images/gallery/greenhouse-loop.webp 640w" sizes="(max-width: 760px) calc(100vw - 54px), 700px" width="640" height="480" alt="A 6-second looping animation on a sunny greenhouse terrace above the sea, the camera slowly arcing around a round wooden table: hanging glass globes with air plants, a woven lantern and shelves of potted plants frame the view. Small cream robot Mācron, with a dark screen face and two cyan eyes, sits on the tabletop drawing in a flipbook; the red ball on the page pops up into the air, bounces three times and comes to rest while he watches. Pink axolotl Tlatoāni, in a cream robe with teal trim, sits on a stool beside the table, pointing and smiling, gills swaying.">
-          <figcaption>Greenhouse Flipbook · reference art, not canon</figcaption>
+          <img src="/images/gallery/ink-dot-loop.webp" srcset="/images/gallery/ink-dot-loop-small.webp 480w, /images/gallery/ink-dot-loop.webp 640w" sizes="(max-width: 760px) calc(100vw - 54px), 700px" width="640" height="427" alt="A 6-second looping animation of the canon painting &#39;Arabiya Ink and Voices&#39; come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.">
+          <figcaption>The Dot That Hops · reference art, not canon</figcaption>
         </figure>
         <div class="prose">
 <blockquote>
-<p><strong>Mācron:</strong> I drew a ball, and it bounced off the page!</p>
-<p><strong>Tlatoāni:</strong> It bounced because the table was there first.</p>
+<p><strong>Mācron:</strong> I wrote the dot, and it hopped off the page!</p>
+<p><strong>Tlatoāni:</strong> Count it again. It came back.</p>
 </blockquote>
-<p>The loop above is 72 frames (6 s at 12 fps), with the camera slowly arcing around the table. Mācron draws in his flipbook, the ball pops off the page and bounces three times, and Tlatoāni points and smiles. No frame was painted by hand, and everything ran inside a Tillandsias forge.</p>
+<p>The loop above is 72 frames (6 s at 12 fps), with a very slow camera drift. It is the canon painting <em>Arabiya Ink and Voices</em> come to life: Mācron finishes a stroke with his reed pen, the dot under the curve pops off the paper, bounces three times and settles back in its place, and Tlatoāni smiles and nods. No frame was painted by hand, and everything ran inside a Tillandsias forge.</p>
 <h2 id="how-it-was-made">How it was made</h2>
 <div class="table"><table>
-<thead><tr><th>Blocked out in Blender</th><th>Depth pass (the control)</th><th>Drawn by Wan 2.2 VACE</th></tr></thead>
+<thead><tr><th>Fitted in Blender</th><th>Depth pass (the control)</th><th>Drawn by Wan 2.2 VACE</th></tr></thead>
 <tbody>
-<tr><td><img src="/images/howto/learning-animations/room-wire.webp" alt="Wireframe of the greenhouse terrace: pergola, hanging globes, shelves, round table, stool and both characters&#39; simple shapes, with the camera arcing" loading="lazy" decoding="async"></td><td><img src="/images/howto/learning-animations/room-depth.webp" alt="Grey depth video of the same scene: near is white, and Mācron&#39;s two eyes are marked as white dots" loading="lazy" decoding="async"></td><td><img src="/images/howto/learning-animations/room-final.webp" alt="The final drawn frames, in step with the other two" loading="lazy" decoding="async"></td></tr>
+<tr><td><img src="/images/howto/learning-animations/canon-wire.webp" alt="Wireframe of the blockout fitted to the painting: the table, jars, paper, hanging globes, Mācron&#39;s boxy head and Tlatoāni&#39;s round head and gills, with the dot hopping" loading="lazy" decoding="async"></td><td><img src="/images/howto/learning-animations/canon-depth.webp" alt="Grey depth video of the same scene: near is white, and Mācron&#39;s two eyes and the hopping dot are marked as white dots" loading="lazy" decoding="async"></td><td><img src="/images/howto/learning-animations/canon-final.webp" alt="The final drawn frames, in step with the other two" loading="lazy" decoding="async"></td></tr>
 </tbody>
 </table></div>
 <ol>
-<li><strong>Start from a canon picture.</strong> Qwen-Image-Edit re-staged <em>Chess Tlatoāni vs Mācron</em>: chessboard out, flipbook in, everything else kept. That still is the video model&#39;s identity and style reference, which is where the rich greenhouse comes from. A text prompt alone never drew these characters.</li>
-<li><strong>Build the whole room and the camera path.</strong> <code>art/tools/blockout_room.py</code> models the terrace from that picture: pergola, hanging globes, lantern, shelves of pots, a round table, a stool, the flipbook, the ball, and both characters from the canon&#39;s simple shapes. The motion <em>and</em> the camera arc are cyclic: frame 72 is frame 0. Placing contacts by hand isn&#39;t enough. The first version shipped with Tlatoāni&#39;s legs through his stool, because the blockout had them there and the video model drew what the depth said. Now <code>--check</code> tests his legs and tail against the stool and the table in every frame and fails on any overlap.</li>
-<li><strong>Render a depth pass, and mark what depth can&#39;t show.</strong> Near is white, with Blender&#39;s <code>Raw</code> view transform so values stay linear. Anything the model must keep has to show up in it. Mācron&#39;s eyes are a few centimetres deep at 2.5 m, about two grey levels, so two runs drew him with <strong>three</strong> eyes, even with &quot;exactly two eyes&quot; in the prompt. Painting the two eyes pure white in the depth video fixed it in every frame.</li>
-<li><strong>Let a video model draw it.</strong> Wan 2.2 Fun VACE takes the depth video as its control and the still as its reference, and generates all 81 frames in one run (about 31 min at 768×576), so nothing pops between frames. Seeds matter: the seed that fixed the eyes lost the ball&#39;s hop, so the shipped run went back to the seed that drew the hop.</li>
-<li><strong>Close the loop inside one run.</strong> Generate past the cycle (81 for 72) and blend frames 72–79 into 0–7. With a moving camera every frame differs a lot from the last, so judge the seam by its <em>jolt</em>: how far the wrap&#39;s step differs from the average of its neighbours. Here it is −0.08, against 0.24 on average across the loop.</li>
-<li><strong>Commit the recipe.</strong> Prompts, seeds, model hashes and every failed run are in <a href="https://github.com/8007342/macron.dev/blob/main/art/animations/greenhouse-loop/recipe.json">recipe.json</a>, next to <a href="https://github.com/8007342/macron.dev/tree/main/art/tools">the tools</a> and <a href="https://github.com/8007342/macron.dev/tree/main/art/workflows">the workflows</a>.</li>
+<li><strong>Start from the canon art.</strong> The repo&#39;s paintings are prettier than anything a prompt draws from scratch, so the painting itself, unedited, is the video model&#39;s reference. It sets the characters, the room and the style.</li>
+<li><strong>Fit the blockout to the painting.</strong> <code>art/tools/blockout_canon.py</code> places every proxy by un-projecting its pixel position in the painting through the frame-0 camera at a chosen distance: Mācron&#39;s head at (482, 392) and 1.6 m, the jars on the table where the painting puts them. <code>--overlay</code> draws the depth pass&#39;s edges over the painting, so you can see the fit before spending GPU time.</li>
+<li><strong>Move a little.</strong> The motion and a gentle camera drift (±4°, a 6 % push-in) are cyclic: frame 72 is frame 0. The further the camera strays from the painting&#39;s view, the more the model has to invent.</li>
+<li><strong>Mark what depth can&#39;t show, and check every frame.</strong> Mācron&#39;s eyes and the 2 cm dot are painted pure white in the depth video. <code>--check</code> tests the moving parts against the table and the props in every frame and fails on any overlap. The greenhouse loop below first shipped with Tlatoāni&#39;s legs through his stool, because its blockout had them there.</li>
+<li><strong>Let a video model draw it.</strong> Wan 2.2 Fun VACE takes the depth video as its control and the painting as its reference, and draws all 81 frames in one run (about 23 min at 768×512). Big gestures read differently than you meant: swinging Mācron&#39;s whole arm out toward Tlatoāni was drawn as a long stretched arm poking his cheek, so the shipped run lifts the hand only a little.</li>
+<li><strong>Close the loop inside one run.</strong> Generate past the cycle (81 for 72) and blend frames 72–79 into 0–7. With a moving camera, judge the seam by its <em>jolt</em>: how far the wrap&#39;s step differs from the average of its neighbours. Here it is 0.62, inside the loop&#39;s own range (up to 1.79).</li>
+<li><strong>Commit the recipe.</strong> Prompts, seeds, model hashes and every failed run are in <a href="https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json">recipe.json</a>, next to <a href="https://github.com/8007342/macron.dev/tree/main/art/tools">the tools</a> and <a href="https://github.com/8007342/macron.dev/tree/main/art/workflows">the workflows</a>.</li>
 </ol>
-<p>The previous version, a 48-frame loop with a fixed camera in a sparse room, shows how far the room and the reference carry a shot:</p>
-<p><img src="/images/gallery/learning-animations-loop-small.webp" alt="The earlier 48-frame loop: a simpler workshop, fixed camera" loading="lazy" decoding="async"></p>
+<p>The previous version modelled a greenhouse terrace from scratch and used a re-staged picture as the reference. It moves more, but the characters drift off model (a sleeveless robe, a boxy robot):</p>
+<p><img src="/images/gallery/greenhouse-loop-small.webp" alt="The earlier greenhouse loop: a camera arc around a round table, with characters drawn from a blockout built from scratch" loading="lazy" decoding="async"></p>
 <h2 id="blender-in-a-forge">Blender in a forge</h2>
 <p>There is no <code>blender</code> binary, but the <code>bpy</code> wheel runs headless: <code>uv python install 3.13</code>, then a venv on persistent disk, then <code>uv pip install bpy==5.3.0</code> (about 430 MB). Workbench, EEVEE and Cycles all render on the CPU (about 10 min for 216 frames of the full room). kumbia-kombat keys its dance poses on a Blender rig the same way.</p>
 <h2 id="how-the-studio-works">How the studio works</h2>
@@ -185,6 +188,7 @@
 <li><strong>One GPU, several studios, no arbiter.</strong> If another project runs short jobs back to back, yours can fail with <code>VRAM grow failed</code> even when the GPU looks free. Back off and retry, and ask the operator&#39;s coordinator for a window. Never jump the queue.</li>
 <li><strong>A free GPU reading can be a lull.</strong> <code>gpu.status</code> showed no holders between another project&#39;s back-to-back music cues, and a 31-minute video job landed in the middle of that batch. When someone has announced a batch, ask before queueing anything long, and say how long it will run.</li>
 <li><strong>New tray, old tools.</strong> A tray update reaches a forge&#39;s host tools only when the forge is relaunched, so newly admitted models (here Qwen-Image and Real-ESRGAN) can be installed but out of reach. <code>tillandsias.lane_version</code> says which.</li>
+<li><strong>gpu.status doesn&#39;t list every holder.</strong> A run failed 16 s in with <code>gpu_memory_busy</code> because an image.generate engine held 18 GB unlisted. Check the ticket with <code>studio.job_status</code> a minute after queueing, and ask before unloading anything you didn&#39;t start.</li>
 </ul>
 <h2 id="stills-sprites-and-music">Stills, sprites and music</h2>
 <ul>
@@ -198,6 +202,8 @@
         <section class="provenance" aria-labelledby="distilled-from">
           <h2 id="distilled-from">Distilled from</h2>
           <ul class="sources">
+          <li><a href="https://macron.dev/notes/2026-11-14-forge-seed-the-animation-from-canon-art.md">Seed the animation from the canon art, not from scratch (note, 2026-11-14)</a></li>
+          <li><a href="https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json">github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json</a></li>
           <li><a href="https://macron.dev/notes/2026-11-14-forge-greenhouse-camera-loop-three-eyes.md">A full greenhouse, a moving camera, and a robot with three eyes (note, 2026-11-14)</a></li>
           <li><a href="https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md">From a Blender blockout to a 48-frame loop with Wan VACE, all inside a forge (note, 2026-11-14)</a></li>
           <li><a href="https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md">Building graphics (and music) pipelines from a forge with the ComfyUI studio (note, 2026-11-14)</a></li>

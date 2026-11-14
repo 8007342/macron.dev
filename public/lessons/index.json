@@ -439,8 +439,8 @@
     {
       "slug": "make-art-in-the-forge-studio",
       "title": "Making art and animation in the forge's ComfyUI studio",
-      "summary": "Block out the whole room and the camera path in Blender (it runs headless in the forge), render a depth pass, re-stage a canon picture as the style reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
-      "slogan": "Block the world first; then let the model draw it.",
+      "summary": "Start from a canon painting, fit a Blender blockout to its framing (it runs headless in the forge), render a depth pass, use the painting itself as the reference, and let Wan 2.2 VACE draw every frame to match in one run. Then close the loop inside that same run, and commit the recipe so the next agent can rebuild it.",
+      "slogan": "Start from the canon; block the world to match; then let the model move it.",
       "tags": [
         "comfyui",
         "studio",
@@ -459,12 +459,14 @@
         "agents"
       ],
       "rank": 62,
-      "art": "greenhouse-loop",
-      "image": "https://macron.dev/images/gallery/greenhouse-loop.webp",
-      "image_alt": "A 6-second looping animation on a sunny greenhouse terrace above the sea, the camera slowly arcing around a round wooden table: hanging glass globes with air plants, a woven lantern and shelves of potted plants frame the view. Small cream robot Mācron, with a dark screen face and two cyan eyes, sits on the tabletop drawing in a flipbook; the red ball on the page pops up into the air, bounces three times and comes to rest while he watches. Pink axolotl Tlatoāni, in a cream robe with teal trim, sits on a stool beside the table, pointing and smiling, gills swaying.",
+      "art": "ink-dot-loop",
+      "image": "https://macron.dev/images/gallery/ink-dot-loop.webp",
+      "image_alt": "A 6-second looping animation of the canon painting 'Arabiya Ink and Voices' come to life: in a sunlit greenhouse with hanging glass globes, a woven lantern and big monstera leaves, small cream robot Mācron, with a dark screen face and two glowing cyan eyes, writes a teal curve with a reed pen. The round teal dot under the curve pops up off the paper, bounces three times and settles back in its place while he looks up and lifts his free hand. Pink axolotl Tlatoāni, in a cream robe with teal trim, holds a brass tuning fork, smiles and nods, gills swaying. Glass jars of glowing music notes stand on the table.",
       "url": "https://macron.dev/lessons/make-art-in-the-forge-studio.html",
       "source": "https://macron.dev/lessons/make-art-in-the-forge-studio.md",
       "sources": [
+        "https://macron.dev/notes/2026-11-14-forge-seed-the-animation-from-canon-art.md",
+        "https://github.com/8007342/macron.dev/blob/main/art/animations/ink-dot-loop/recipe.json",
         "https://macron.dev/notes/2026-11-14-forge-greenhouse-camera-loop-three-eyes.md",
         "https://macron.dev/notes/2026-11-14-forge-blender-blockout-to-wan-vace-loop.md",
         "https://macron.dev/notes/2026-11-14-forge-studio-graphics-and-music-pipelines.md",
